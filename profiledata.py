@@ -1,20 +1,21 @@
 import os
-from numpy import sqrt
-from helper import index, parsecoords, split_xy, make_continuuous_loop, compute_vals, compute_circumference
+from helper import parsecoords, split_xy, make_continuuous_loop, compute_vals, compute_circumference
 import matplotlib.pyplot as plt
 
-for filename in os.listdir("data/rawestdata"):
+for filename in os.listdir("data/rawdata"):
 
-    # get coordinates in closed loop form
+    # get coordinates in selig format
     make_continuuous_loop(filename)
-    coords = parsecoords("data/loopdata/" + filename[:-4] + "_loop.dat")
 
-    # seperate x and y coordinates
+    # get x and y coordinates
+    coords = parsecoords("data/processeddata/" + filename)
     x, y = split_xy(coords)
     n = len(x)
 
+    # compute circumference of profile
     U = compute_circumference(x, y)
 
+    # compute profile data
     X, Y, theta, l = compute_vals(x, y)
 
     # write calculated values to file
@@ -24,6 +25,11 @@ for filename in os.listdir("data/rawestdata"):
         for i in range(len(X)):
             file.write(f"{X[i]}, {Y[i]}, {theta[i]}, {l[i]}\n")
 
+
+    # close loops for plotting
+    if (x[0], y[0]) != (x[-1], y[-1]):
+        x.append(x[0])
+        y.append(y[0])
     # make plots
 
     fig, (ax1, ax2, ax3) = plt.subplots(3, constrained_layout=True)
@@ -32,12 +38,12 @@ for filename in os.listdir("data/rawestdata"):
     ax1.set(xlabel='x', ylabel='y')
     ax1.set_title("Profile")
 
-    ax2.plot(theta[:len(theta) // 2 + 1])
+    ax2.plot(theta)
     ax2.set(xlabel='n', ylabel='theta [rad]')
-    ax2.set_title("Angle of Panel for half of the loop")
+    ax2.set_title("Angle of Panel")
 
-    ax3.plot(l[:len(theta) // 2 + 1])
+    ax3.plot(l)
     ax3.set(xlabel='n', ylabel='l [m]')
-    ax3.set_title("Panel length for half of the loop")
+    ax3.set_title("Panel length")
 
     plt.show()

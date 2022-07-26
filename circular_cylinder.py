@@ -1,10 +1,10 @@
 import sympy as sym
-from helper import compute_vals, compute_xi_eta, compute_I_J, compute_An_M, compute_At
+from helper import compute_vals, compute_xi_eta, compute_I_J, compute_An_M, compute_At, compute_vt
 from make_cylinder import cylinder
 from sympy.solvers.solveset import linsolve
 
 for panels in range(6,12):
-    x, y = cylinder(na = panels)
+    x, y = cylinder(n = panels)
     n = len(x)
     X, Y, theta, l = compute_vals(x,y)
     xi, eta = compute_xi_eta(n, X, Y, theta)
@@ -37,9 +37,12 @@ for panels in range(6,12):
 
     # tangential component of velocity
     A_t = compute_At(n, theta, I, J)
+    '''
     vt = []
     for i in range(n):
         vt.append(sum([A_t[i][j] * q_sol[j] for j in range(n)]) + V * sym.cos(a - theta[i]))
+    '''
+    vt = compute_vt(n, A_t, theta, q_sol)
 
     # constituent pressure
     cp = []

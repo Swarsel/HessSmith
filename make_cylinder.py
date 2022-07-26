@@ -1,11 +1,8 @@
 import numpy as np
 
-
-def cylinder(radius=1, alpha=360, na=8):
-    if int(alpha) == 360:
-        a = np.linspace(0, alpha, num=na, endpoint=False) / 180 * np.pi
-    else:
-        a = np.linspace(0, alpha, num=na) / 180 * np.pi
+def cylinder(radius=1, n=8):
+    # generate a cylinder with n equidistant panels
+    a = np.linspace(0, 360, num=n, endpoint=False) / 180 * np.pi
 
     x = radius * np.cos(a)
     y = radius * np.sin(a)
