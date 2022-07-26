@@ -1,4 +1,4 @@
-from helper import compute_vals
+from computations import compute_vals
 import matplotlib.pyplot as plt
 from make_cylinder import cylinder
 import numpy as np

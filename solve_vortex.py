@@ -1,4 +1,3 @@
-import sympy as sym
 from make_cylinder import cylinder
 from solving import solve_vortex
 from computations import compute_vals, compute_system, compute_vt_vortex, compute_cp, compute_updrift
