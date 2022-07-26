@@ -3,19 +3,14 @@ import numpy as np
 
 from sympy.solvers.solveset import linsolve
 
-def solve_no_vortex(n, M, theta, V_val=None, alpha_val = None):
-    # V inf
-    V = sym.Symbol('V')
-    # alpha
-    a = sym.Symbol('a')
+def solve_no_vortex(n, M, theta, V=sym.Symbol("V"), a=sym.Symbol("a")):
+
     # source
     q = sym.symbols('q_0:{}'.format(n))
 
     b = []
     for i in range(n):
         temp = -V * sym.sin(a - theta[i])
-        if V_val and alpha_val:
-            temp = temp.subs([(V, V_val), (a, alpha_val)])
         b.append(temp)
 
     eq = []

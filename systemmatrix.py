@@ -1,13 +1,10 @@
-from helper import compute_vals, compute_xi_eta, compute_I_J, compute_An_M
+from computations import compute_vals, compute_system
 from make_cylinder import cylinder
 
 x, y = cylinder()
 n = len(x)
 X, Y, theta, l = compute_vals(x,y)
 
-xi, eta = compute_xi_eta(n, X, Y, theta)
-I, J = compute_I_J(n, l, xi, eta)
-
-A_n, M = compute_An_M(n, theta, I, J)
+xi, eta, I, J, A_n, A_t, M = compute_system(n, X, Y, theta, l)
 
 print(M)
