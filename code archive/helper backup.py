@@ -1,42 +1,30 @@
 import numpy as np
 from panel import Panel
 
-
 def index(list: list, element: int) -> float:
     # allows to use normal list as a closed loop, connecting the last and first elements
     return list[element % len(list)]
 
-def check_ccw(x, y):
-    edge = np.zeros(len(x) - 1)
-    for i in range(len(x) - 1):  # Loop over all panels
-        edge[i] = (x[i + 1] - x[i]) * (y[i + 1] + y[i])
-    if np.sum(edge) <0:
-        return True
-    else:
-        return False
-
-
-def make_panels_old(x, y):
+def make_panels(x, y):
     panels = np.empty(len(x), dtype=object)
     for i in range(len(x)):
-        panels[i] = Panel(index(x, i), index(y, i), index(x, i + 1), index(y, i + 1))
+        panels[i] = Panel(index(x,i),index(y,i),index(x,i+1),index(y,i+1))
     return panels
-
-
-def make_panels(x, y):
-    panels = np.empty(len(x)-1, dtype=object)
-    for i in range(len(x)-1):
-        panels[i] = Panel(x[-i-2], y[-i-2], x[-i-1], y[-i-1])
-    #if (panels[0].xa, panels[0].ya) == (panels[0].xb, panels[0].yb):
-    #    panels = panels[1:]
-    print([(panel.xa, panel.ya, panel.xb, panel.yb) for panel in panels])
-    return panels
-
+def parsecoords_old(filename: str) -> list:
+    # reads coordinates from file
+    parsed = np.loadtxt(filename, dtype=float, unpack=True)
+    return [(parsed[0][i], parsed[1][i]) for i in range(len(parsed[0]))]
 
 def parsecoords(filename: str):
     # reads coordinates from file
     x, y = np.loadtxt(filename, dtype=float, unpack=True)
     return x, y
+
+
+def split_xy(coords: list) -> (list, list):
+    # splits a list of coordinates into x & y
+    return [coords[i][0] for i in range(len(coords))], \
+           [coords[i][1] for i in range(len(coords))]
 
 
 def preprocess_list(filename: str) -> None:
@@ -110,14 +98,8 @@ def merge_and_reverse_lists(filename: str, rev1=True, rev2=False) -> str:
 def finish_data(filename: str, path: str) -> None:
     with open("data/processeddata/" + filename, "w+") as write:
         with open(path + filename) as file:
-            first = ""
             for line in file:
-                if not first:
-                    first = line
-                last = line
                 write.write(line)
-            #if str(first) != str(last)+"\n" and str(first) != str(last):
-            #    write.write(first)
 
 
 def make_continuuous_loop(filename: str, rev1: bool = True, rev2: bool = False) -> None:

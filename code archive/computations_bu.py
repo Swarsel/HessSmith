@@ -50,12 +50,12 @@ def compute_An(n: int, I, J, panels):
     A_n = np.empty((n, n))
     for i in range(n):
         for j in range(n):
-            if i == j:
+            #if i == j:
                 A_n[i][j] = - np.sin(panels[i].theta - panels[j].theta) * I[i][j] + np.cos(
                     panels[i].theta - panels[j].theta) * J[i][j]
-            else:
-                A_n[i][j] =  np.sin(panels[i].theta - panels[j].theta) * I[i][j] - np.cos(
-                    panels[i].theta - panels[j].theta) * J[i][j]
+            #else:
+             #   A_n[i][j] =  np.sin(panels[i].theta - panels[j].theta) * I[i][j] - np.cos(
+              #      panels[i].theta - panels[j].theta) * J[i][j]
     return A_n
 
 
@@ -68,24 +68,35 @@ def compute_At(n: int, I, J, panels):
     return A_t
 
 
+def compute_M(n: int, A_n):
+    M = np.empty((n, n))
+    for i in range(n):
+        for j in range(n):
+                M[i][j] = A_n[i][j]
+    return M
+
+
 def kutta_condition(A_n, A_t):
-    v = np.empty(A_n.shape[0] + 1, dtype=float)
-    v[:-1] = A_t[0, :] + A_t[-1, :]
-    v[-1] = - np.sum(A_n[0, :] + A_n[-1, :])
-    return v
+    b = np.empty(A_n.shape[0] + 1, dtype=float)
+    # matrix of source contribution on tangential velocity
+    # is the same than
+    # matrix of vortex contribution on normal velocity
+    b[:-1] = A_t[0, :] + A_t[-1, :]
+    # matrix of vortex contribution on tangential velocity
+    # is the opposite of
+    # matrix of source contribution on normal velocity
+    b[-1] = - np.sum(A_n[0, :] + A_n[-1, :])
+    return b
 
 
-def system_matrix(A_n, A_t, vortex=True):
-    if vortex:
-        M = np.empty((A_n.shape[0] + 1, A_n.shape[1] + 1), dtype=float)
-    else:
-        M = np.empty((A_n.shape[0], A_n.shape[1]), dtype=float)
-    if vortex:
-        M[:-1, :-1] = A_n
-        M[:-1, -1] = np.sum(A_t, axis=1)
-        M[-1, :] = kutta_condition(A_n, A_t)
-    else:
-        M = A_n
+def system_matrix(A_n, A_t):
+    M = np.empty((A_n.shape[0] + 1, A_n.shape[1] + 1), dtype=float)
+    # source contribution matrix
+    M[:-1, :-1] = A_n
+    # vortex contribution array
+    M[:-1, -1] = np.sum(A_t, axis=1)
+    # Kutta condition array
+    M[-1, :] = kutta_condition(A_n, A_t)
     return M
 
 
@@ -95,8 +106,19 @@ def compute_inhomogenity(panels, vortex, V, a):
     else:
         b = np.empty(panels.size, dtype=float)
     for i, panel in enumerate(panels):
-        b[i] = V * np.sin(a - panel.theta)
+        b[i] = -V * np.sin(a - panel.theta)
     # b_n
     if vortex:
         b[-1] = -V * (np.cos(a - panels[0].theta) + np.cos(a - panels[-1].theta))
     return b
+
+def compute_inhomogenity_old(panels, vortex, V, a):
+    b = np.empty(panels.size + 1, dtype=float)
+    # freestream contribution on each panel
+    for i, panel in enumerate(panels):
+        b[i] = -V * np.cos(a - panel.delta)
+    # freestream contribution on the Kutta condition
+    b[-1] = -V * (np.sin(a - panels[0].delta) +
+                                 np.sin(a - panels[-1].delta) )
+    return b
+

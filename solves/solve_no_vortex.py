@@ -7,7 +7,7 @@ n = len(x)
 X, Y, theta, l = compute_vals(x, y)
 xi, eta, I, J, A_n, A_t, M = compute_system(n, X, Y, theta, l)
 
-q_sol = solve_no_vortex(n, M, theta)
+q_sol = solve_no_vortex(n, M, theta,V=1, a=0)
 
 sum_sol = sum([q_sol[i] * l[i] for i in range(n)])
 

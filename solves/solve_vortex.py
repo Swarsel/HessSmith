@@ -1,5 +1,5 @@
 from make_cylinder import cylinder
-from solving import solve_vortex
+from solving import solve_vortex_np
 from computations import compute_vals, compute_system, compute_vt_vortex, compute_cp, compute_updrift
 
 # constants
@@ -16,22 +16,22 @@ for panels in range(8, 9):
     # solution
 
     # q_sol = solve_vortex(n, M, A_t, A_n, theta, V=V, a=a)
-    q_sol = solve_vortex(n, M, A_t, A_n, theta)
+    q_sol = solve_vortex_np(n, M, A_t, A_n, theta)
 
     # tangential component of velocity
 
     # vt = compute_vt_vortex(n, A_t, A_n, theta, q_sol, V=V, a=a)
-    vt = compute_vt_vortex(n, A_t, A_n, theta, q_sol)
+    vt = compute_vt_vortex(n, A_t, A_n, theta, q_sol, V=1, a=0)
 
     # constituent pressure
 
     # cp = compute_cp(n, vt, V=V)
-    cp = compute_cp(n, vt)
+    cp = compute_cp(n, vt, V=1)
 
     # constituent updrift
 
     # ca = compute_updrift(n, vt, l, V=V, t=t)
-    ca = compute_updrift(n, vt, l)
+    ca = compute_updrift(n, vt, l, V=1)
 
     print(f"Panels: {panels} \n"
           f"Tangential velocity:\n"
