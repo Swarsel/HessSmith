@@ -29,15 +29,19 @@ def make_panels(x, y):
         panels[i] = Panel(x[-i-2], y[-i-2], x[-i-1], y[-i-1])
     #if (panels[0].xa, panels[0].ya) == (panels[0].xb, panels[0].yb):
     #    panels = panels[1:]
-    print([(panel.xa, panel.ya, panel.xb, panel.yb) for panel in panels])
     return panels
 
 
 def parsecoords(filename: str):
     # reads coordinates from file
     x, y = np.loadtxt(filename, dtype=float, unpack=True)
+
     return x, y
 
+def write_coords(x,y, filename):
+    with open("data/writtendata/" + filename, "w+") as write:
+        for x, y in zip(x,y):
+            write.write(f"{x} {y}\n")
 
 def preprocess_list(filename: str) -> None:
     with open("data/rawdata/" + filename) as file:

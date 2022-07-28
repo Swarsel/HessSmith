@@ -1,25 +1,39 @@
-from make_cylinder import cylinder
-from helper import make_panels
-from profile import Profile
+from make_cylinder import cylinder, circle
+from helper import make_panels, write_coords
+from profile import AirfoilProfile
+from joukowski import make_joukowski
+import numpy as np
+import matplotlib.pyplot as pyplot
 
 for npanels in range(8, 9):
     for a in range(0, 1):
-        x, y = cylinder(n=npanels)
+        x, y = cylinder(n=100)
         panels = make_panels(x, y)
-        profile = Profile(panels, f"{npanels}-Sided Cylinder", vortex=False)
+        profile = AirfoilProfile(panels, f"{npanels}-Sided Cylinder", vortex=False)
 
-        profile.solve()
-        profile.plot()
-        print(f"Panels: {panels}, Angle: {a}\n"
-              f"Tangential velocity:\n"
-              f"{[panel.vt for panel in panels]}\n"
-              f"Constituent Pressure:\n"
-              f"{[panel.cp for panel in panels]}\n"
-              f"Source vector:\n"
-              f"{[panel.q for panel in panels]}\n"
-              f"Gamma:\n"
-              f"{profile.gamma}\n"
-              f"Constituent updrift:\n"
-              f"{profile.ca}\n"
-              f"Accuracy:\n"
-              f"{profile.accuracy}\n\n")
+        profile.solve(a=np.radians(0))
+        #print(profile)
+        #profile.plot()
+
+    x_c, y_c = circle(N=100)
+    R=1
+
+    cp_analytical = 1.0 - 4 * (y_c / R)**2
+    cps2 = [panel.cp for panel in panels]
+    print([(panel.xm, panel.cp) for panel in panels])
+
+    pyplot.figure(figsize=(10, 6))
+    pyplot.grid()
+    pyplot.xlabel('x', fontsize=16)
+    pyplot.ylabel('$C_p$', fontsize=16)
+    pyplot.plot(x_c, cp_analytical,
+                label='analytical',
+                color='b', linestyle='-', linewidth=1, zorder=1)
+    pyplot.scatter([p.xm for p in panels], [p.cp for p in panels],
+                   label='source-panel method',
+                   color='#CD2305', s=40, zorder=2)
+    pyplot.title('Number of panels : %d' % 10, fontsize=16)
+    pyplot.legend(loc='best', prop={'size': 16})
+    pyplot.xlim(-1.0, 1.0)
+    pyplot.ylim(-4.0, 2.0)
+    pyplot.show()

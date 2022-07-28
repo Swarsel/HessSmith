@@ -1,0 +1,163 @@
+\appendix
+
+\addsec{Anhang A: Lednicer- und Selig-Format}
+\label{appendix:a}
+
+Es folgt eine Gegenüberstellung des Selig-Formats (links) mit dem Lednicer-Format (rechts) am Beispiel des NACA M13-Profils.
+
+\begin{minipage}{0.45\textwidth}
+\verbatiminput{dataformats/m13_selig.DAT}
+\end{minipage}
+    \hfill
+\begin{minipage}{0.45\textwidth}
+\verbatiminput{dataformats/m13_lednicer.DAT}
+\end{minipage}
+
+\newpage
+\addsec{Anhang B: Beispielausgabe der Methode .write\_panels()}
+\label{appendix:b}
+Hier ist die Ausgabe der ersten 30 Zeilen der AirfoilProfile-Methode .write\_panels() gezeigt, am Beispiel des NASA: HSNLF(1)-0213 Profils gezeigt.
+
+\verbatiminput{writtenvals/hsnlf213_vals.csv}
+
+\newpage
+\addsec{Anhang C: Codeausschnitte}
+\label{appendix:C}
+Hier sind ausgewählte Codeausschnitte gezeigt, welche zur Lösung der Problemstellungen geschrieben wurden.
+\subsubsection{Die Klasse Panel}
+Die Klasse Panel modelliert die Panels $\mathcal{C}_i$ eines gegebenen Profils. Gespeichert werden neben den charakteristischen Parametern $X_i, Y_i, \theta _i, l_i$ auch der Normalwinkel des Panels $\delta_i$, welcher aus dem Profil herauszeigt. Ebenso wird die Panelposition als Ober- oder Unterseite bestimmt (für einige besondere Profile ist auch ein Wert "vertical" für komplett senkrechte Panele möglich). Ebenso gespeichert wird die Quellbelegung $q_i$, die Tangentialgeschwindigkeit $v_i^{(t)}$ unter gegebenen Anströmwinkel $\alpha $ und -geschwindigkeit $V_{\infty}$, und der resultierende Druckbeiwert $c_{p_i}$.
+\begin{lstlisting}[language=Python]
+class Panel:
+
+    def __init__(self, xa, ya, xb, yb):
+        self.xa, self.ya = xa, ya  # panel starting-point
+        self.xb, self.yb = xb, yb  # panel ending-point
+
+        self.xm = (xa + xb) / 2  # center of panel on x axis
+        self.ym = (ya + yb) / 2  # center of panel on y axis
+ 		# panel length       
+        self.length = np.sqrt((xb - xa) ** 2 + (yb - ya) ** 2)  
+
+        self.theta = atan2(yb - ya, xb - xa)  # angle of panel
+        # if angle is negative, add 2pi to only have positive angles for plotting
+        if self.theta < 0:  
+            self.theta += 2 * np.pi
+
+        # normal angle of panel
+        self.delta = self.theta - np.pi / 2  
+        if self.delta < 0:
+            self.delta += 2 * np.pi
+        if self.delta > 2 * np.pi:
+            self.delta -= 2 * np.pi
+
+        # panel location (used for plotting)
+        if np.pi / 2 < self.theta < 3 * np.pi / 2:
+            self.loc = 'upper'  # upper surface
+        elif self.theta == np.pi / 2 or self.theta == 3 * np.pi / 2:
+            self.loc = 'vertical'
+        else:
+            self.loc = 'lower'  # lower surface
+
+        self.q = None  # source strength
+        self.vt = None  # tangential velocity
+        self.cp = None  # pressure coefficient
+\end{lstlisting}
+
+\subsubsection{Die Klasse AirfoilProfile}
+Die Klasse AirfoilProfile modelliert ein gegebenes Profil. Sie speichert neben wählbaren Namen und der ihr zugewiesenen Panele auch die Profiltiefe $t$ und sämtliche Systemparameter $\xi_{ij}, \; \eta_{ij}, \; I_{ij}, \; J_{ij}, \; A_{ij}^{(n)}, \;A_{ij}^{(t)}, \;M_{ij}$. \\
+Durch einen Aufruf der Methode .solve(V, a) mit gegebenen $\alpha $ und $V_{\infty}$ werden für alle zugeordneten Panele die Quellstärken, Tangentialgeschwindigkeiten und Druckbeiwerte berechnet (und in den jeweiligen Klassenvariablen abgespeichert). Dabei wird ebenfalls die Genauigkeit der Approximation $\sum q_i l_i$ berechnet. Die Methode kann mit dem Schlüsselwortargument vortex=True aufgerufen werden, wodurch ebenfalls der Auftriebsbeiwert $c_a$, sowie die Wirbelbewegung $\gamma$ \\ berechnet werden.
+Die Methode .write\_panels() erzeugt eine .csv-Datei, welche für jedes Panel die Werte $X_i, Y_i \theta_i, l_i$ in eine Zeile schreibt (siehe \nameref{appendix:a}). \\
+Die Methode .compute\_free\_vt(x, y, V, a) ermöglicht die Berechnung der Tangentialgeschwindigkeiten an jedem Punkt $(x_i, y_i)$ des Profils. Diese werden als Tupel von der Methode zurückgegeben.
+\begin{lstlisting}[language=Python]
+class AirfoilProfile:
+    def __init__(self, panels, name, vortex=True):
+        self.panels = panels
+        self.name = name
+        self.len = len(self.panels)
+        self.vortex = vortex
+
+        self.U = sum([panel.length for panel in self.panels])
+        self.xi = compute_xi(self.len, self.panels)
+        self.eta = compute_eta(self.len, self.panels)
+        self.I = compute_I(self.len, self.xi, self.eta, self.panels)
+        self.J = compute_J(self.len, self.xi, self.eta, self.panels)
+        self.An = compute_An(self.len, self.I, self.J, self.panels)
+        self.At = compute_At(self.len, self.I, self.J, self.panels)
+        self.M = system_matrix(self.An, self.At, self.vortex)
+
+        self.x = [panel.xa for panel in self.panels]
+        self.y = [panel.ya for panel in self.panels]
+        self.t = abs(max(self.x) - min(self.x))
+        self.coords = [(panel.xa, panel.ya, panel.xb, panel.yb) for panel in self.panels]
+        self.lower = [panel for panel in self.panels if panel.loc == "lower"]
+        self.upper = [panel for panel in self.panels if panel.loc == "upper"]
+
+        self.ca = None
+        self.accuracy = None
+        self.gamma = None
+
+    def solve(self, V=1, a=np.radians(4.0)):
+        b = compute_inhomogenity(self.panels, self.vortex, V, a)
+        qs = np.linalg.solve(self.M, b)
+        
+        for i, panel in enumerate(self.panels):
+            panel.q = qs[i]
+        if self.vortex:
+            self.gamma = qs[-1]
+
+        if self.vortex:
+            vt = []
+            for i in range(self.len):
+                vt.append(
+                    sum([self.At[i][j] * self.panels[j].q for j in range(self.len)]) - self.gamma * sum(
+                        [self.An[i][j] for j in range(self.len)]) + V * np.cos(
+                        a - self.panels[i].theta))
+        else:
+            vt = []
+            for i in range(self.len):
+                vt.append(
+                    sum([self.At[i][j] * self.panels[j].q for j in range(self.len)]) + V * np.cos(
+                        a - self.panels[i].theta))
+        for i, panel in enumerate(self.panels):
+            panel.vt = vt[i]
+
+        for panel in self.panels:
+            panel.cp = 1 - (panel.vt / V) ** 2
+
+        self.ca = - 2 / (V * self.t) * sum([panel.vt * panel.length for panel in self.panels])
+        self.accuracy = sum([panel.q * panel.length for panel in self.panels])
+
+    def write_panels(self):
+        header = ["X_i", "Y_i", "theta_i", "l_i"]
+        with open("data/vals/" + self.name + "_vals.csv", "w+", encoding='UTF8',newline="") as file:
+            writer = csv.writer(file)
+            writer.writerow(header)
+            #file.write(f"Circumference: {self.U} \n")
+            #file.write(f"X_i, Y_i, theta_i, l_i\n")
+            for panel in self.panels:
+                #file.write(f"{panel.xm}, {panel.ym}, {panel.theta}, {panel.length}\n")
+                writer.writerow([panel.xm, panel.ym, panel.theta, panel.length])
+
+    def compute_free_vt(self, x, y, V=1, a=np.radians(4.0)):
+        eta = compute_eta_free(len(x), self.len, self.panels, x, y)
+        xi = compute_xi_free(len(x), self.len, self.panels, x, y)
+        I = compute_I_free(len(x), self.len, xi, eta, self.panels)
+        J = compute_J_free(len(x), self.len, xi, eta, self.panels)
+        An = compute_An_free(len(x), self.len, I, J, self.panels)
+        At = compute_At_free(len(x), self.len, I, J, self.panels)
+
+        vtx = np.empty(len(x))
+        vty = np.empty(len(x))
+        for i in range(len(x)):
+            vtx[i] = sum([At[i][j] * self.panels[j].q for j in range(self.len)]) - self.gamma * sum(
+                [An[i][j] for j in range(self.len)]) + V * np.cos(a)
+
+            vty[i] = sum([An[i][j] * self.panels[j].q for j in range(self.len)]) + self.gamma * sum(
+                [At[i][j] for j in range(self.len)]) + V * np.sin(a)
+
+        return vtx, vty
+\end{lstlisting}
+
+
+
+

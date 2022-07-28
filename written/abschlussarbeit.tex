@@ -1,0 +1,51 @@
+\documentclass[12pt,a4paper,twoside,open=right,%
+bibliography=totoc,BCOR=10mm]{scrreprt} % Schriftgröße, Seitenformat, Zweiseitig für Seitenränder, Bindcorrection
+\input{header.tex}
+\hypersetup{ % Setzt einige Werte die in den Eigenschaften des PDF gespeichert sind.
+	pdfdisplaydoctitle = true,
+	colorlinks = false,% Für Druck auf "false" setzen!
+	allcolors = green 
+}
+\writeIn{german} % Siehe header.tex. Setzt Dokumentsprache und damit Sprache von "Abstract", "Inhaltsverzeichnis", Datumsangaben etc.
+\input{titlepage.tex}
+
+\addbibresource{bib/example.bib}
+
+\begin{document}
+
+\AbschlussarbeitTUWienPhysikTitlePage{
+	titel={Implementation eines Hess-Smith Panelverfahrens in Python},
+	institut=Institut für Strömungsmechanik und Wärmeübertragung,
+	prof={Ao.Univ.Prof. Dipl.-Ing. Dr.techn. Stefan Braun}, % citeauthor nimmt Namen der Person aus der Bibliography in bib/example.bib
+	autor=Leon Schwarzäugl,
+	adresse={Gumpendorfer Straße 137,\\ 1060 Wien},
+	typ={bacc},
+	% Vordefinierte Typen sind: sem (Seminararbeit), bacc (Bachelorarbeit), proj (Projektarbeit), mast (Diplomarbeit), dipl (Diplomarbeit), diss (Dissertation)
+	% Laut Auskunft des Dekants muss auch eine Masterarbeit den Titel "Diplomarbeit" tragen.
+	% Bei allen anderen Typen werden die Texte direkt übernommen.
+	schwarzweisslogo=false % Definiert, ob das Logo der TU in Schwarz-Weiß oder Farbe ist.
+	}
+
+\pagenumbering{gobble} % Keine Seitenzahl drucken
+\titlePageTUWienPhysik
+
+\input{abstract.tex}
+\tableofcontents \newpage
+\cleardoublepage % Macht, dass openright funktioniert.
+% \chapter macht das automatisch, \tableofcontents und \printbibliography machen das nicht.
+% Falls es Probleme gibt hilft auch der Befehl \blankpage (siehe header.tex)
+\pagenumbering{arabic} \setcounter{page}{1}
+
+\input{aufgabenstellung.tex}
+\input{hauptteil.tex}
+%\input{mathematik.tex}
+
+%\cleardoublepage
+\pagenumbering{roman} \setcounter{page}{1}
+\printbibliography
+%\input{thanks.tex}
+\newpage
+\appendix
+\input{appendix01.tex}
+
+\end{document}

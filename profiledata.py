@@ -5,7 +5,7 @@ from profile import AirfoilProfile
 import numpy as np
 
 for filename in os.listdir("data/rawdata"):
-
+    print("working on " + filename)
     # get coordinates in selig format
     make_continuuous_loop(filename)
 
@@ -19,6 +19,8 @@ for filename in os.listdir("data/rawdata"):
 
 
     # make plots
+    #profile.solve()
+    #print(profile)
     profile.plot()
-    profile.solve()
-    print(profile)
+
+

@@ -12,13 +12,33 @@ def compute_xi(n: int, panels):
     return xi
 
 
+def compute_xi_free(n: int, plen, panels, x, y):
+    xi = np.empty((n, plen))
+
+    for i in range(n):
+        for j in range(plen):
+            xi[i][j] = (x[i] - panels[j].xm) * np.cos(panels[j].theta) + (y[i] - panels[j].ym) * np.sin(
+                panels[j].theta)
+    return xi
+
+
+def compute_eta_free(n: int, plen, panels, x, y):
+    eta = np.empty((n, plen))
+
+    for i in range(n):
+        for j in range(plen):
+            eta[i][j] = -(x[i] - panels[j].xm) * np.sin(panels[j].theta) + (
+                    y[i] - panels[j].ym) * np.cos(panels[j].theta)
+    return eta
+
+
 def compute_eta(n: int, panels):
     eta = np.empty((n, n))
 
     for i in range(n):
         for j in range(n):
             eta[i][j] = -(panels[i].xm - panels[j].xm) * np.sin(panels[j].theta) + (
-                        panels[i].ym - panels[j].ym) * np.cos(panels[j].theta)
+                    panels[i].ym - panels[j].ym) * np.cos(panels[j].theta)
     return eta
 
 
@@ -46,6 +66,30 @@ def compute_J(n: int, xi, eta, panels):
     return J
 
 
+def compute_I_free(n: int, plen, xi, eta, panels):
+    I = np.empty((n, plen))
+    for i in range(n):
+        for j in range(plen):
+            if i == j:
+                I[i][j] = 0
+            else:
+                I[i][j] = 1 / (4 * np.pi) * np.log(((panels[j].length + 2 * xi[i][j]) ** 2 + 4 * eta[i][j] ** 2) /
+                                                   ((panels[j].length - 2 * xi[i][j]) ** 2 + 4 * eta[i][j] ** 2))
+    return I
+
+
+def compute_J_free(n: int, plen, xi, eta, panels):
+    J = np.empty((n, plen))
+    for i in range(n):
+        for j in range(plen):
+            if i == j:
+                J[i][j] = 0.5
+            else:
+                J[i][j] = 1 / (2 * np.pi) * atan2(panels[j].length - 2 * xi[i][j], 2 * eta[i][j]) + \
+                          1 / (2 * np.pi) * atan2(panels[j].length + 2 * xi[i][j], 2 * eta[i][j])
+    return J
+
+
 def compute_An(n: int, I, J, panels):
     A_n = np.empty((n, n))
     for i in range(n):
@@ -54,9 +98,27 @@ def compute_An(n: int, I, J, panels):
                 A_n[i][j] = - np.sin(panels[i].theta - panels[j].theta) * I[i][j] + np.cos(
                     panels[i].theta - panels[j].theta) * J[i][j]
             else:
-                A_n[i][j] =  np.sin(panels[i].theta - panels[j].theta) * I[i][j] - np.cos(
+                A_n[i][j] = np.sin(panels[i].theta - panels[j].theta) * I[i][j] - np.cos(
                     panels[i].theta - panels[j].theta) * J[i][j]
     return A_n
+
+
+def compute_An_free(n: int, plen, I, J, panels):
+    A_n = np.empty((n, n))
+    for i in range(n):
+        for j in range(plen):
+            A_n[i][j] = - np.sin(- panels[j].theta) * I[i][j] + np.cos(
+                - panels[j].theta) * J[i][j]
+    return A_n
+
+
+def compute_At_free(n: int, plen, I, J, panels):
+    A_t = np.empty((n, plen))
+    for i in range(n):
+        for j in range(plen):
+            A_t[i][j] = np.cos(- panels[j].theta) * I[i][j] + np.sin(
+                - panels[j].theta) * J[i][j]
+    return A_t
 
 
 def compute_At(n: int, I, J, panels):
