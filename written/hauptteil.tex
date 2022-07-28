@@ -57,9 +57,10 @@ Auf der Oberfläche des Profils muss die Strömung die Gleitbedingung erfüllen;
 v_j^{(n)} =  \vec v(\vec X_j) \cdot \vec n_j,
 \end{equation}
 verschwindet. Dabei ist $\vec n_j$ der Normalvektor auf das Panel $\mathcal{C}_j$.\\
-Wir erhalten ein System von $n$ Gleichungen
+Wir erhalten in 0. Ordnung ein System von $n$ Gleichungen
 \begin{equation}
-\sum_{j=0}^{n-1} M_{ij}^{(q)}g_j =  b_i,
+\label{eq:lgls1}
+\sum_{j=0}^{n-1} M_{ij}^{(q)}q_j =  b_i,
 \end{equation}
 mit
 \begin{equation}
@@ -69,16 +70,25 @@ M_{ij}^{(q)} = \frac{1}{q_j} \nabla \phi_j^{(q)} (\vec X) \cdot \vec n_i,
 b_i =  -V_{\infty} \left( \begin{matrix} \cos \alpha \\ \sin \alpha \end{matrix} \right) \cdot \vec n_i,
 \end{equation}
 aus dessen Lösung wir die Quellstärken $q_i$ für jedes Panel ermitteln können. \\
-Mithilfe der Tangentialkomponenten des Geschwindigkeitsvektors
+Damit kann nun der Tangentialkomponenten des Geschwindigkeitsvektors
 \begin{equation}
 \label{eqn:vt}
 v_j^{(t)} =  \vec v(X_j) \cdot \frac{\vec x_{j+1}-\vec x_j}{|\vec x_{j+1}-\vec x_j|},
 \end{equation}
-können wir nun den Druckbeiwert
+bestimmt werden. \\
+Aus der Bernoulli-Gleichung
 \begin{equation}
-c_{p_j} =  1 - \left( \frac{v_j^{(t)}}{V_{\infty}}\right)
+p_{\infty} + \frac{1}{2} \rho V_{\infty}^2 =  p + \frac{1}{2} \rho v^2,
 \end{equation}
-zum Panel $\mathcal{C}_j$ bestimmen.
+definieren wir den Druckbeiwert als das Verhältnis zwischen der Druckdifferenze zwischen der Profilanströmung und dem dynamischen Druck 
+\begin{equation}
+c_p =  \frac{p-p_{\infty}}{\frac{1}{2} \rho V_{\infty}^2}.
+\end{equation}
+Daraus können wir den Druckbeiwert
+\begin{equation}
+c_{p_j} =  1 - \left( \frac{v_j^{(t)}}{V_{\infty},}\right)
+\end{equation}
+am Mittelpunkt des Panels $\mathcal{C}_j$ bestimmen.
 \subsection{Berücksichtigung einer Wirbelbewegung}
 Wollen wir den Auftrieb berücksichtigen, so reicht die reine Quellbelegung des Profils noch nicht aus. \\
 Im Hess-Smith Verfahren nehmen wir für das gesamte Profil eine einzige konstante Wirbelbelegung $\gamma$ für alle Panels an. Damit wird das Potential (\ref{eqn:potnovortex}) erweitert um Beiträge
@@ -105,8 +115,69 @@ c_a \approx \frac{2}{V_{\infty t}}\sum_{i=0}^{n-1} v_i^{(t)} l_i.
 \caption{Zur Kutta-Bedingung am Beispiel eines NACA0012-Profils - am Punkt der Hinterkante sind die Tangentialgeschwindigkeiten genau entgegengerichtet}
 \label{fig:kutta}
 \end{figure}
-\cite{Hess:1966} \cite{Cebeci:1999} \cite{Alonso:2005}
+Für eine analytische Berechnung des Auftriebsbeiwerts müssen wir nun noch die Systemmatrix bestimmen, welche das lineare Gleichungssystem (\eqref{eq:lgls1}) definiert. \cite{Hess:1966} \cite{Cebeci:1999} \cite{Alonso:2005}
 
+\subsection{Berechnung der Systemmatrix}
+\label{chap:systemmatrixtheory}
+Die Systemmatrix zur Berechnung der Normalgeschwindigkeiten $v_i^{(n)}$ in den Panelmittelpunkten für eine stückweise konstante Quellenbewegung der Panels ergibt sich aus der Gleitbedingung. Wenden wir diese direkt auf \ref{eqn:potnovortex} an, muss ein kompliziertes Integral gelöst werden. Dieses kann theoretisch direkt mit Computermethoden gelöst werden, für den Berechnungsaufwand ist es allerdings gerade bei Profilen mit einer hohen Anzahl an Panels günstiger, dieses analytisch zu berechnen. \\
+Für die Systemmatrix und ihre Parameter gelten:
+\begin{equation}
+M_{ij} = A_{ij}^{(n)}, \;\; i = 0, 1, \ldots , n-1; \;\; j = 0,1,\ldots , n-1.
+\end{equation}
+mit der Einflussmatrix der Quellbelegung
+\begin{equation}
+A_{ij}^{(n)} = -\sin {(\theta _i - \theta _j)} I_{ij} + \cos{(\theta _i - \theta _j)} J_{ij}
+\end{equation}
+sowie das geometrische Integral der Normalgeschwindigkeit
+\begin{equation}
+I_{ij} = 
+     \begin{cases}
+       \frac{1}{4\pi } \ln \left[ \frac{(l_j + 2 \xi_{ij})^2 + 4 \eta_{ij}^2}{(l_j -2 \xi _{ij})^2 + 4 \eta_{ij}^2} \right] &\quad i \neq j \\
+       0 &\quad i = j \\
+     \end{cases}
+\end{equation}
+und dem geometrischen Integral der Tangentialgeschindigkeit
+\begin{equation}
+J_{ij} = 
+     \begin{cases}
+       \frac{1}{2\pi } \arctan \left[ \frac{l_j - 2 \xi_{ij}}{2 \eta_{ij}} \right] + \frac{1}{2\pi } \arctan \left[ \frac{l_j + 2 \xi_{ij}}{2 \eta_{ij}} \right] &\quad i \neq j \\
+       \frac{1}{2} &\quad i = j \\
+     \end{cases}
+\end{equation}
+\begin{equation}
+\xi_{ij} =  (X_i - X_j) \cos \theta _j + (Y_i - Y_j) \sin \theta _j
+\end{equation}
+\begin{equation}
+\eta_{ij} =  -(X_i - X_j) \sin \theta _j + (Y_i - Y_j) \cos \theta _j
+\end{equation}
+Mit der Systemmatrix und den Inhomogenitäten $b_i$ können wir nun das lineare Gleichungssystem aus (\ref{eq:lgls1}) berechnen. \\
+Für die Tangentialkomponente der Geschwindigkeit erhalten wir dann den Ausdruck
+\begin{equation}
+\label{eq:vtnovortex}
+v_i^{(t)} =  \sum_{j=0}^{n-1} A_{ij}^{(t)} q_j + V_{\infty} \cos{(\alpha - \theta_i)},
+\end{equation}
+mit der Einflussmatrix der Wirbelbelegung
+\begin{equation}
+A_{ij}^{(t)} =  \cos{(\theta _i - \theta _j)} I_{ij} + \sin{(\theta _i - \theta _j)} J_{ij}.
+\end{equation}
+\\
+Diese Systemmatrix berücksichtigt allerdings noch keine Wirbelbelegungen. Im Falle einer konstanten Wirbelbelegung $\gamma$ auf allen Panels erweitert sich die Dimension von $M_{ij}$ von $n \times n$ auf $(n+1) \times (n+1)$. Dadurch müssen folgende zusätzliche Elemente bestimmt werden:
+\begin{equation}
+M_{in} =  \sum_{j=0}^{n-1} A_{ij}^{(t)}, \;\; i=0,1,\ldots, n-1;
+\end{equation}
+\begin{equation}
+M_{nj} =  A_{0j}^{(t)} + A_{n-1,j}^{(t)}, \;\; j =0,1,\ldots, n-1;
+\end{equation}
+\begin{equation}
+M_{n,n} =  - \sum_{j=0}^{n-1} \left[ A_{0,j}^{(n)} + A_{n-1,j}^{(n)}\right];
+\end{equation}
+\begin{equation}
+b_n =  -V_{\infty} [\cos{(\alpha -\theta 0)} + \cos{(\alpha -\theta _{n-1})}];
+\end{equation}
+Gleichung (\ref{eq:vtnovortex}) erweitert sich damit zu
+\begin{equation}
+v_i^{(t)} =  \sum_{j=0}^{n-1} A_{ij}^{(t)} q_j - \gamma \sum_{j=0}^{n-1}A_{i,j}^{(n)} + V_{\infty} \cos{(\alpha - \theta_i)}.
+\end{equation}
 \newpage
 \chapter{Bericht der Arbeit}
 Im Folgenden werden die wesentlichen Erkenntnisse der Arbeit präsentiert.
@@ -117,10 +188,65 @@ Im Lednicer-Format wird in der ersten Zeile die Bezeichnung des Profils angegebe
 \\
 Im Selig-Format wird in der ersten Zeile die Bezeichnung des Profils angegeben. Ab der zweiten Zeile werden die Koordinaten der Panelenden $(x_i,y_i)$ im Gegenuhrzeigersinn, beginnend bei $x=1$ angegeben.
 \\\\
-Es wurde eine Routine geschrieben, welche Daten im Lednicer-Format in das Selig-Format überführt. Dies wurde bewerkstelligt, indem die Koordinatenpaare der Oberseite invertiert wurden. Anschließend wurden aus den Daten die Header-Zeilen entfernt. 
+Es wurde eine Routine geschrieben, welche Daten im Lednicer-Format in das Selig-Format überführt. Dies wurde bewerkstelligt, indem die Koordinatenpaare der Oberseite invertiert wurden. Anschließend wurden aus den Daten die Header-Zeilen entfernt. \\
+Unter Verwendung der Methode .write\_file() wurde für sämtliche Profile eine .csv-Datei mit den Werten $X_i, Y_i, \theta _i, l_i$ pro Panel erstellt (eine Beispieldatei ist in \nameref{appendix:a} gezeigt. Ebenso wurde für jedes sih in der UIUC-Datenbank befindliche Trägerprofil ein Graph erzeugt, welcher zum einen die Geometrie des Profils, sowie auch die Neigungswinkel und Längen der einzelnen Panels darstellt. Zur einfacheren Betrachtung sind die Graphen der Neigungswinkel und Panellängen in die beiden Seiten des Profils aufgeteilt. 
+\\Ein solcher Graph ist in Abbildung \ref{fig:naca0012} an einem NACA-0012-Profil gezeigt. Die Symmetrie des Profils spiegelt sich in der gewählten Darstellung der Neigungswinkel und Panellängen gut wieder.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=1]{figures/NACA0012.png} 
+\caption{NACA-0012-Profil}
+\label{fig:naca0012}
+\end{center}
+\end{figure}
+
+\begin{table}
+\label{tab:1}
+\centering{
+\begin{tabular}{cccc}
+%\toprule
+$X_i$ & $Y_i$         & $\theta_i$ & $l_i$ \\
+%\midrule
+0.8 & -0.35 & 67.5 & 0.77 \\
+0.35 & -0.85 & 22.5 & 0.77 \\
+-0.35 & -0.85 & 337.5 & 0.77 \\
+-0.85 & -0.35 & 292.5 & 0.77 \\
+-0.85 & 0.35 & 247.5 & 0.77 \\
+-0.35 & 0.85 & 202.5 & 0.77 \\
+0.35 & 0.85 & 157.5 & 0.77 \\
+0.85 & 0.35 & 112.5 & 0.77
+
+%\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.7]{figures/cylinderascircle.png} 
+\caption{Achtseitiger Cylinder als Approximation eines Kreiszylinders sowie zugehörige Panelparameter}
+\label{fig:cylinder8}
+\end{center}
+\end{figure}
 \section{Untersuchungen am  Kreiszylinder}
+
+Als nächstes wurden Untersuchung an Kreiszylindern vorgenommen, da bei diesen die Aufteilung in Panele relativ leicht zu implementieren ist. Zur Generierung eines Kreiszylinders mit $n$ gleich großen Seiten wurde die Funktion make\_cylinder(r, n) verwendet (siehe \nameref{appendix:c}).
 \subsection{Achtseitiger Kreiszylinder}
 \subsubsection{Berechnung der Systemmatrix}
+Für den in \ref{fig:cylinder8} gezeigten Kreisylinder wurde die Systemmatrix zu folgenden Werten berechnet:
+\begin{align*}
+M_{i,j} = 
+\begin{pmatrix}
+0.5&0.056&0.064&0.065&0.065&0.065&0.064&0.056 \\
+0.056&0.5&0.056&0.064&0.065&0.065&0.065&0.064\\
+0.064&0.056&0.5&0.056&0.064&0.065&0.065&0.065\\
+0.065&0.064&0.056&0.5&0.056&0.064&0.065&0.065\\
+0.065&0.065&0.064&0.056&0.5&0.056&0.064&0.065\\
+0.065&0.065&0.065&0.064&0.056&0.5&0.056&0.064\\
+0.064&0.065&0.065&0.065&0.064&0.056&0.5&0.056\\
+0.056&0.064&0.065&0.065&0.065&0.064&0.056&0.5
+\end{pmatrix}
+\end{align*}
 \subsubsection{Lösung des wirbellosen Gleichungssystems}
 \subsection{Untersuchungen an variierenden Kreiszylindern}
 \subsubsection{Variation der Panelanzahl}

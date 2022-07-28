@@ -22,7 +22,7 @@ class Panel:
             self.delta += 2 * np.pi
         if self.delta > 2 * np.pi:
             self.delta -= 2 * np.pi
-
+        '''
         # orientation of the panel (angle between x-axis and panel's normal)
         if xb - xa <= 0.0:
             self.beta = math.acos((yb - ya) / self.length)
@@ -42,6 +42,7 @@ class Panel:
             self.loc = 'vertical'
         else:
             self.loc = 'lower'  # lower surface
+        '''
         '''
         self.q = None  # source strength
         self.vt = None  # tangential velocity

@@ -20,22 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/go.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/joukowski.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plottst.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/safe.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testjouk.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/computations.py" beforeDir="false" afterPath="$PROJECT_DIR$/computations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/vals/NACA0012.DAT_vals.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/vals/NACA0012.DAT_vals.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/rawdata/NACA0012.DAT" beforeDir="false" afterPath="$PROJECT_DIR$/data/rawdata/NACA0012.DAT" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/cylinder.png" beforeDir="false" afterPath="$PROJECT_DIR$/figures/cylinder.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/make_cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_cylinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naca0012.py" beforeDir="false" afterPath="$PROJECT_DIR$/naca0012.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiledata.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiledata.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotating_cylinders.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotating_cylinders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/appendix01.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/appendix01.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/hauptteil.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/hauptteil.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/header.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/header.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/pdfa.xmpi" beforeDir="false" afterPath="$PROJECT_DIR$/written/pdfa.xmpi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,28 +57,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.profiledata">
-    <configuration name="go" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/go.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.rotating_cylinders">
     <configuration name="naca0012" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,6 +92,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/profiledata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rotating_cylinders" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rotating_cylinders.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -169,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.rotating_cylinders" />
         <item itemvalue="Python.profiledata" />
         <item itemvalue="Python.testjouk" />
         <item itemvalue="Python.naca0012" />
         <item itemvalue="Python.safe" />
-        <item itemvalue="Python.go" />
       </list>
     </recent_temporary>
   </component>
@@ -200,28 +196,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="386" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1658962414417">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="386" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1658962414417" />
-    <state width="1040" height="275" key="GridCell.Tab.0.bottom" timestamp="1659021660892">
+    <state width="1469" height="275" key="GridCell.Tab.0.bottom" timestamp="1659035321308">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1040" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659021660892" />
-    <state width="1040" height="275" key="GridCell.Tab.0.center" timestamp="1659021660892">
+    <state width="1469" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659035321308" />
+    <state width="1469" height="275" key="GridCell.Tab.0.center" timestamp="1659035321308">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1040" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659021660892" />
-    <state width="1040" height="275" key="GridCell.Tab.0.left" timestamp="1659021660892">
+    <state width="1469" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659035321308" />
+    <state width="1469" height="275" key="GridCell.Tab.0.left" timestamp="1659035321308">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1040" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659021660892" />
-    <state width="1040" height="275" key="GridCell.Tab.0.right" timestamp="1659021660892">
+    <state width="1469" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659035321308" />
+    <state width="1469" height="275" key="GridCell.Tab.0.right" timestamp="1659035321308">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1040" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659021660892" />
+    <state width="1469" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659035321308" />
     <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1658938318406">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

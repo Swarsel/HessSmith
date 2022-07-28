@@ -22,7 +22,7 @@ Hier ist die Ausgabe der ersten 30 Zeilen der AirfoilProfile-Methode .write\_pan
 
 \newpage
 \addsec{Anhang C: Codeausschnitte}
-\label{appendix:C}
+\label{appendix:c}
 Hier sind ausgewählte Codeausschnitte gezeigt, welche zur Lösung der Problemstellungen geschrieben wurden.
 \subsubsection{Die Klasse Panel}
 Die Klasse Panel modelliert die Panels $\mathcal{C}_i$ eines gegebenen Profils. Gespeichert werden neben den charakteristischen Parametern $X_i, Y_i, \theta _i, l_i$ auch der Normalwinkel des Panels $\delta_i$, welcher aus dem Profil herauszeigt. Ebenso wird die Panelposition als Ober- oder Unterseite bestimmt (für einige besondere Profile ist auch ein Wert "vertical" für komplett senkrechte Panele möglich). Ebenso gespeichert wird die Quellbelegung $q_i$, die Tangentialgeschwindigkeit $v_i^{(t)}$ unter gegebenen Anströmwinkel $\alpha $ und -geschwindigkeit $V_{\infty}$, und der resultierende Druckbeiwert $c_{p_i}$.
@@ -156,6 +156,19 @@ class AirfoilProfile:
                 [At[i][j] for j in range(self.len)]) + V * np.sin(a)
 
         return vtx, vty
+\end{lstlisting}
+
+\subsubsection{make\_cylinder(r,n)}
+Diese Funktion wurde verwendet, um die $x$- und $y$-Koordinaten eines Kreiszylinder mit Radius $r$ und $n$ gleich langen Panels zu generieren.
+\begin{lstlisting}
+def cylinder(r=1, n=8):
+    # generate a cylinder with n equidistant panels
+    a = np.linspace(0, 360, num=n+1, endpoint=True) / 180 * np.pi
+
+    x = r * np.cos(a)
+    y = r * np.sin(a)
+
+    return x, y
 \end{lstlisting}
 
 

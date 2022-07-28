@@ -98,7 +98,7 @@ class AirfoilProfile:
             for panel in self.panels:
                 #file.write(f"{panel.xm}, {panel.ym}, {panel.theta}, {panel.length}\n")
                 writer.writerow([panel.xm, panel.ym, panel.theta, panel.length])
-    def plot(self, height=8, width=5, sort=False, normalvectors=False):
+    def plot(self, height=8, width=5, sort=False, normalvectors=False, scaled=False):
         fig, (ax1, ax2, ax3) = plt.subplots(3, constrained_layout=True)
         fig.set_figheight(height)
         fig.set_figwidth(width)
@@ -170,14 +170,14 @@ class AirfoilProfile:
         xl.reverse()
         yl.reverse()
         # thetal.pop(0)
-        thetal.pop(-1)
+        #thetal.pop(-1)
         thetal.reverse()
         # thetal.append(thetau[0])
         ax2.plot(thetau, color='r', linestyle=':', marker="D", linewidth=1, mec="k", mfc='r', markersize=3,
                  label='upper')
         ax2.plot(thetal, color='b', linestyle=':', marker="D", linewidth=1, mec="k", mfc='b', markersize=3,
                  label='lower')
-        ax2.set(xlabel='n', ylabel='theta [grad]')
+        ax2.set(xlabel='x', ylabel='theta [grad]')
         ax2.set_title("Angle of Panel")
         #ax2.set_yticks(np.arange(min(theta), max(theta) + 1, 40.0))
         ax2.set_yticks([min(theta)] + [(min((theta)) + 270)/2] + [270] + [(max((theta)) + 270)/2] + [max(theta)])
@@ -185,17 +185,21 @@ class AirfoilProfile:
 
         lu = [panel.length for panel in self.upper]
         ll = [panel.length for panel in self.lower]
-        ll.pop(-1)
+
         ll.reverse()
         # lu.append(ll[0])
         ax3.plot(lu, color='r', linestyle=':', marker="D", linewidth=1, mec="k", mfc='r', markersize=3, label='upper')
         ax3.plot(ll, color='b', linestyle=':', marker="D", linewidth=1, mec="k", mfc='b', markersize=3, label='lower')
-        ax3.set(xlabel='n', ylabel='l [m]')
+        ax3.set(xlabel='x', ylabel='l [m]')
         ax3.set_title("Panel length")
         ax3.legend(loc='best', prop={'size': 8})
+
+        if scaled:
+            ax1.axis('scaled')
         plt.savefig('data/figures/' + self.name + ".png")
-        #plt.show()
-        plt.clf()
+        plt.show()
+
+        #plt.clf()
 
     def compute_free_vt(self, x, y, V=1, a=np.radians(4.0)):
         eta = compute_eta_free(len(x), self.len, self.panels, x, y)
