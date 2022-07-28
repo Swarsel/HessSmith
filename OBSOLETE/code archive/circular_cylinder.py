@@ -1,7 +1,8 @@
 import sympy as sym
-from helper import compute_vals, compute_xi_eta, compute_I_J, compute_An_M, compute_At, compute_vt
+from computations import compute_xi_eta, compute_I_J, compute_An_M, compute_At, compute_vt
 from make_cylinder import cylinder
 from sympy.solvers.solveset import linsolve
+from helper import compute_vals
 
 for panels in range(6,12):
     x, y = cylinder(n = panels)

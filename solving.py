@@ -1,6 +1,6 @@
 import sympy as sym
 import numpy as np
-from computations import system_matrix
+from computations_backup import system_matrix
 
 from sympy.solvers.solveset import linsolve
 

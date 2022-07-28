@@ -189,7 +189,7 @@ Im Lednicer-Format wird in der ersten Zeile die Bezeichnung des Profils angegebe
 Im Selig-Format wird in der ersten Zeile die Bezeichnung des Profils angegeben. Ab der zweiten Zeile werden die Koordinaten der Panelenden $(x_i,y_i)$ im Gegenuhrzeigersinn, beginnend bei $x=1$ angegeben.
 \\\\
 Es wurde eine Routine geschrieben, welche Daten im Lednicer-Format in das Selig-Format überführt. Dies wurde bewerkstelligt, indem die Koordinatenpaare der Oberseite invertiert wurden. Anschließend wurden aus den Daten die Header-Zeilen entfernt. \\
-Unter Verwendung der Methode .write\_file() wurde für sämtliche Profile eine .csv-Datei mit den Werten $X_i, Y_i, \theta _i, l_i$ pro Panel erstellt (eine Beispieldatei ist in \nameref{appendix:a} gezeigt. Ebenso wurde für jedes sih in der UIUC-Datenbank befindliche Trägerprofil ein Graph erzeugt, welcher zum einen die Geometrie des Profils, sowie auch die Neigungswinkel und Längen der einzelnen Panels darstellt. Zur einfacheren Betrachtung sind die Graphen der Neigungswinkel und Panellängen in die beiden Seiten des Profils aufgeteilt. 
+Unter Verwendung der Methode .write\_panels() wurde für sämtliche Profile eine .csv-Datei mit den Werten $X_i, Y_i, \theta _i, l_i$ pro Panel erstellt (eine Beispieldatei ist in \nameref{appendix:a} gezeigt. Ebenso wurde für jedes sih in der UIUC-Datenbank befindliche Trägerprofil ein Graph erzeugt, welcher zum einen die Geometrie des Profils, sowie auch die Neigungswinkel und Längen der einzelnen Panels darstellt. Zur einfacheren Betrachtung sind die Graphen der Neigungswinkel und Panellängen in die beiden Seiten des Profils aufgeteilt. 
 \\Ein solcher Graph ist in Abbildung \ref{fig:naca0012} an einem NACA-0012-Profil gezeigt. Die Symmetrie des Profils spiegelt sich in der gewählten Darstellung der Neigungswinkel und Panellängen gut wieder.
 
 \begin{figure}
@@ -233,7 +233,7 @@ $X_i$ & $Y_i$         & $\theta_i$ & $l_i$ \\
 Als nächstes wurden Untersuchung an Kreiszylindern vorgenommen, da bei diesen die Aufteilung in Panele relativ leicht zu implementieren ist. Zur Generierung eines Kreiszylinders mit $n$ gleich großen Seiten wurde die Funktion make\_cylinder(r, n) verwendet (siehe \nameref{appendix:c}).
 \subsection{Achtseitiger Kreiszylinder}
 \subsubsection{Berechnung der Systemmatrix}
-Für den in \ref{fig:cylinder8} gezeigten Kreisylinder wurde die Systemmatrix zu folgenden Werten berechnet:
+Für den in \ref{fig:cylinder8} gezeigten Kreisylinder wurde die Systemmatrix, gerundet auf zwei Dezimalstellen, zu folgenden Werten berechnet:
 \begin{align*}
 M_{i,j} = 
 \begin{pmatrix}
@@ -248,7 +248,82 @@ M_{i,j} =
 \end{pmatrix}
 \end{align*}
 \subsubsection{Lösung des wirbellosen Gleichungssystems}
+Im Folgenden wurde die Lösung des linearen Gleichungssystems mit der obigen Systemmatrix und den Inhomogenitäten
+\begin{equation}
+b_i =  -V_{\infty} \sin{(q-\theta _i)}, \;\; i= 0,1,\ldots, n-1
+\end{equation}
+berechnet. Daraus wurde der Vektor der Quellenbewegung zunächst mit $V_{\infty}$ und $\alpha $ als Variablen berechnet: \\
+\begin{figure}[!h]
+\begin{center}
+\includegraphics[scale=0.2]{figures/analytical.png} 
+\label{fig:analyticalcylinder8}
+\end{center}
+\end{figure}
+
+Nach Einsetzen der Werte $V_{\infty} = 1$ und $\alpha  = 0$ vereinfacht sich der Vektor zu einem leichter zu handhabenden Wert. Die Ergebnisse für Quellenbelegung, Tangentialgeschwindigkeiten und Druckbeiwerte sind in Tabelle \ref{tab:cyl8} zusammengetragen. \\
+Ebenfalls von Interesse ist die Größe $\sum_{i=0}^{n-1} q_i l_i$. Diese Summe sollte für einen geschlossenen Körper null ergeben, da der Körper sonst durch den Fluss seine Masse verändern würde. Tatsächlich ergibt sich:
+\begin{align*}
+\sum_{i=0}^{n-1} q_i l_i \approx 4.44 \cdot 10^{-16}
+\end{align*}
+Dieser sehr kleine Fehler ergibt sich zum einen aus Fehlern, die bei der Berechnung von $\vec q$ entstehen, und zum anderen aus Rundungsfehlern bei der Berechnung der Eckpunkte des Kreiszylinders.
+
+\begin{table}
+\caption{Ergebnisse für den achtseitigen Zylinder mit $V_{\infty} = 1, \alpha  = 0$}
+\label{tab:cyl8}
+\begin{center}
+\begin{tabular}{c|ccc}
+%\toprule
+$i$ & $q_i$ & $v_i^{(t)}$ & $c_{p_i}$ \\
+%\midrule
+0 & -2.19 & 0.77 & 0.41 \\
+1 & -0.91 & 1.85 & -2.41 \\
+2 & 0.91 & 1.85 & -2.41 \\
+3 & 2.19 & 0.77 & 0.41 \\
+4 & 2.19 & -0.77 &  0.41 \\ 
+5 &  0.91 & -1.85 & -2.41 \\
+6 & -0.91 & -1.85 & -2.41 \\
+7 & -2.19 &-0.765 & 0.41
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
 \subsection{Untersuchungen an variierenden Kreiszylindern}
+Die Potentialtheorie liefert ein exaktes Resultat für den Druckbeiwert auf der Oberfläche eines Zylinders:
+\begin{align}
+c_p^\mathrm{exakt} (\varphi ) &=  2 \cos{(2*\varphi )} -1
+\end{align}
+Dabei bezeichnet $\varphi$ den Winkel der Flächennormale des Kreiszylinders welche ins Innere des Profils zeigt. Mit unserer Definition des Neigungswinkels $\theta$ gilt
+\begin{equation}
+\varphi = \theta +  \frac{\pi }{2}.
+\end{equation}
+Abbildung \ref{fig:analyticalcylinder8} zeigt die Abweichung der Druckbeiwerte eines achtseitigen Zylinders vom analytischen Resultat. Es ergibt sich eine Abweichung dadurch, dass die Mittelpunkte des achtseitigen Zylinders nicht auf der Kreisfläche liegen. Wir können den Fehler durch eine Umformung bestimmen:
+\begin{align}
+c_p^\mathrm{exakt} (\varphi ) &=  2 \cos{(2\varphi )} -1 \\
+&= 1 - 4 \sin^2 \varphi \\
+&= 1 - 4 \left( \frac{Y}{R}\right)^2
+\end{align}
+Der Fehler, der bei der Approximation entsteht, ist also
+\begin{align}
+\Delta c_{p_{i}} &= |c_{p_{i}} - c_p^\mathrm{exakt} (\varphi )| \\
+&= |c_{p_{i}} -[ 1 - 4 (Y_{i}/R)^2 ] \;|
+\end{align}
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering\includegraphics[scale=0.6]{figures/theoretical.png} 
+    \caption{\label{fig:theoreticalcylinder}}
+  \end{subfigure}%
+  \begin{subfigure}[b]{0.5\linewidth}
+    \centering\includegraphics[scale=0.6]{figures/absoluteerror.png} 
+    \caption{\label{fig:absoluteerror}}
+  \end{subfigure}
+  \caption{\subref{fig:theoreticalcylinder}) Abweichung der Druckbeiwerte eines achtseitigen Zylinders vom theoretisch ermittelten Wert \subref{fig:absoluteerror}) Graph der Abweichung des Relativen Fehlers vom exaken Wert.}
+\end{figure}
+Das Programm wurde nun für Kreiszylinder zwischen 5 und 100 Panels durchlaufen und die mittlere absolute Abweichung $e_{c_p}$ für jeden Kreiszylinder festgehalten (Abbildung \ref{fig:absoluteerror}). Das Experiment zeigt, dass bereits ab einer geringen Anzahl an Panels eine akzeptable Approximation erreicht wird.
+
+
 \subsubsection{Variation der Panelanzahl}
 \subsubsection{Rotation des Zylinders}
 \section{Untersuchungen an ausgewählten Profilen}
