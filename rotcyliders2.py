@@ -6,13 +6,14 @@ import numpy as np
 import matplotlib.pyplot as pyplot
 
 err = []
-for npanels in range(1000, 1001):
+for npanels in range(8,9):
     #print(npanels)
     x, y = cylinder(n=npanels)
 
     panels = make_panels(x, y)
     profile = AirfoilProfile(panels, f"{npanels}-Sided Cylinder", vortex=False)
-    profile.solve(a=np.radians(0))
+    for a in range(-25,25):
+        profile.solve(a=np.radians(0))
     R=1
     errors = []
     for panel in panels:

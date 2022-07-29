@@ -85,7 +85,7 @@ class AirfoilProfile:
         for panel in self.panels:
             panel.cp = 1 - (panel.vt / V) ** 2
 
-        self.ca = - 2 / (V * self.t) * sum([panel.vt * panel.length for panel in self.panels])
+        self.ca = -2 / (V * self.t) * sum([panel.vt * panel.length for panel in self.panels])
         self.accuracy = sum([panel.q * panel.length for panel in self.panels])
 
     def write_panels(self):
@@ -98,11 +98,11 @@ class AirfoilProfile:
             for panel in self.panels:
                 #file.write(f"{panel.xm}, {panel.ym}, {panel.theta}, {panel.length}\n")
                 writer.writerow([panel.xm, panel.ym, panel.theta, panel.length])
-    def plot(self, height=8, width=5, sort=False, normalvectors=False, scaled=False):
-        fig, (ax1, ax2, ax3) = plt.subplots(3, constrained_layout=True)
+    def plot(self, height=3, width=6, sort=False, normalvectors=False, scaled=False):
+        fig, (ax1) = plt.subplots(1, constrained_layout=True)
         fig.set_figheight(height)
         fig.set_figwidth(width)
-        fig.suptitle(f'{self.name}')
+        #fig.suptitle(f'{self.name}')
 
         xu = [panel.xb for panel in self.upper]
         xu.append(self.upper[-1].xa)
@@ -124,11 +124,13 @@ class AirfoilProfile:
             yl = [c[1] for c in coordsl]
 
         ax1.grid()
-        ax1.plot(xu, yu, color='r', linestyle='-', linewidth=1, label='upper')
-        ax1.plot(xl, yl, color='b', linestyle='-', linewidth=1, label='lower')
+        ax1.plot(xu, yu, color='g', linestyle='-', linewidth=1, label='upper')
+        ax1.plot(xl, yl, color='k', linestyle='-', linewidth=1, label='lower')
         ax1.set(xlabel='x', ylabel='y')
-        ax1.set_title("Profile")
-
+        ax1.axis('scaled')
+        ax1.set_ylim([-0.2, 0.2])
+        #ax1.set_title("Profile")
+        """
         if normalvectors:
             X = np.zeros(2)  # Initialize panel X variable
             Y = np.zeros(2)  # Initialize panel Y variable
@@ -171,12 +173,10 @@ class AirfoilProfile:
         yl.reverse()
         # thetal.pop(0)
         #thetal.pop(-1)
-        thetal.reverse()
+        thetau.reverse()
         # thetal.append(thetau[0])
-        ax2.plot(thetau, color='r', linestyle=':', marker="D", linewidth=1, mec="k", mfc='r', markersize=3,
-                 label='upper')
-        ax2.plot(thetal, color='b', linestyle=':', marker="D", linewidth=1, mec="k", mfc='b', markersize=3,
-                 label='lower')
+        ax2.plot(thetau, color='g', linestyle=':',  linewidth=2, label='upper')
+        ax2.plot(thetal, color='k', linestyle=':', linewidth=2, label='lower')
         ax2.set(xlabel='x', ylabel='theta [grad]')
         ax2.set_title("Angle of Panel")
         #ax2.set_yticks(np.arange(min(theta), max(theta) + 1, 40.0))
@@ -188,14 +188,14 @@ class AirfoilProfile:
 
         ll.reverse()
         # lu.append(ll[0])
-        ax3.plot(lu, color='r', linestyle=':', marker="D", linewidth=1, mec="k", mfc='r', markersize=3, label='upper')
-        ax3.plot(ll, color='b', linestyle=':', marker="D", linewidth=1, mec="k", mfc='b', markersize=3, label='lower')
+        ax3.plot(lu, color='g', linestyle=':',  linewidth=2, label='upper')
+        ax3.plot(ll, color='k', linestyle=':', linewidth=2, label='lower')
         ax3.set(xlabel='x', ylabel='l [m]')
         ax3.set_title("Panel length")
         ax3.legend(loc='best', prop={'size': 8})
 
-        if scaled:
-            ax1.axis('scaled')
+        #if scaled:
+        """
         plt.savefig('data/figures/' + self.name + ".png")
         plt.show()
 

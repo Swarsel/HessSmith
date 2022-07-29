@@ -20,18 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/rotcyliders2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/s.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/varcyliders.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vortexcylinders.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/circular_cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/OBSOLETE/code archive/circular_cylinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/helper backup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/NACA0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/figures/NACA0012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joukowski.py" beforeDir="false" afterPath="$PROJECT_DIR$/joukowski.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rotating_cylinders.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotating_cylinders.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/solving.py" beforeDir="false" afterPath="$PROJECT_DIR$/solving.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotcyliders2.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotcyliders2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testjouk.py" beforeDir="false" afterPath="$PROJECT_DIR$/testjouk.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/aufgabenstellung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/aufgabenstellung.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/bib/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/written/bib/example.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/hauptteil.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/hauptteil.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/header.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/header.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/pdfa.xmpi" beforeDir="false" afterPath="$PROJECT_DIR$/written/pdfa.xmpi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,29 +62,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.rotating_cylinders">
-    <configuration name="circular_cylinder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/OBSOLETE/code archive" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/OBSOLETE/code archive/circular_cylinder.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="profiledata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.testjouk">
+    <configuration name="joukowski" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -92,7 +75,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/profiledata.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/joukowski.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -101,7 +84,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="rotating_cylinders" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="onlyonce" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -113,7 +96,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rotating_cylinders.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/onlyonce.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,7 +105,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="rotcyliders2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="testjouk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -134,7 +117,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rotcyliders2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testjouk.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -143,7 +126,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="s" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="varcyliders" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,7 +138,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/s.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/varcyliders.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="vortexcylinders" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vortexcylinders.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -166,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.rotating_cylinders" />
-        <item itemvalue="Python.rotcyliders2" />
-        <item itemvalue="Python.s" />
-        <item itemvalue="Python.circular_cylinder" />
-        <item itemvalue="Python.profiledata" />
+        <item itemvalue="Python.testjouk" />
+        <item itemvalue="Python.joukowski" />
+        <item itemvalue="Python.varcyliders" />
+        <item itemvalue="Python.vortexcylinders" />
+        <item itemvalue="Python.onlyonce" />
       </list>
     </recent_temporary>
   </component>
@@ -204,42 +208,46 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="386" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1658962414417" />
-    <state width="1469" height="275" key="GridCell.Tab.0.bottom" timestamp="1659050293276">
+    <state width="1131" height="275" key="GridCell.Tab.0.bottom" timestamp="1659132866933">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659050293276" />
-    <state width="1469" height="275" key="GridCell.Tab.0.center" timestamp="1659050293276">
+    <state width="1131" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
+    <state width="1131" height="275" key="GridCell.Tab.0.center" timestamp="1659132866933">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659050293276" />
-    <state width="1469" height="275" key="GridCell.Tab.0.left" timestamp="1659050293276">
+    <state width="1131" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
+    <state width="1131" height="275" key="GridCell.Tab.0.left" timestamp="1659132866933">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659050293276" />
-    <state width="1469" height="275" key="GridCell.Tab.0.right" timestamp="1659050293276">
+    <state width="1131" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
+    <state width="1131" height="275" key="GridCell.Tab.0.right" timestamp="1659132866933">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659050293276" />
-    <state width="1469" height="340" key="GridCell.Tab.1.bottom" timestamp="1659044910244">
+    <state width="1131" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
+    <state width="1131" height="340" key="GridCell.Tab.1.bottom" timestamp="1659104364820">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659044910244" />
-    <state width="1469" height="340" key="GridCell.Tab.1.center" timestamp="1659044910244">
+    <state width="1131" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
+    <state width="1131" height="340" key="GridCell.Tab.1.center" timestamp="1659104364820">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="340" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659044910244" />
-    <state width="1469" height="340" key="GridCell.Tab.1.left" timestamp="1659044910244">
+    <state width="1131" height="340" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
+    <state width="1131" height="340" key="GridCell.Tab.1.left" timestamp="1659104364820">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="340" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659044910244" />
-    <state width="1469" height="340" key="GridCell.Tab.1.right" timestamp="1659044910244">
+    <state width="1131" height="340" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
+    <state width="1131" height="340" key="GridCell.Tab.1.right" timestamp="1659104364820">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1469" height="340" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659044910244" />
-    <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1658938318406">
+    <state width="1131" height="340" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
+    <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1659111845493">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1658938318406" />
+    <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1659111845493" />
+    <state x="482" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1659103410232">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="482" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1659103410232" />
     <state x="434" y="117" width="892" height="706" key="dock-window-1" timestamp="1658934652240">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

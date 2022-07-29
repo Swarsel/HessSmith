@@ -7,6 +7,7 @@ import matplotlib.pyplot as pyplot
 
 for npanels in range(8, 9):
     for a in range(0, 1):
+        """"""
         x4, y4 = cylinder(n=6)
         x8, y8 = cylinder(n=8)
         x16, y16 = cylinder(n=16)
@@ -14,7 +15,7 @@ for npanels in range(8, 9):
         panels8 = make_panels(x8, y8)
         panels16 = make_panels(x16, y16)
         profile4 = AirfoilProfile(panels4, f"4-Sided Cylinder", vortex=False)
-        profile8 = AirfoilProfile(panels8, f"4-Sided Cylinder", vortex=False)
+        profile8 = AirfoilProfile(panels8, f"4-Sided Cylinder", vortex=True)
         profile16 = AirfoilProfile(panels16, f"4-Sided Cylinder", vortex=False)
 
         profile4.solve(a=np.radians(0))
@@ -46,6 +47,7 @@ for npanels in range(8, 9):
 
     pyplot.show()
     """
+    """
     x_c, y_c = circle(N=100)
     R = 1
 
@@ -53,7 +55,8 @@ for npanels in range(8, 9):
     cp_analytical = 1.0 - 4 * (y_c / R) ** 2
     #cps2 = [panel.cp for panel in panels]
     #print([(panel.xm, panel.cp) for panel in panels])
-
+    """
+    """
     pyplot.figure(figsize=(5, 5))
     pyplot.grid()
     pyplot.xlabel("$x$", fontsize=16)
@@ -75,3 +78,7 @@ for npanels in range(8, 9):
     #pyplot.xlim(-1.0, 1.0)
     pyplot.ylim(-4.0, 2.0)
     pyplot.show()
+    vx, vy = profile8.compute_free_vt(x8, y8
+                                      )
+    print(vx, vy)
+    """
