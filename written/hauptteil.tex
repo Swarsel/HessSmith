@@ -4,15 +4,16 @@
 
 \section{Hess-Smith-Panelverfahren}
 \begin{figure}[!h]
-\begin{center} \includegraphics[scale=0.3]{figures/zaehlrichtung.png} \end{center}
-\caption{Zur Definition der Zählrichtung der Panels sowie der Anströmgeschwindigkeit und deren Winkel}
-\label{fig:zaehlrichtung}
+\begin{center} \includegraphics[scale=0.5]{figures/panel.png} \end{center}
+\caption{Zur Definition eines Panels}
+\label{fig:panel}
 \end{figure}
 Das Hess-Smith-Panelverfahren ist ein Verfahren zur Berechnung von ebenen Potentialströmungen um geschlossene Körper mit Auftrieb. Ein kontinuierlicher zweidimensionaler Körper mit der Umfangkurve $\mathcal{C}$ wird dabei zunächst durch  $n + 1$ diskrete Datenpunkte $\vec x_i = (x_i, y_i)$ dargestellt. Die Zählrichtung dieser Punkte sei als im Uhrzeigersinn festgelegt (siehe Abb. \ref{fig:zaehlrichtung}). Für das Profil gilt somit die Periodizität $\vec x_n = \vec x_0$.\\
 Die Kontur des Profils wird nun durch eine endliche Anzahl Verbindungsgeraden zwischen zwei benachbarten Punkten $\vec x_i, \vec x_{i+1}$, den Panelen $\mathcal{C}_i$ (Abb. \ref{fig:panel}) angenähert. Dabei wird jedes Panel durch die folgenden Parameter charakterisiert:
 \begin{itemize}
 \item Den Mittelpunkten auf beiden Achsen: 
 \begin{equation}
+\label{eq:X}
 X_i =  \frac{x_{n-i}+x_{n-i-1}}{2}, \; Y_i =  \frac{y_{n-i}+y_{n-i-1}}{2},
 \end{equation}
 \item seinem Neigungswinkel: 
@@ -21,15 +22,17 @@ X_i =  \frac{x_{n-i}+x_{n-i-1}}{2}, \; Y_i =  \frac{y_{n-i}+y_{n-i-1}}{2},
 \end{equation}
 \item und seiner Länge: 
 \begin{equation}
+\label{eq:l}
 l_i =  \sqrt{(x_{n-i-1} - x_{n-i})^2 + (y_{n-i-1} - y_{n-i})^2}.
 \end{equation}
 \end{itemize}
 
 
+
 \begin{figure}
-\begin{center} \includegraphics[scale=0.5]{figures/panel.png} \end{center}
-\caption{Zur Definition eines Panels}
-\label{fig:panel}
+\begin{center} \includegraphics[scale=0.7]{figures/zaehlrichtung.png} \end{center}
+\caption{Zur Definition der Zählrichtung sowie der Anströmgeschwindigkeit und deren Winkel}
+\label{fig:zaehlrichtung}
 \end{figure}
 
 Im Hess-Smith-Panelverfahren sei nun jedes dieser Panels mit einer vorerst unbestimmten, konstanten Quelldichte $q_i$ behaftet, welche an einem Punkt $\vec r_i =  \vec x - \hat x_i(s)$ zum Geschwindigkeitspotential den Beitrag
@@ -43,7 +46,7 @@ Ebenso liefert die Profilanströmung mit der konstanten Geschwindigkeit $V_{\inf
 \label{eqn:potv}
 \phi_{\infty} =  V_{\infty} (\cos \alpha x + \sin \alpha y).
 \end{equation}
-Aus der Summe über alle Panelbeiträge aus (\ref{eqn:potq}) und (\ref{eqn:potv}) ergibt sich das Gesamtgeschwindigkeitspotential zu
+Aus der Summe über alle Panelbeiträge aus \eqref{eqn:potq} und \eqref{eqn:potv} ergibt sich das Gesamtgeschwindigkeitspotential zu
 \begin{equation}
 \label{eqn:potnovortex}
 \phi(\vec x) =  V_{\infty} (\cos \alpha x + \sin \alpha y) + \sum_{i=0}^{n-1} \phi_i^{(q)}.
@@ -91,7 +94,7 @@ c_{p_j} =  1 - \left( \frac{v_j^{(t)}}{V_{\infty}}\right)
 am Mittelpunkt des Panels $\mathcal{C}_j$ bestimmt werden. \cite{Hess:1966} \cite{Cebeci:1999} 
 \subsection{Berücksichtigung einer Wirbelbelegung}
 Will man den Auftrieb berücksichtigen, so reicht die reine Quellbelegung des Profils noch nicht aus. \\
-Im Hess-Smith-Verfahren wird für das gesamte Profil eine einzige konstante Wirbelbelegung $\gamma$ für alle Panels angenommen. Damit wird das Potential aus (\ref{eqn:potnovortex}) erweitert um Beiträge
+Im Hess-Smith-Verfahren wird für das gesamte Profil eine einzige konstante Wirbelbelegung $\gamma$ für alle Panels angenommen. Damit wird das Potential aus \eqref{eqn:potnovortex} erweitert um Beiträge
 \begin{equation}
 \phi_i^{(w)} =  \frac{\gamma}{2 \pi } \int ds \theta_i,
 \end{equation}
@@ -181,6 +184,7 @@ b_n =  -V_{\infty} [\cos{(\alpha -\theta 0)} + \cos{(\alpha -\theta _{n-1})}];
 \end{equation}
 Gleichung \eqref{eq:vtnovortex} erweitert sich damit zu
 \begin{equation}
+\label{eq:vtvortex}
 v_i^{(t)} =  \sum_{j=0}^{n-1} A_{ij}^{(t)} q_j - \gamma \sum_{j=0}^{n-1}A_{i,j}^{(n)} + V_{\infty} \cos{(\alpha - \theta_i)}.
 \end{equation}
 \cite{Hess:1966} \cite{Cebeci:1999}
@@ -237,7 +241,9 @@ $X_i$ & $Y_i$         & $\theta_i$ & $l_i$ \\
 \end{figure}
 \section{Untersuchungen am  Kreiszylinder}
 
-Als nächstes wurden Untersuchungen an Kreiszylindern vorgenommen. Zur Generierung eines Kreiszylinders mit $n$ gleich langen Seiten wurde die Funktion make\_cylinder verwendet (siehe \nameref{appendix:c}).
+Als nächstes wurden Untersuchungen an Kreiszylindern vorgenommen. Zur Generierung der Koordinatenpaare eines Kreiszylinders mit $n$ gleich langen Seiten wurde die Funktion make\_cylinder verwendet (siehe \nameref{appendix:c}). \\
+Die Panelparameter sowie die Systemmatrix und sämtliche damit verbundene Werte wurden entsprechend den Gleichungen \eqref{eq:X} bis \eqref{eq:l} sowie \eqref{eq:mnovortex} bis \eqref{eq:vtvortex} berechnet. 
+
 \subsection{Achtseitiger Kreiszylinder}
 \subsubsection{Berechnung der Systemmatrix}
 Für den in Abbildung \ref{fig:cylinder8} gezeigten Kreisylinder wurde die Systemmatrix, gerundet auf zwei Dezimalstellen, zu folgenden Werten berechnet:
@@ -259,7 +265,7 @@ Im Folgenden wurde die Lösung des linearen Gleichungssystems mit der obigen Sys
 \begin{equation}
 b_i =  -V_{\infty} \sin{(\alpha -\theta _i)}, \;\; i= 0,1,\ldots, n-1
 \end{equation}
-berechnet. Daraus wurde der Vektor der Quellenbelegung zunächst mit $V_{\infty}$ und $\alpha $ als Variablen berechnet: \\
+berechnet. Daraus wurde der Vektor der Quellenbelegung zunächst mit $V_{\infty}$ und $\alpha $ als beliebigen Variablen berechnet: \\
 \begin{figure}[!h]
 \begin{center}
 \includegraphics[scale=0.2]{figures/analytical.png} 
@@ -385,7 +391,7 @@ $\alpha$ & $\gamma$ & $c_a$ & $c_{p_0}$ & $c_{p_1}$& $c_{p_{2}}$& $c_{p_3}$& $c_
 
 \section{Auswertung ausgewählter Profile}
 Im Folgenden wurde das entwickelte Programm auf die drei Profile NACA0012, NASA NLF1015 und Taylor Zone-40 angewandt. Für jedes Profil wurden die Werte $\gamma$ und $c_a$ unter verschiedenen Anströmwinkeln $\alpha $ berechnet. \\
-An dieser Stelle wurde das Programm um die Möglichkeit erweitern, den Geschwindigkeitsvektor an jedem Punkt des Profils zu berechnen. Dies spiegelt sich in (\ref{eq:xi}) und (\ref{eq:eta}) wieder, für welche dann
+An dieser Stelle wurde das Programm um die Möglichkeit erweitern, den Geschwindigkeitsvektor an jedem Punkt des Profils zu berechnen. Dies spiegelt sich in \eqref{eq:xi} und \eqref{eq:eta} wieder, für welche dann
 \begin{equation}
 \xi_{ij} =  (x - X_j) \cos \theta _j + (y - Y_j) \sin \theta _j
 \end{equation}
@@ -393,7 +399,7 @@ und
 \begin{equation}
 \eta_{ij} =  -(x - X_j) \sin \theta _j + (y - Y_j) \cos \theta _j
 \end{equation}
-gilt. (\ref{eq:An}) und (\ref{eq:At}) vereinfachen sich zu
+gilt. \eqref{eq:An} und \eqref{eq:At} vereinfachen sich zu
 \begin{equation}
 A_{ij}^{(n)} = \sin {(\theta _j)} I_{ij} + \cos{( \theta _j)} J_{ij},
 \end{equation}
@@ -627,13 +633,13 @@ Mit dem Kutta-Jukowski-Theorem für den dynamischen Auftrieb $F_a = \rho \Gamma 
 \label{eq:joukowskitheoretical}
 c_a = \frac{8  R V_{\infty} \sin{\left(\alpha + \arcsin \frac{\mu_y}{R} \right)}}{V_{\infty}t}
 \end{equation} 
-Es wurde nun für Joukowski-Profile mit den Parametern $\mu_x = 0.2, \mu_y =0.1$ (siehe \ref{fig:jouk0201}) für 10 bis 200 Panele der Auftriebsbeiwert berechnet und mit dem theoretischen Resultat aus (\ref{eq:joukowskitheoretical}) verglichen. 
+Es wurde nun für Joukowski-Profile mit den Parametern $\mu_x = 0.2, \mu_y =0.1$ (siehe \ref{fig:jouk0201}) für 10 bis 200 Panele der Auftriebsbeiwert berechnet und mit dem theoretischen Resultat aus \eqref{eq:joukowskitheoretical} verglichen. 
 \begin{figure}[!ht]
 \begin{center} \includegraphics[scale=0.5]{figures/joukowskitheoretical.png} \end{center}
 \caption{Vergleich des theoretisch ermittelten Werts für den Auftriebsbeiwert eines Joukowski-Profils mit $\mu_x = 0.2, \mu_y =0.1$ und dem berechneten Wert.}
 \label{fig:joukowskitheoretical}
 \end{figure}
-Es ist ersichtlich, dass sich der Auftriebsbeiwert ab einer Panelanzahl von ungefähr 75 stabil eingeschwungen hat, bis auf Schwankungen, welche Vermutlich auf der Diskretisierungsfunktion des Joukowski-Profils beruhen. Für den mittleren relativen Fehler eines Joukowski-Profils mit mindesten 75 Panels wurde der Wert
+Es ist ersichtlich, dass sich der Auftriebsbeiwert ab einer Panelanzahl von ungefähr 75 stabil eingeschwungen hat, bis auf Schwankungen, welche vermutlich auf der Diskretisierungsfunktion des Joukowski-Profils beruhen. Für den mittleren relativen Fehler eines Joukowski-Profils mit mindesten 75 Panels wurde der Wert
 \begin{align*}
 \frac{\Delta c_a}{c_a^\mathrm{theoretisch}} &= \frac{|c_a^\mathrm{theoretisch} - c_a^\mathrm{exakt}|}{c_a^\mathrm{theoretisch}} \\
 & = 0.062 = 6.2 \%

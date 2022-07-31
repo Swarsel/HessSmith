@@ -20,252 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processeddata/sc20614.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/processeddata/z40.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/2032c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/8-Sided Cylinder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/8sided.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/NACA0012.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/a18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/a18sm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/a63a108c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag44ct02r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag455ct02r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag45c03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag45ct02r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag46c03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag46ct02r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag47c03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag47ct02r.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah21-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah21-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah63k127.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah6407.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah7476.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79100a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79100b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79100c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79k132.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79k135.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79k143.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah80129.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah80136.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah80140.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah81131.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah81k144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah81k144wfKlappe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah82150a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah82150f.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah83150q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah83159.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah85l120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah88k130.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah88k136.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93156.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93157.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93k130.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93k131.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93k132.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w145.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w174.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w215.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w257.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w300.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w480b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah94145.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah94156.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah94w301.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah95160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ames01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ames02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/ames03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/amsoil1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/amsoil2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/apex16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/aquilasm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as5045.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as5046.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as5048.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6091.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6092.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6093.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6094.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6095.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6096.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6097.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6098.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/joukowsk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/joukowski.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/profilesheets/m13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/cylinder8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/paneldefinition.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/zaehlrichtung.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external/AngleAnnotation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other/OBSOLETE/naca0012.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other/completeprofile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/other/makeprofilegraphs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/definitionfigures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/definitionpanel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/joukowskierror.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/joukowskiplots.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/karmanerror.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/old/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/panel_old.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/zaehlrichtung_old.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/BA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/completeprofile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/2032c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/8-Sided Cylinder.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/8sided.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/NACA0012.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/a18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/a18sm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/a63a108c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag44ct02r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag455ct02r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag45c03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag45ct02r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag46c03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag46ct02r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag47c03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ag47ct02r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah21-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah21-9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah63k127.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah6407.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah7476.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah79100a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah79100b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah79100c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah79k132.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah79k135.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah79k143.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah80129.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah80136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah80140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah81131.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah81k144.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah81k144wfKlappe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah82150a.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah82150f.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah83150q.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah83159.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah85l120.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah88k130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah88k136.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93156.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93157.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93k130.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93k131.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93k132.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93w145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93w174.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93w215.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93w257.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93w300.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah93w480b.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah94145.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah94156.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah94w301.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ah95160.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ames01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ames02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/ames03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/amsoil1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/amsoil2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/apex16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/aquilasm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/arad10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/arad13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/arad20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/arad6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as5045.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as5046.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as5048.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6091.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6092.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6093.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6094.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6095.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6096.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6097.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/as6098.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/joukowsk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/joukowski.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/m13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/joukowski.py" beforeDir="false" afterPath="$PROJECT_DIR$/joukowski.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/naca0012.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/NACA0012.DAT.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/completeprofile.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/completeprofile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/eightsidedcylindererror.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/eightsidedcylindererror.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/errorcylindertheoretical.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/errorcylindertheoretical.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/makeprofilegraphs.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/sc20614.dat.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/writecylinderintocircle.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/writecylinderintocircle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/z40.dat.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/joukowskierror.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/joukowskierror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abstract.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/appendix01.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/appendix01.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/aufgabenstellung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/aufgabenstellung.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/bib/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/written/bib/example.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/figures/panel.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/panel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/zaehlrichtung.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/zaehlrichtung.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/header.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/header.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/hauptteil.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/hauptteil.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/pdfa.xmpi" beforeDir="false" afterPath="$PROJECT_DIR$/written/pdfa.xmpi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -294,17 +57,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "F:/Libraries/Documents/GitHub/BA/written/figures/joukowskierror.png",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/Libraries/Documents/GitHub/BA/written/figures/joukowskierror.png&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="PyConsoleOptionsProvider">
     <option name="myUseExistingConsole" value="true" />
   </component>
@@ -345,6 +108,9 @@
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -364,6 +130,9 @@
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -383,6 +152,9 @@
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -402,6 +174,9 @@
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -468,6 +243,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658926506731</updated>
       <workItem from="1659295494390" duration="12695000" />
+      <workItem from="1659310718482" duration="1083000" />
     </task>
     <servers />
   </component>
@@ -490,6 +266,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/profile_new.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

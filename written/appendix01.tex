@@ -30,37 +30,19 @@ Die Klasse Panel modelliert die Panels $\mathcal{C}_i$ eines gegebenen Profils. 
 class Panel:
 
     def __init__(self, xa, ya, xb, yb):
-        self.xa, self.ya = xa, ya  # panel starting-point
-        self.xb, self.yb = xb, yb  # panel ending-point
+        self.xa, self.ya = xa, ya
+        self.xb, self.yb = xb, yb
 
-        self.xm = (xa + xb) / 2  # center of panel on x axis
-        self.ym = (ya + yb) / 2  # center of panel on y axis
- 		# panel length       
-        self.length = np.sqrt((xb - xa) ** 2 + (yb - ya) ** 2)  
-
-        self.theta = atan2(yb - ya, xb - xa)  # angle of panel
-        # if angle is negative, add 2pi to only have positive angles for plotting
-        if self.theta < 0:  
+        self.xm = (xa + xb) / 2
+        self.ym = (ya + yb) / 2
+        self.length = np.sqrt((xb - xa) ** 2 + (yb - ya) ** 2)
+        self.theta = np.arctan2(yb - ya, xb - xa)
+        if self.theta < 0:
             self.theta += 2 * np.pi
 
-        # normal angle of panel
-        self.delta = self.theta - np.pi / 2  
-        if self.delta < 0:
-            self.delta += 2 * np.pi
-        if self.delta > 2 * np.pi:
-            self.delta -= 2 * np.pi
-
-        # panel location (used for plotting)
-        if np.pi / 2 < self.theta < 3 * np.pi / 2:
-            self.loc = 'upper'  # upper surface
-        elif self.theta == np.pi / 2 or self.theta == 3 * np.pi / 2:
-            self.loc = 'vertical'
-        else:
-            self.loc = 'lower'  # lower surface
-
-        self.q = None  # source strength
-        self.vt = None  # tangential velocity
-        self.cp = None  # pressure coefficient
+        self.q = None
+        self.vt = None
+        self.cp = None
 \end{lstlisting}
 
 \subsubsection{Die Klasse AirfoilProfile}
@@ -70,107 +52,138 @@ Die Methode .write\_panels() erzeugt eine .csv-Datei, welche für jedes Panel di
 Die Methode .compute\_free\_vt(x, y, V, a) ermöglicht die Berechnung der Tangentialgeschwindigkeiten an jedem Punkt $(x_i, y_i)$ des Profils. Diese werden als Tupel von der Methode zurückgegeben.
 \begin{lstlisting}[language=Python]
 class AirfoilProfile:
-    def __init__(self, panels, name, vortex=True):
+    def __init__(self, panels, name=None, vortex=True):
         self.panels = panels
         self.name = name
+        self.x = [panel.xa for panel in self.panels]
+        self.y = [panel.ya for panel in self.panels]
         self.len = len(self.panels)
         self.vortex = vortex
 
         self.U = sum([panel.length for panel in self.panels])
-        self.xi = compute_xi(self.len, self.panels)
-        self.eta = compute_eta(self.len, self.panels)
-        self.I = compute_I(self.len, self.xi, self.eta, self.panels)
-        self.J = compute_J(self.len, self.xi, self.eta, self.panels)
-        self.An = compute_An(self.len, self.I, self.J, self.panels)
-        self.At = compute_At(self.len, self.I, self.J, self.panels)
-        self.M = system_matrix(self.An, self.At, self.vortex)
-
-        self.x = [panel.xa for panel in self.panels]
-        self.y = [panel.ya for panel in self.panels]
         self.t = abs(max(self.x) - min(self.x))
-        self.coords = [(panel.xa, panel.ya, panel.xb, panel.yb) for panel in self.panels]
-        self.lower = [panel for panel in self.panels if panel.loc == "lower"]
-        self.upper = [panel for panel in self.panels if panel.loc == "upper"]
+
+        self.xi = comp.xi(self)
+        self.eta = comp.eta(self)
+        self.I = comp.I(self)
+        self.J = comp.J(self)
+        self.An = comp.An(self)
+        self.At = comp.At(self)
+        self.M = comp.M(self)
 
         self.ca = None
         self.accuracy = None
         self.gamma = None
-
-    def solve(self, V=1, a=np.radians(4.0)):
-        b = compute_inhomogenity(self.panels, self.vortex, V, a)
-        qs = np.linalg.solve(self.M, b)
-        
-        for i, panel in enumerate(self.panels):
-            panel.q = qs[i]
-        if self.vortex:
-            self.gamma = qs[-1]
-
-        if self.vortex:
-            vt = []
-            for i in range(self.len):
-                vt.append(
-                    sum([self.At[i][j] * self.panels[j].q for j in range(self.len)]) - self.gamma * sum(
-                        [self.An[i][j] for j in range(self.len)]) + V * np.cos(
-                        a - self.panels[i].theta))
-        else:
-            vt = []
-            for i in range(self.len):
-                vt.append(
-                    sum([self.At[i][j] * self.panels[j].q for j in range(self.len)]) + V * np.cos(
-                        a - self.panels[i].theta))
-        for i, panel in enumerate(self.panels):
-            panel.vt = vt[i]
-
-        for panel in self.panels:
-            panel.cp = 1 - (panel.vt / V) ** 2
-
-        self.ca = - 2 / (V * self.t) * sum([panel.vt * panel.length for panel in self.panels])
-        self.accuracy = sum([panel.q * panel.length for panel in self.panels])
-
-    def write_panels(self):
+    def write_panels(self, filename, n=2):
         header = ["X_i", "Y_i", "theta_i", "l_i"]
-        with open("data/vals/" + self.name + "_vals.csv", "w+", encoding='UTF8',newline="") as file:
+        with open(filename, "w+", encoding='UTF8',newline="") as file:
             writer = csv.writer(file)
             writer.writerow(header)
-            #file.write(f"Circumference: {self.U} \n")
-            #file.write(f"X_i, Y_i, theta_i, l_i\n")
             for panel in self.panels:
-                #file.write(f"{panel.xm}, {panel.ym}, {panel.theta}, {panel.length}\n")
-                writer.writerow([panel.xm, panel.ym, panel.theta, panel.length])
+                writer.writerow([round(panel.xm,n), round(panel.ym,n), round(panel.theta*180/np.pi,n), round(panel.length,n)])
 
-    def compute_free_vt(self, x, y, V=1, a=np.radians(4.0)):
-        eta = compute_eta_free(len(x), self.len, self.panels, x, y)
-        xi = compute_xi_free(len(x), self.len, self.panels, x, y)
-        I = compute_I_free(len(x), self.len, xi, eta, self.panels)
-        J = compute_J_free(len(x), self.len, xi, eta, self.panels)
-        An = compute_An_free(len(x), self.len, I, J, self.panels)
-        At = compute_At_free(len(x), self.len, I, J, self.panels)
+    def solve(self, V=1, a=5):
+        a = np.radians(a)
+        b = comp.b(self, V, a)
 
-        vtx = np.empty(len(x))
-        vty = np.empty(len(x))
-        for i in range(len(x)):
-            vtx[i] = sum([At[i][j] * self.panels[j].q for j in range(self.len)]) - self.gamma * sum(
-                [An[i][j] for j in range(self.len)]) + V * np.cos(a)
+        comp.q(self, b)  # setzt auch self.gamma
+        comp.vt(self, V, a)
+        comp.cp(self, V)
+        comp.ca(self, V)
+        comp.accuracy(self)
+\end{lstlisting}
 
-            vty[i] = sum([An[i][j] * self.panels[j].q for j in range(self.len)]) + self.gamma * sum(
-                [At[i][j] for j in range(self.len)]) + V * np.sin(a)
-
-        return vtx, vty
+\subsubsection{Berechnungsfunktionen der Systemmatrix}
+Hier ist die Implementation der Berechnung der Systemmatrix und ihrer Parameter anhand der Funktion xi gezeigt. Die Berechnung der anderen Parameter wurde analog implementiert.
+\begin{lstlisting}
+def xi(profile):
+    panels = profile.panels
+    n = len(panels)
+    Xi = np.empty((n, n), dtype=float)
+    for i in range(n):
+        for j in range(n):
+            pi, pj = panels[i], panels[j]
+            Xi[i][j] = (pi.xm - pj.xm) * np.cos(pj.theta) + (pi.ym - pj.ym) * np.sin(pj.theta)
+    return Xi
 \end{lstlisting}
 
 \subsubsection{make\_cylinder(r,n)}
-Diese Funktion wurde verwendet, um die $x$- und $y$-Koordinaten eines Kreiszylinder mit Radius $r$ und $n$ gleich langen Panels zu generieren.
+Diese Funktion wurde verwendet, um die $x$- und $y$-Koordinaten eines Kreiszylinder mit Radius $r$ und $n$ gleich langen Panels zu generieren. Es wurde dabei besonderes Augenmerk darauf gelegt, dass es an den Endpunkten durch Rundungsfehler nicht zu einem disjunkten Körper kommt.
 \begin{lstlisting}
 def cylinder(r=1, n=8):
-    # generate a cylinder with n equidistant panels
     a = np.linspace(0, 360, num=n+1, endpoint=True) / 180 * np.pi
 
     x = r * np.cos(a)
     y = r * np.sin(a)
+    if abs(x[0] - x[-1]) <= 10 ** (-15):
+        x[-1] = x[0]
+    if abs(y[0] - y[-1]) <= 10 ** (-15):
+        y[-1] = y[0]
 
     return x, y
 \end{lstlisting}
 
+\subsubsection{make\_panels(x,y, reverse=False)}
+\begin{lstlisting}
+    if type(x) is not np.ndarray:
+        x = np.array(x)
+    if type(y) is not np.ndarray:
+        y = np.array(y)
+    if (x[0], y[0]) != (x[-1], y[-1]):
+        x = np.append(x, x[0])
+        y = np.append(y, y[0])
+    if reverse:
+        x = np.flipud(x)
+        y = np.flipud(y)
+    n = len(x) - 1
+    panels = np.array([Panel(x[i], y[i], x[i + 1], y[i + 1]) for i in range(n)])
+    return panels
+\end{lstlisting}
 
+\subsubsection{parsecoords(filename)}
+\begin{lstlisting}
+    x, y = np.loadtxt(filename, dtype=float, unpack=True)
+    return x, y
+\end{lstlisting}
+
+\subsubsection{Joukowsky-Profil-Generator}
+
+\begin{lstlisting}
+def joukowski_transfrom(zeta):
+    z = zeta + 1 / zeta
+    return z
+def make_joukowski(mux=0.2, muy=0.1, N=100):
+    center = -mux + muy * 1j 
+    R = np.sqrt((1 + mux) ** 2 + muy ** 2)
+
+    theta = np.linspace(0, 2 * np.pi, N)
+    Xc = np.real(center) + R * np.cos(theta)
+    Yc = np.imag(center) + R * np.sin(theta)
+
+    p = joukowski_transfrom(Xc + Yc * 1j)
+    Xp, Yp = np.real(p), np.imag(p)
+    return Xp, Yp, R, muy
+\end{lstlisting}
+
+\subsubsection{Kármán-Trefftz-Profil-Generator}
+
+\begin{lstlisting}
+def karman_trefftz_transform(zeta, n):
+    z = n * ((zeta + 1) ** n + (zeta - 1) ** n) / ((zeta + 1) ** n - (zeta - 1) ** n)
+    return z
+def make_karman_trefftz(mux=0.2, muy=0.1, n=1.9, N=100):
+    center = -mux + muy * 1j
+    R = np.sqrt((1 + mux) ** 2 + muy ** 2) 
+
+    theta = np.linspace(0, 2 * np.pi, N)
+    Xc = np.real(center) + R * np.cos(theta)
+    Yc = np.imag(center) + R * np.sin(theta)
+    tx = np.real(center)
+    ty = np.imag(center)
+
+    p = karman_trefftz_transform(Xc + Yc * 1j, n)
+    Xp, Yp = np.real(p), np.imag(p)
+    return Xp, Yp, R, muy
+\end{lstlisting}
 
 
