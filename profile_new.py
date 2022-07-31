@@ -1,6 +1,7 @@
 import comp
 import numpy as np
 import csv
+import free
 
 class AirfoilProfile:
     def __init__(self, panels, name=None, vortex=True):
@@ -27,7 +28,13 @@ class AirfoilProfile:
         self.gamma = None
 
     def __str__(self):
-        return f"q:\n" \
+        return f"An:\n" \
+               f"{self.An}\n" \
+               f"At:\n" \
+               f"{self.At}\n" \
+               f"M:\n" \
+               f"{self.M}\n" \
+               f"q:\n" \
                f"{[panel.q for panel in self.panels]}\n" \
                f"vt:\n" \
                f"{[panel.vt for panel in self.panels]}\n" \
@@ -54,3 +61,24 @@ class AirfoilProfile:
         comp.cp(self, V)
         comp.ca(self, V)
         comp.accuracy(self)
+
+    def compute_free_vt(self, x, y, V=1, a=np.radians(4.0)):
+        #x = x[:-1]
+        #y = y[:-1]
+        eta = free.compute_eta_free(len(x), self.len, self.panels, x, y)
+        xi = free.compute_xi_free(len(x), self.len, self.panels, x, y)
+        I = free.compute_I_free(len(x), self.len, xi, eta, self.panels)
+        J = free.compute_J_free(len(x), self.len, xi, eta, self.panels)
+        An = free.compute_An_free(len(x), self.len, I, J, self.panels)
+        At = free.compute_At_free(len(x), self.len, I, J, self.panels)
+
+        vtx = np.empty(len(x))
+        vty = np.empty(len(x))
+        for i in range(len(x)):
+            vtx[i] = sum([At[i][j] * self.panels[j].q for j in range(self.len)]) - self.gamma * sum(
+                [An[i][j] for j in range(self.len)]) + V * np.cos(a)
+
+            vty[i] = sum([An[i][j] * self.panels[j].q for j in range(self.len)]) + self.gamma * sum(
+                [At[i][j] for j in range(self.len)]) + V * np.sin(a)
+
+        return vtx, vty

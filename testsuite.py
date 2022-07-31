@@ -8,6 +8,12 @@ from scipy.optimize import curve_fit
 from scenario.errorcylindertheoretical import errorcylindertheoretical
 from scenario.eightsidedcylindererror import eightsidedcylindererror
 from scenario.eightsidedcylinderpanelparameters import eightsidedcylinderpanelparameters
+from scenario.makeprofilegraphs import makeprofilegraphs
+from scenario.writecylinderintocircle import writecylinderintocircle
+from scenario.novortexsystemmatrix import novortexsystemmatrix
+from scenario.analyticalcylinder import analyticalcylinder
+from scenario.cylinderqvc import cylinderqvc
+from scenario.rotatingcylinder import rotatingcylinder
 """
 got = []
 theo = []
@@ -44,8 +50,28 @@ ax1.legend(prop={'size': 10})
 plt.show()
 
 """
+
+#8-seitiger Zylinder zwischen -15 und 15 grad
+#rotatingcylinder()
+
+#q, vt, cp für 8-seitigen Zylinder
+#cylinderqvc()
+
+#Analytische Lösung 8-seitgier Zylinder
+#analyticalcylinder()
+
+#Systemmatrix 8-seitiger Zylinder
+#novortexsystemmatrix()
+
+#Zylinder in Kreis einschreiben
+#writecylinderintocircle()
+
+#BigGraphs
+#besser: über scenario-Folder starten
+#makeprofilegraphs()
+
 # Panelparameter 8-seitig
-eightsidedcylinderpanelparameters()
+#eightsidedcylinderpanelparameters()
 
 # Grafik Abweichung Berechnung Theorie
 #eightsidedcylindererror()

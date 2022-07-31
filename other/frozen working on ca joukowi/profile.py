@@ -99,7 +99,7 @@ class AirfoilProfile:
                 #file.write(f"{panel.xm}, {panel.ym}, {panel.theta}, {panel.length}\n")
                 writer.writerow([panel.xm, panel.ym, panel.theta, panel.length])
     def plot(self, height=3, width=6, sort=False, normalvectors=False, scaled=False):
-        fig, (ax1) = plt.subplots(1, constrained_layout=True)
+        fig, (ax1, ax2, ax3) = plt.subplots(3, constrained_layout=True)
         fig.set_figheight(height)
         fig.set_figwidth(width)
         #fig.suptitle(f'{self.name}')
@@ -126,11 +126,11 @@ class AirfoilProfile:
         ax1.grid()
         ax1.plot(xu, yu, color='g', linestyle='-', linewidth=1, label='upper')
         ax1.plot(xl, yl, color='k', linestyle='-', linewidth=1, label='lower')
-        ax1.set(xlabel='x', ylabel='y')
+        ax1.set(xlabel='$x$', ylabel='$y$')
         ax1.axis('scaled')
         ax1.set_ylim([-0.2, 0.2])
         #ax1.set_title("Profile")
-        """
+
         if normalvectors:
             X = np.zeros(2)  # Initialize panel X variable
             Y = np.zeros(2)  # Initialize panel Y variable
@@ -177,8 +177,8 @@ class AirfoilProfile:
         # thetal.append(thetau[0])
         ax2.plot(thetau, color='g', linestyle=':',  linewidth=2, label='upper')
         ax2.plot(thetal, color='k', linestyle=':', linewidth=2, label='lower')
-        ax2.set(xlabel='x', ylabel='theta [grad]')
-        ax2.set_title("Angle of Panel")
+        ax2.set(xlabel='$x$', ylabel='$\\theta [\mathrm{grad}]$')
+        ax2.set_title("Neigungswinkel")
         #ax2.set_yticks(np.arange(min(theta), max(theta) + 1, 40.0))
         ax2.set_yticks([min(theta)] + [(min((theta)) + 270)/2] + [270] + [(max((theta)) + 270)/2] + [max(theta)])
         ax2.legend(loc='best', prop={'size': 8})
@@ -190,13 +190,11 @@ class AirfoilProfile:
         # lu.append(ll[0])
         ax3.plot(lu, color='g', linestyle=':',  linewidth=2, label='upper')
         ax3.plot(ll, color='k', linestyle=':', linewidth=2, label='lower')
-        ax3.set(xlabel='x', ylabel='l [m]')
+        ax3.set(xlabel='$x$', ylabel='$l [\mathrm{m}]$')
         ax3.set_title("Panel length")
         ax3.legend(loc='best', prop={'size': 8})
 
-        #if scaled:
-        """
-        plt.savefig('data/figures/' + self.name + ".png")
+        #plt.savefig('data/figures/' + self.name + ".png")
         plt.show()
 
         #plt.clf()
