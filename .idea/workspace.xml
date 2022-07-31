@@ -20,22 +20,115 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/redux.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/varcyliders.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vortexcylinders.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/eightsidedcylinderpanelparameters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/errorcylindertheoretical.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testsuite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/figures/NACA0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/figures/NACA0012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/circular_cylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/computations - old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/computations_backup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/computations_bu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/computations_old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/helper old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/profiledata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/rotating_cylinders_old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/solve.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/code archive/vortexfield.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/plot_an_angle_matplotlib_08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/plottst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/solves/hess_smith.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/solves/solve_cylinders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/solves/solve_no_vortex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/solves/solve_testcylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/solves/solve_vortex.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/solves/systemmatrix.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/computations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/make_cylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/naca0012.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/panel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/profiledata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/rotating_cylinders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OBSOLETE/working/solving.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/computations - Kopie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/computations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/computations_backup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/computations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/computationsnoclass.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/joukowski.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/make_cylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/onlyonce.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/panel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/profiledata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/doesnt work/vortexcylinders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/NACA0012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/a63a108c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/ames01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/cylinder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/cylinderca.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/fx6617ai.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/hsnlf213.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/kutta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/lg10sc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/figures/m13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/computations - Kopie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/computations.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/computations_backup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/go.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/helper - Kopie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/joukowski.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/make_cylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/naca0012.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/panel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/plottst.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/pro.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/profile - Kopie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/profiledata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/redux.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/rotating_cylinders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/rotcyliders2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/s.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/safe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/solving.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/testjouk.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frozen/vortexcylinders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper - Kopie.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/joukowski.py" beforeDir="false" afterPath="$PROJECT_DIR$/joukowski.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotating_cylinders.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotating_cylinders.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rotcyliders2.py" beforeDir="false" afterPath="$PROJECT_DIR$/rotcyliders2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testjouk.py" beforeDir="false" afterPath="$PROJECT_DIR$/testjouk.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/make_cylinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/make_cylinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/naca0012.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/plottst.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile - Kopie.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiledata.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotating_cylinders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rotcyliders2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/s.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/safe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/solving.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testjouk.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/varcyliders.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vortexcylinders.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.xmpdata" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.xmpdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abstract.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/bib/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/written/bib/example.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/absoluteerror.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/absoluteerror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/theoretical.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/theoretical.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/hauptteil.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/hauptteil.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/header.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/header.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/pdfa.xmpi" beforeDir="false" afterPath="$PROJECT_DIR$/written/pdfa.xmpi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +155,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.testjouk">
-    <configuration name="joukowski" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.testsuite">
+    <configuration name="helper" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -75,7 +168,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/joukowski.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/helper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -84,7 +177,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="onlyonce" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="rotcyliders2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -92,11 +185,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/frozen working on ca joukowi" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/onlyonce.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/frozen working on ca joukowi/rotcyliders2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -126,7 +219,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="varcyliders" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="testsuite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -138,7 +231,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/varcyliders.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testsuite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,11 +263,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.testsuite" />
+        <item itemvalue="Python.rotcyliders2" />
+        <item itemvalue="Python.helper" />
         <item itemvalue="Python.testjouk" />
-        <item itemvalue="Python.joukowski" />
-        <item itemvalue="Python.varcyliders" />
         <item itemvalue="Python.vortexcylinders" />
-        <item itemvalue="Python.onlyonce" />
       </list>
     </recent_temporary>
   </component>
@@ -208,38 +301,38 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="386" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1658962414417" />
-    <state width="1131" height="275" key="GridCell.Tab.0.bottom" timestamp="1659132866933">
+    <state width="1242" height="275" key="GridCell.Tab.0.bottom" timestamp="1659273638043">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
-    <state width="1131" height="275" key="GridCell.Tab.0.center" timestamp="1659132866933">
+    <state width="1242" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659273638043" />
+    <state width="1242" height="275" key="GridCell.Tab.0.center" timestamp="1659273638027">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
-    <state width="1131" height="275" key="GridCell.Tab.0.left" timestamp="1659132866933">
+    <state width="1242" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659273638027" />
+    <state width="1242" height="275" key="GridCell.Tab.0.left" timestamp="1659273638027">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
-    <state width="1131" height="275" key="GridCell.Tab.0.right" timestamp="1659132866933">
+    <state width="1242" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659273638027" />
+    <state width="1242" height="275" key="GridCell.Tab.0.right" timestamp="1659273638043">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659132866933" />
-    <state width="1131" height="340" key="GridCell.Tab.1.bottom" timestamp="1659104364820">
+    <state width="1242" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659273638043" />
+    <state width="1131" height="340" key="GridCell.Tab.1.bottom" timestamp="1659199273279">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
-    <state width="1131" height="340" key="GridCell.Tab.1.center" timestamp="1659104364820">
+    <state width="1131" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
+    <state width="1131" height="340" key="GridCell.Tab.1.center" timestamp="1659199273279">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
-    <state width="1131" height="340" key="GridCell.Tab.1.left" timestamp="1659104364820">
+    <state width="1131" height="340" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
+    <state width="1131" height="340" key="GridCell.Tab.1.left" timestamp="1659199273279">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
-    <state width="1131" height="340" key="GridCell.Tab.1.right" timestamp="1659104364820">
+    <state width="1131" height="340" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
+    <state width="1131" height="340" key="GridCell.Tab.1.right" timestamp="1659199273279">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659104364820" />
+    <state width="1131" height="340" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
     <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1659111845493">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -248,14 +341,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="482" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1659103410232" />
-    <state x="434" y="117" width="892" height="706" key="dock-window-1" timestamp="1658934652240">
+    <state x="960" y="0" width="960" height="1050" key="dock-window-1" timestamp="1659206566961">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="434" y="117" width="892" height="706" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1658934652240" />
-    <state x="980" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1658933781621">
+    <state x="960" y="0" width="960" height="1050" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1659206566961" />
+    <state x="980" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1659272567734">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="980" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1658933781621" />
+    <state x="980" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1659272567734" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

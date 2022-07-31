@@ -16,16 +16,16 @@ from joukowski import make_joukowski_all, make_joukowski, joukowski_ca, karman_t
 #y = numpy.flipud(y)
 theo = []
 got = []
-#for n in range(30,50):
-x1, y1, xc, yc, tx, ty, delta, lamda, R = make_joukowski_all(lamda=1/np.sqrt(2), delta=1/np.sqrt(2), N=30)
-panels = make_panels(x1, y1)
-profile = AirfoilProfile(panels, "joukowski")
-
-profile.write_panels()
-
-profile.solve(a=np.radians(4))
-got.append(profile.ca)
-theo.append(joukowski_ca(np.radians(4),R, muy=delta, t=profile.t))
+for n in range(100,110):
+    x1, y1, xc, yc, tx, ty, delta, lamda, Rci, R = make_joukowski_all(lamda=1/np.sqrt(2), delta=1/np.sqrt(2), N=n)
+    panels = make_panels(x1, y1)
+    profile = AirfoilProfile(panels, "joukowski")
+    #print([(a,b) for a,b in zip(x1, y1)])
+#profile.write_panels()
+    #print(R)
+    profile.solve(a=np.radians(4))
+    got.append(profile.ca)
+    theo.append(joukowski_ca(np.radians(4),Rci, delta, profile.t))
 
 print(got)
 print(theo)
