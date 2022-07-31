@@ -3,7 +3,7 @@ from helper import make_panels
 from profile_new import AirfoilProfile
 from joukowski import make_joukowski
 import numpy as np
-import matplotlib.pyplot as pyplot
+import matplotlib.pyplot as plt
 
 def eightsidedcylindererror():
 
@@ -21,19 +21,20 @@ def eightsidedcylindererror():
     #print([(panel.xm, panel.cp) for panel in panels])
     """
     """
-    pyplot.figure(figsize=(5, 5))
-    pyplot.grid()
-    pyplot.xlabel("$x$", fontsize=16)
-    pyplot.ylabel('$c_p$', fontsize=16)
-    pyplot.plot(x_c, cp_analytical, label="$2 \cos{(2 \\varphi)} -1$", color='k', linestyle=':', linewidth=1)
-    pyplot.scatter([p.xm for p in panels], [p.cp for p in panels],
+    plt.figure(figsize=(5, 5))
+    plt.grid()
+    plt.xlabel("$x$", fontsize=16)
+    plt.ylabel('$c_p$', fontsize=16)
+    plt.plot(x_c, cp_analytical, label="$2 \cos{(2 \\varphi)} -1$", color='k', linestyle=':', linewidth=1)
+    plt.scatter([p.xm for p in panels], [p.cp for p in panels],
                    label='8-seitiger Zylinder', marker="^",
                    color='g', s=20, zorder=2)
 
-    #pyplot.title('Number of panels : %d' % 10, fontsize=16)
+    #plt.title('Number of panels : %d' % 10, fontsize=16)
     print([(p.theta+np.pi/2, p.cp) for p in panels])
-    pyplot.legend(loc='lower right', prop={'size': 10})
-    #pyplot.axis('scaled')
-    #pyplot.xlim(-1.0, 1.0)
-    pyplot.ylim(-4.0, 2.0)
-    pyplot.show()
+    plt.legend(loc='lower right', prop={'size': 10})
+    #plt.axis('scaled')
+    #plt.xlim(-1.0, 1.0)
+    plt.ylim(-4.0, 2.0)
+    plt.savefig('data/scenarios/FIGURES/eightsidedcylindertheo.png')
+    plt.show()

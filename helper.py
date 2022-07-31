@@ -23,20 +23,15 @@ def parsecoords(filename):
     return x, y
 
 
+## only for testing of discretization
 def define_panels(x, y, N=40, reverse=False):
-    R = (x.max() - x.min()) / 2.0  # circle radius
-    x_center = (x.max() + x.min()) / 2.0  # x-coordinate of circle center
-
-    theta = np.linspace(0.0, 2.0 * np.pi, N + 1)  # array of angles
-    x_circle = x_center + R * np.cos(theta)  # x-coordinates of circle
-
-    x_ends = np.copy(x_circle)  # x-coordinate of panels end-points
-    y_ends = np.empty_like(x_ends)  # y-coordinate of panels end-points
-
-    # extend coordinates to consider closed surface
+    R = (x.max() - x.min()) / 2.0
+    x_center = (x.max() + x.min()) / 2.0
+    theta = np.linspace(0.0, 2.0 * np.pi, N + 1)
+    x_circle = x_center + R * np.cos(theta)
+    x_ends = np.copy(x_circle)
+    y_ends = np.empty_like(x_ends)
     x, y = np.append(x, x[0]), np.append(y, y[0])
-
-    # compute y-coordinate of end-points by projection
     I = 0
     for i in range(N):
         while I < len(x) - 1:
@@ -51,8 +46,6 @@ def define_panels(x, y, N=40, reverse=False):
     if reverse:
         x_ends = np.flipud(x)
         y_ends = np.flipud(y)
-
-    # create panels
     panels = np.empty(N, dtype=object)
     for i in range(N):
         panels[i] = Panel(x_ends[i], y_ends[i], x_ends[i + 1], y_ends[i + 1])

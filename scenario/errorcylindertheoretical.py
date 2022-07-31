@@ -52,5 +52,5 @@ def errorcylindertheoretical():
     plt.plot(x_line,y_line, color='g', linestyle=':', label="17.85/n^2")
     plt.legend()
     #plt.plot(n, y, color='g', linestyle=':', linewidth=1)
-
+    plt.savefig('data/scenarios/FIGURES/eightsidedcylindererror.png')
     plt.show()

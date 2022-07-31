@@ -10,17 +10,17 @@ from sympy.solvers.solveset import linsolve
 import os
 
 def completeprofile():
-    #for filename in os.listdir("data/rawdata"):
-    for filename in os.listdir("data/"):
+    for filename in os.listdir("data/rawdata"):
+    #for filename in os.listdir("data/"):
         print(filename)
-        #x, y = parsecoords("data/processeddata/" + filename)
-        x, y = parsecoords("data/" + filename)
+        x, y = parsecoords("data/processeddata/" + filename)
+        #x, y = parsecoords("data/" + filename)
         panels = make_panels(x, y)
         profile = AirfoilProfile(panels, vortex=True)
         aas = []
         cas = []
-        #with open("data/scenarios/completeprofile/" + filename + ".txt", "w+") as write:
-        with open(filename + ".txt", "w+") as write:
+        with open("data/scenarios/completeprofile/" + filename + ".txt", "w+") as write:
+        #with open(filename + ".txt", "w+") as write:
             for a in range(-11, 18, 4):
                 profile.solve(V=1, a=a)
                 txt = str(a) + " & " + str(round(profile.gamma, 2)) + " & " + str(round(profile.ca, 2)) + " \\\\ \n"
@@ -37,7 +37,9 @@ def completeprofile():
         ax1.set_ylim([min(cas) - 0.3, max(cas) + 0.3])
         ax1.set_yticks(np.arange(min(cas), max(cas), 0.3))
         ax1.set_xticks(aas)
+         plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'ca.png')
         plt.show()
+
 
         profile.solve(V=1, a=5)
         vx, vy = profile.compute_free_vt(x, y)
@@ -54,7 +56,9 @@ def completeprofile():
         plt.ylabel('$y$', fontsize=16)
         plt.ylim(-0.2, 0.2)
         plt.colorbar(orientation="horizontal")
+        plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'vx.png')
         plt.show()
+
 
         plt.figure(figsize=(5, 3), layout='constrained')
         plt.title(f'$y$-Komponente von $\\vec v$')
@@ -64,7 +68,9 @@ def completeprofile():
         plt.ylabel('$y$', fontsize=16)
         plt.ylim(-0.2, 0.2)
         plt.colorbar(orientation="horizontal")
+        plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'vy.png')
         plt.show()
+
 
         x = [p.xm for p in panels]
         y = [p.ym for p in panels]
@@ -77,6 +83,7 @@ def completeprofile():
         plt.ylabel('$y$', fontsize=16)
         plt.ylim(-0.2, 0.2)
         plt.colorbar(orientation="horizontal")
+        plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'q.png')
         plt.show()
 
         plt.figure(figsize=(5, 3), layout='constrained')
@@ -87,7 +94,5 @@ def completeprofile():
         plt.ylabel('$y$', fontsize=16)
         plt.ylim(-0.2, 0.2)
         plt.colorbar(orientation="horizontal")
+        plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'cp.png')
         plt.show()
-
-
-completeprofile()

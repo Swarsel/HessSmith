@@ -20,26 +20,252 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/free.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/analyticalcylinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/completeprofile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/cylinderqvc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/novortexsystemmatrix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/rotatingcylinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/writecylinderintocircle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/processeddata/sc20614.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/processeddata/z40.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/2032c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/8-Sided Cylinder.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/8sided.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/NACA0012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/a18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/a18sm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/a63a108c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag04.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag08.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag09.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag44ct02r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag455ct02r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag45c03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag45ct02r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag46c03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag46ct02r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag47c03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ag47ct02r.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah21-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah21-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah63k127.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah6407.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah7476.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79100a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79100b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79100c.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79k132.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79k135.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah79k143.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah80129.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah80136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah80140.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah81131.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah81k144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah81k144wfKlappe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah82150a.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah82150f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah83150q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah83159.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah85l120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah88k130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah88k136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93156.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93157.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93k130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93k131.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93k132.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w145.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w174.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w215.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w257.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w300.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah93w480b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah94145.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah94156.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah94w301.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ah95160.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ames01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ames02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/ames03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/amsoil1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/amsoil2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/apex16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/aquilasm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/arad6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as5045.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as5046.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as5048.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6091.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6092.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6093.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6094.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6095.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6096.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6097.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/as6098.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/joukowsk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/joukowski.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/profilesheets/m13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/cylinder8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/paneldefinition.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/zaehlrichtung.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/external/AngleAnnotation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/other/OBSOLETE/naca0012.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/other/completeprofile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/other/makeprofilegraphs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/definitionfigures.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/definitionpanel.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/joukowskierror.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/joukowskiplots.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/karmanerror.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/old/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/panel_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/zaehlrichtung_old.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/BA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/BA.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rawdata/joukowsk.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rawdata/m13.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eightsidedcylinderpanelparameters.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/other/frozen working on ca joukowi/profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/other/frozen working on ca joukowi/profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/completeprofile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/2032c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/8-Sided Cylinder.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/8sided.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/NACA0012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/a18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/a18sm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/a63a108c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag08.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag09.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag44ct02r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag455ct02r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag45c03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag45ct02r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag46c03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag46ct02r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag47c03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ag47ct02r.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah21-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah21-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah63k127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah6407.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah7476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah79100a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah79100b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah79100c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah79k132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah79k135.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah79k143.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah80129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah80136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah80140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah81131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah81k144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah81k144wfKlappe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah82150a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah82150f.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah83150q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah83159.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah85l120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah88k130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah88k136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93157.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93k130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93k131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93k132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93w145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93w174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93w215.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93w257.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93w300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah93w480b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah94145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah94156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah94w301.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ah95160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ames01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ames02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/ames03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/amsoil1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/amsoil2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/apex16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/aquilasm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/arad10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/arad13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/arad20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/arad6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as5045.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as5046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as5048.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6091.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6092.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6093.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6094.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6095.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/as6098.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/joukowsk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/joukowski.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/figures/m13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/joukowski.py" beforeDir="false" afterPath="$PROJECT_DIR$/joukowski.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/naca0012.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/NACA0012.DAT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/completeprofile.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/completeprofile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/eightsidedcylindererror.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/eightsidedcylindererror.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/errorcylindertheoretical.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/errorcylindertheoretical.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/makeprofilegraphs.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/sc20614.dat.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/writecylinderintocircle.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/writecylinderintocircle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/z40.dat.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testsuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/nacaca.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/nacaca.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/nacavx.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/nacavx.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/nacavy.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/nacavy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/zoneca.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/zoneca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/joukowskierror.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/joukowskierror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/panel.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/panel.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/zaehlrichtung.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/zaehlrichtung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/header.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/header.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/pdfa.xmpi" beforeDir="false" afterPath="$PROJECT_DIR$/written/pdfa.xmpi" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,17 +283,141 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2CWm2IuXumFTpFB9ZMBihZ11Wsu" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/Libraries/Documents/GitHub/BA/written/figures/joukowskierror.png",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  }
+}]]></component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myUseExistingConsole" value="true" />
   </component>
-  <component name="RunManager" selected="Python.completeprofile (1)">
-    <configuration name="completeprofile (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Libraries\Documents\GitHub\BA\scenario\profiledata" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Libraries\Documents\GitHub\BA\other" />
+      <recent name="F:\Libraries\Documents\GitHub\BA\other\OBSOLETE" />
+      <recent name="F:\Libraries\Documents\GitHub\BA\scenario" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.testsuite">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="BA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="joukowskierror" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scenario/joukowskierror.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="joukowskiplots" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scenario/joukowskiplots.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="karmanerror" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scenario/karmanerror.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/run.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="testsuite" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -79,7 +429,8 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/completeprofile.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/testsuite.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -88,100 +439,24 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="completeprofile" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scenario/completeprofile.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="naca0012 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/naca0012.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="naca0012" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scenario/naca0012.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="rotatingcylinder" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="BA" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scenario/rotatingcylinder.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.joukowskierror" />
+      <item itemvalue="Python.joukowskiplots" />
+      <item itemvalue="Python.karmanerror" />
+      <item itemvalue="Python.run" />
+      <item itemvalue="Python.testsuite" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.completeprofile (1)" />
-        <item itemvalue="Python.naca0012 (1)" />
-        <item itemvalue="Python.naca0012" />
-        <item itemvalue="Python.completeprofile" />
-        <item itemvalue="Python.rotatingcylinder" />
+        <item itemvalue="Python.testsuite" />
+        <item itemvalue="Python.run" />
+        <item itemvalue="Python.joukowskierror" />
+        <item itemvalue="Python.karmanerror" />
+        <item itemvalue="Python.joukowskiplots" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -192,8 +467,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1658926506731</updated>
+      <workItem from="1659295494390" duration="12695000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -205,61 +484,9 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="386" y="326" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1658962414417">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="386" y="326" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1658962414417" />
-    <state width="1465" height="275" key="GridCell.Tab.0.bottom" timestamp="1659284282973">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659284282973" />
-    <state width="1465" height="275" key="GridCell.Tab.0.center" timestamp="1659284282973">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659284282973" />
-    <state width="1465" height="275" key="GridCell.Tab.0.left" timestamp="1659284282973">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659284282973" />
-    <state width="1465" height="275" key="GridCell.Tab.0.right" timestamp="1659284282973">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659284282973" />
-    <state width="1131" height="340" key="GridCell.Tab.1.bottom" timestamp="1659199273279">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
-    <state width="1131" height="340" key="GridCell.Tab.1.center" timestamp="1659199273279">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
-    <state width="1131" height="340" key="GridCell.Tab.1.left" timestamp="1659199273279">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
-    <state width="1131" height="340" key="GridCell.Tab.1.right" timestamp="1659199273279">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1131" height="340" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659199273279" />
-    <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1659111845493">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="1045" y="134" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1659111845493" />
-    <state x="482" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1659103410232">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="482" y="438" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1050@0.0.1920.1050" timestamp="1659103410232" />
-    <state x="960" y="0" width="960" height="1050" key="dock-window-1" timestamp="1659206566961">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="960" y="0" width="960" height="1050" key="dock-window-1/0.0.1920.1050@0.0.1920.1050" timestamp="1659206566961" />
-    <state x="980" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1659272567734">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="980" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1659272567734" />
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -271,5 +498,10 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BA$run.coverage" NAME="run Coverage Results" MODIFIED="1659302549289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BA$joukowskierror.coverage" NAME="joukowskierror Coverage Results" MODIFIED="1659300536947" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scenario" />
+    <SUITE FILE_PATH="coverage/BA$testsuite.coverage" NAME="testsuite Coverage Results" MODIFIED="1659308105583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

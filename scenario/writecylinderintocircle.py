@@ -26,4 +26,6 @@ def writecylinderintocircle():
     ax1.set_xticks([])
     ax1.set_yticks([])
 
+    plt.savefig('data/scenarios/FIGURES/cylinder8.png')
     plt.show()
+
