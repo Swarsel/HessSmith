@@ -3,7 +3,8 @@ import numpy as np
 
 class Panel:
 
-    def __init__(self, xa, ya, xb, yb):
+    def __init__(self, xa, ya, xb, yb, index):
+        self.index = index
         self.xa, self.ya = xa, ya
         self.xb, self.yb = xb, yb
 
@@ -19,6 +20,6 @@ class Panel:
         self.cp = None
 
     def __str__(self):
-        return f"{(self.xa, self.ya)} -> {(self.xb, self.yb)}; " \
+        return f"Panel {self.index}: {(self.xa, self.ya)} -> {(self.xb, self.yb)}; " \
                f"Angle: {self.theta * 180 / np.pi}; " \
                f"Length: {self.length}"

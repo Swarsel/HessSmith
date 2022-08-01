@@ -7,6 +7,13 @@ from joukowski import make_joukowski, make_karman_trefftz, joukowski_ca
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.optimize import curve_fit
-from AngleAnnotation import AngleAnnotation
+from external.AngleAnnotation import AngleAnnotation
 import matplotlib.patches as patches
 
+x,y = parsecoords("data/processeddata/naca0012b.dat")
+panels = make_panels(x,y)
+for panel in panels:
+    print(panel)
+profile = AirfoilProfile(panels, vortex=True)
+profile.solve()
+print(profile)

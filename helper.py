@@ -7,14 +7,15 @@ def make_panels(x, y, reverse=False):
         x = np.array(x)
     if type(y) is not np.ndarray:
         y = np.array(y)
+    n = len(x)
     if (x[0], y[0]) != (x[-1], y[-1]):
         x = np.append(x, x[0])
         y = np.append(y, y[0])
     if reverse:
         x = np.flipud(x)
         y = np.flipud(y)
-    n = len(x) - 1
-    panels = np.array([Panel(x[i], y[i], x[i + 1], y[i + 1]) for i in range(n)])
+
+    panels = np.array([Panel(x[n-i], y[n-i], x[n-i -1], y[n -i - 1], i) for i in range(n)])
     return panels
 
 

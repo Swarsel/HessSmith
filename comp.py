@@ -50,7 +50,7 @@ def J(profile):
         for j in range(n):
             pi, pj = panels[i], panels[j]
             if i == j:
-                JJ[i][j] = -0.5
+                JJ[i][j] = 0.5
             else:
                 JJ[i][j] = (1 / (2 * np.pi)) * np.arctan2(pj.length - 2 * Xi[i][j], 2 * Eta[i][j]) + \
                            (1 / (2 * np.pi)) * np.arctan2(pj.length + 2 * Xi[i][j], 2 * Eta[i][j])
@@ -95,11 +95,11 @@ def M(profile):
         MM = np.empty((n, n), dtype=float)
     if vortex:
         MM[:-1, :-1] = AN
-        MM[:-1, -1] = -np.sum(AT, axis=1)
+        MM[:-1, -1] = np.sum(AT, axis=1)
 
         r = np.empty(n + 1, dtype=float)
         r[:-1] = AT[0, :] + AT[-1, :]
-        r[-1] = np.sum(AN[0, :] + AN[-1, :])
+        r[-1] = -np.sum(AN[0, :] + AN[-1, :])
         MM[-1, :] = r
     else:
         MM = AN
