@@ -2,20 +2,29 @@ from panel_new import Panel
 import numpy as np
 
 
-def make_panels(x, y, reverse=False):
+def ensure_zero(scalar):
+    if abs(scalar) < 10 ** (-15):
+        scalar = 0
+    return scalar
+
+
+def make_panels(x, y, dir=True, reverse=False):
     if type(x) is not np.ndarray:
         x = np.array(x)
     if type(y) is not np.ndarray:
         y = np.array(y)
-    n = len(x)
     if (x[0], y[0]) != (x[-1], y[-1]):
         x = np.append(x, x[0])
         y = np.append(y, y[0])
     if reverse:
         x = np.flipud(x)
         y = np.flipud(y)
+    n = len(x) -1
 
-    panels = np.array([Panel(x[n-i], y[n-i], x[n-i -1], y[n -i - 1], i) for i in range(n)])
+    if dir:
+        panels = np.array([Panel(x[n - i], y[n - i], x[n - i - 1], y[n - i - 1], i) for i in range(n)])
+    if not dir:
+        panels = np.array([Panel(x[i], y[i], x[i +1], y[i +1], i) for i in range(n)])
     return panels
 
 
@@ -25,7 +34,7 @@ def parsecoords(filename):
 
 
 ## only for testing of discretization
-def define_panels(x, y, N=40, reverse=False):
+def define_panels(x, y, N=40, reverse=False, dir=False, flip=False):
     R = (x.max() - x.min()) / 2.0
     x_center = (x.max() + x.min()) / 2.0
     theta = np.linspace(0.0, 2.0 * np.pi, N + 1)
@@ -48,7 +57,11 @@ def define_panels(x, y, N=40, reverse=False):
         x_ends = np.flipud(x)
         y_ends = np.flipud(y)
     panels = np.empty(N, dtype=object)
-    for i in range(N):
-        panels[i] = Panel(x_ends[i], y_ends[i], x_ends[i + 1], y_ends[i + 1])
+    if dir:
+        for i in range(N):
+            panels[i] = Panel(x_ends[N - i], y_ends[N - i], x_ends[N - i - 1], y_ends[N - i - 1], i, flip)
+    if not dir:
+        for i in range(N):
+            panels[i] = Panel(x_ends[i], y_ends[i], x_ends[i + 1], y_ends[i + 1], i, flip)
 
     return panels

@@ -20,9 +20,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/bu/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bu/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012cp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012vx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012vy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614cp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614vx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614vy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40cp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40vx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40vy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hold/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tryhard/testsuite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/comp.py" beforeDir="false" afterPath="$PROJECT_DIR$/comp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processeddata/sc20614.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/processeddata/sc20614.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/processeddata/z40.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/processeddata/z40.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012.DAT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012.DAT.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/free.py" beforeDir="false" afterPath="$PROJECT_DIR$/free.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/panel_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/completeprofile.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/completeprofile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -249,32 +301,45 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1465" height="275" key="GridCell.Tab.0.bottom" timestamp="1659346883602">
+    <state width="978" height="275" key="GridCell.Tab.0.bottom" timestamp="1659373550661">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659346883602" />
-    <state width="1465" height="275" key="GridCell.Tab.0.center" timestamp="1659346883602">
+    <state width="978" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
+    <state width="978" height="275" key="GridCell.Tab.0.center" timestamp="1659373550661">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659346883602" />
-    <state width="1465" height="275" key="GridCell.Tab.0.left" timestamp="1659346883602">
+    <state width="978" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
+    <state width="978" height="275" key="GridCell.Tab.0.left" timestamp="1659373550661">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659346883602" />
-    <state width="1465" height="275" key="GridCell.Tab.0.right" timestamp="1659346883602">
+    <state width="978" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
+    <state width="978" height="275" key="GridCell.Tab.0.right" timestamp="1659373550661">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1465" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659346883602" />
+    <state width="978" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
+    <state width="1080" height="198" key="GridCell.Tab.1.bottom" timestamp="1659368887549">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1080" height="198" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
+    <state width="1080" height="198" key="GridCell.Tab.1.center" timestamp="1659368887549">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1080" height="198" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
+    <state width="1080" height="198" key="GridCell.Tab.1.left" timestamp="1659368887549">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1080" height="198" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
+    <state width="1080" height="198" key="GridCell.Tab.1.right" timestamp="1659368887549">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1080" height="198" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
+    <state x="222" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1659367685688">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="222" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1659367685688" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/profile_new.py</url>
-          <line>46</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

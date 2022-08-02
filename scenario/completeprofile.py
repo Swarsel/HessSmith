@@ -37,7 +37,7 @@ def completeprofile():
         ax1.set_ylim([min(cas) - 0.3, max(cas) + 0.3])
         ax1.set_yticks(np.arange(min(cas), max(cas), 0.3))
         ax1.set_xticks(aas)
-         plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'ca.png')
+        plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'ca.png')
         plt.show()
 
 
