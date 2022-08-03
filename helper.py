@@ -34,7 +34,7 @@ def parsecoords(filename):
 
 
 ## only for testing of discretization
-def define_panels(x, y, N=40, reverse=False, dir=False, flip=False):
+def define_panels(x, y, N=40, reverse=False, dir=True, flip=False):
     R = (x.max() - x.min()) / 2.0
     x_center = (x.max() + x.min()) / 2.0
     theta = np.linspace(0.0, 2.0 * np.pi, N + 1)
@@ -59,9 +59,9 @@ def define_panels(x, y, N=40, reverse=False, dir=False, flip=False):
     panels = np.empty(N, dtype=object)
     if dir:
         for i in range(N):
-            panels[i] = Panel(x_ends[N - i], y_ends[N - i], x_ends[N - i - 1], y_ends[N - i - 1], i, flip)
+            panels[i] = Panel(x_ends[N - i], y_ends[N - i], x_ends[N - i - 1], y_ends[N - i - 1], i)
     if not dir:
         for i in range(N):
-            panels[i] = Panel(x_ends[i], y_ends[i], x_ends[i + 1], y_ends[i + 1], i, flip)
+            panels[i] = Panel(x_ends[i], y_ends[i], x_ends[i + 1], y_ends[i + 1], i)
 
     return panels

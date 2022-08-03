@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import math
 from scipy.optimize import curve_fit
-from external.AngleAnnotation import AngleAnnotation
+#from external.AngleAnnotation import AngleAnnotation
 import matplotlib.patches as patches
 
 """
@@ -39,11 +39,9 @@ x,y = parsecoords("data/processeddata/naca0012b.dat")
 
 
 panels = make_panels(x,y)
-for panel in panels:
-    print(panel)
 profile = AirfoilProfile(panels, vortex=True)
-profile.solve(a=5)
-print(profile)
+#profile.solve(a=5)
+#print(profile)
 """
 def vxvy(x,y, profile,V=1, a=0):
     a=np.radians(a)
@@ -68,6 +66,7 @@ def vxvy(x,y, profile,V=1, a=0):
     return vtx, vty
 """
 """
+
 xs = []
 ys = []
 vxs = []
@@ -109,17 +108,16 @@ plt.colorbar(orientation="horizontal")
 plt.show()
 """
 
-"""
-def get_velocity_field(profile, X, Y, a=0, V=1):
-    a = np.radians(a)
+def get_velocity_field(profile, XX, YY, shape, a=0, V=1):
+    #a = np.radians(a)
     # freestream contribution
-    n = len(X)
-    vx = np.zeros((n, n), dtype=float)
-    vy = np.zeros((n, n), dtype=float)
-    for i in range(n):
-        for j in range(n):
-
-            vx[i][j], vy[i][j] = vxvy(X[i][j],Y[i][j],profile,V=V,a=a)
+    n = shape
+    vx = np.zeros(n, dtype=float)
+    vy = np.zeros(n, dtype=float)
+    for i in range(len(XX)):
+        for j in range(len(YY)):
+            vx[i][j], vy[i][j] = profile.compute_free_vt(XX[i],YY[j], a=a,V=V)
+            #print(XX[i], YY[j], vx[i][j], vy[i][j])
 
     return vx, vy
 
@@ -130,10 +128,12 @@ x_start, x_end = -1.0, 2.0
 y_start, y_end = -0.3, 0.3
 X, Y = np.meshgrid(np.linspace(x_start, x_end, nx),
                       np.linspace(y_start, y_end, ny))
+xs = X[0]
+ys = np.array([yi[0] for yi in Y])
 
 # compute the velocity field on the mesh grid
-vx, vy = get_velocity_field(profile, X, Y, V=1, a=0)
-
+vx, vy = get_velocity_field(profile, xs, ys, X.shape, V=1, a=0)
+#print(vy)
 # plot the velocity field
 width = 10
 plt.figure(figsize=(width, width))
@@ -150,4 +150,27 @@ plt.ylim(y_start, y_end)
 plt.title('Streamlines around a NACA 0012 airfoil (AoA = ${}^o$)'.format(0),
              fontsize=16)
 plt.show()
-"""
+
+# compute the pressure field
+cp = 1.0 - np.sqrt(vx**2 + vy**2) / 1**2
+
+# plot the pressure field
+width = 10
+plt.figure(figsize=(width, width))
+plt.xlabel('x', fontsize=16)
+plt.ylabel('y', fontsize=16)
+contf = plt.contourf(X, Y, cp,
+                        levels=np.linspace(-2.0, 1.0, 100), extend='both')
+cbar = plt.colorbar(contf,
+                       orientation='horizontal',
+                       shrink=0.5, pad = 0.1,
+                       ticks=[-2.0, -1.0, 0.0, 1.0])
+cbar.set_label('$C_p$', fontsize=16)
+plt.fill([panel.xm for panel in panels],
+            [panel.ym for panel in panels],
+            color='k', linestyle='solid', linewidth=2, zorder=2)
+plt.axis('scaled')
+plt.xlim(x_start, x_end)
+plt.ylim(y_start, y_end)
+plt.title('Contour of pressure field', fontsize=16)
+plt.show()

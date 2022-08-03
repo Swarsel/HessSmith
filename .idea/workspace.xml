@@ -20,62 +20,110 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bu/comp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/free.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/joukowski.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/make_cylinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/panel_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/profile_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bu/testsuite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012vx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012vy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614vx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614vy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40vx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40vy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/comp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/free.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/joukowski.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/make_cylinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/panel_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/profile_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hold/testsuite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/comp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/free.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/helper.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/joukowski.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/make_cylinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/panel_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/profile_new.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tryhard/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bu/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/bubeforechangeclass/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/hold/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/safety/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/tryhard/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/.idea/wild.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/comp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/free.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/helper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/joukowski.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/make_cylinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/naca0012b.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/panel_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/profile_new.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/arc/wild/testsuite.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myplot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/comp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/free.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/joukowski.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/make_cylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/panel_new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/profile_new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bu/testsuite.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/comp.py" beforeDir="false" afterPath="$PROJECT_DIR$/comp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processeddata/sc20614.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/processeddata/sc20614.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/processeddata/z40.dat" beforeDir="false" afterPath="$PROJECT_DIR$/data/processeddata/z40.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012cp.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012cp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012q.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012q.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614cp.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614cp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614q.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614q.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESz40cp.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40cp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESz40q.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURESz40q.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012.DAT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012.DAT.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/free.py" beforeDir="false" afterPath="$PROJECT_DIR$/free.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/comp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/free.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/joukowski.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/make_cylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/panel_new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/profile_new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hold/testsuite.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/profile_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile_new.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/completeprofile.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/completeprofile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testsuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/comp.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/free.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/helper.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/joukowski.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/make_cylinder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/panel_new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/profile_new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/run.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tryhard/testsuite.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +151,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "F:/Libraries/Documents/GitHub/BA"
+  }
+}]]></component>
   <component name="PyConsoleOptionsProvider">
     <option name="myUseExistingConsole" value="true" />
   </component>
@@ -116,7 +171,7 @@
       <recent name="F:\Libraries\Documents\GitHub\BA\scenario" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.testsuite">
+  <component name="RunManager" selected="Python.run">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -258,8 +313,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.testsuite" />
         <item itemvalue="Python.run" />
+        <item itemvalue="Python.testsuite" />
         <item itemvalue="Python.joukowskierror" />
         <item itemvalue="Python.karmanerror" />
         <item itemvalue="Python.joukowskiplots" />
@@ -279,6 +334,9 @@
       <updated>1658926506731</updated>
       <workItem from="1659295494390" duration="12695000" />
       <workItem from="1659310718482" duration="1083000" />
+      <workItem from="1659439266196" duration="4691000" />
+      <workItem from="1659456780302" duration="1186000" />
+      <workItem from="1659476672497" duration="10008000" />
     </task>
     <servers />
   </component>
@@ -295,51 +353,19 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state width="978" height="275" key="GridCell.Tab.0.bottom" timestamp="1659373550661">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="978" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
-    <state width="978" height="275" key="GridCell.Tab.0.center" timestamp="1659373550661">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="978" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
-    <state width="978" height="275" key="GridCell.Tab.0.left" timestamp="1659373550661">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="978" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
-    <state width="978" height="275" key="GridCell.Tab.0.right" timestamp="1659373550661">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="978" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659373550661" />
-    <state width="1080" height="198" key="GridCell.Tab.1.bottom" timestamp="1659368887549">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1080" height="198" key="GridCell.Tab.1.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
-    <state width="1080" height="198" key="GridCell.Tab.1.center" timestamp="1659368887549">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1080" height="198" key="GridCell.Tab.1.center/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
-    <state width="1080" height="198" key="GridCell.Tab.1.left" timestamp="1659368887549">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1080" height="198" key="GridCell.Tab.1.left/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
-    <state width="1080" height="198" key="GridCell.Tab.1.right" timestamp="1659368887549">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state width="1080" height="198" key="GridCell.Tab.1.right/0.0.1920.1050@0.0.1920.1050" timestamp="1659368887549" />
-    <state x="222" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1659367685688">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="222" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1659367685688" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/scenario/joukowskierror.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -348,5 +374,14 @@
         </breakpoint>
       </default-breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.eta" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/panel_new_py$run.coverage" NAME="run Coverage Results" MODIFIED="1659486669858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/panel_new_py$testsuite.coverage" NAME="testsuite Coverage Results" MODIFIED="1659486047513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
