@@ -14,6 +14,7 @@ from scenario.analyticalcylinder import analyticalcylinder
 from scenario.cylinderqvc import cylinderqvc
 from scenario.rotatingcylinder import rotatingcylinder
 from scenario.completeprofile import completeprofile
+from scenario.completeprofile2d import completeprofile2d
 from scenario.joukowskiplots import joukowskiplots
 from scenario.joukowskierror import joukowskierror
 from scenario.karmanerror import karmanerror
@@ -36,7 +37,10 @@ from scenario.definitionpanel import definitionpanel
 #joukowskiplots()
 
 #komplette Graphen für vx, vy, q und cp
-completeprofile()
+#completeprofile()
+
+#funkionierende komplette Graphen in 2d
+completeprofile2d()
 
 #8-seitiger Zylinder zwischen -15 und 15 grad
 #rotatingcylinder()

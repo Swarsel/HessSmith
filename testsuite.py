@@ -10,6 +10,10 @@ import math
 from scipy.optimize import curve_fit
 #from external.AngleAnnotation import AngleAnnotation
 import matplotlib.patches as patches
+from shapely.geometry import Point, Polygon
+from scenario.definitionfigures import definitionfigures
+
+definitionfigures()
 
 """
 x,y = parsecoords("data/processeddata/naca0012b.dat")
@@ -34,7 +38,7 @@ profile = AirfoilProfile(panels)
 profile.solve()
 print(profile)
 """
-
+"""
 x,y = parsecoords("data/processeddata/naca0012b.dat")
 
 
@@ -42,6 +46,7 @@ panels = make_panels(x,y)
 profile = AirfoilProfile(panels, vortex=True)
 #profile.solve(a=5)
 #print(profile)
+"""
 """
 def vxvy(x,y, profile,V=1, a=0):
     a=np.radians(a)
@@ -107,32 +112,53 @@ plt.colorbar(orientation="horizontal")
 #plt.savefig('data/scenarios/FIGURES' + filename[:-4] + 'vy.png')
 plt.show()
 """
-
-def get_velocity_field(profile, XX, YY, shape, a=0, V=1):
+"""
+def get_velocity_field(profile, XX, YY, xshape, yshape, a=0, V=1):
     #a = np.radians(a)
     # freestream contribution
-    n = shape
-    vx = np.zeros(n, dtype=float)
-    vy = np.zeros(n, dtype=float)
+    nx = xshape
+    ny = yshape
+    vx = np.zeros(nx, dtype=float)
+    vy = np.zeros(ny, dtype=float)
     for i in range(len(XX)):
         for j in range(len(YY)):
-            vx[i][j], vy[i][j] = profile.compute_free_vt(XX[i],YY[j], a=a,V=V)
+            vx[j][i], vy[j][i] = profile.compute_free_vt(XX[i],YY[j], a=a,V=V)
             #print(XX[i], YY[j], vx[i][j], vy[i][j])
 
     return vx, vy
 
+coords = [(a,b) for a,b in zip(profile.x, profile.y)]
+#print(coords)
+polygon = Polygon(coords)
+print(polygon)
+
+#xpp,ypp = polygon.exterior.xy
+#plt.plot(xpp,ypp)
+#plt.show()
 
 # define a mesh grid
-nx, ny = 20, 20  # number of points in the x and y directions
-x_start, x_end = -1.0, 2.0
-y_start, y_end = -0.3, 0.3
+nx, ny = 80, 80  # number of points in the x and y directions
+x_start, x_end = -0.5, 1.5
+y_start, y_end = -0.2, 0.2
 X, Y = np.meshgrid(np.linspace(x_start, x_end, nx),
                       np.linspace(y_start, y_end, ny))
 xs = X[0]
 ys = np.array([yi[0] for yi in Y])
-
+vx, vy = get_velocity_field(profile, xs, ys, X.shape, Y.shape, V=1, a=5)
+#print(xs)
+"""
+"""
+for i in range(len(xs)):
+    for j in range(len(ys)):
+        point = Point(xs[i], ys[j])
+        #print(point)
+        if point.within(polygon) or polygon.touches(point):
+            print(point, "is within poly")
+            vx[j][i], vy[j][i] = np.nan, np.nan
+"""
+"""
 # compute the velocity field on the mesh grid
-vx, vy = get_velocity_field(profile, xs, ys, X.shape, V=1, a=0)
+
 #print(vy)
 # plot the velocity field
 width = 10
@@ -140,9 +166,9 @@ plt.figure(figsize=(width, width))
 plt.xlabel('x', fontsize=16)
 plt.ylabel('y', fontsize=16)
 plt.streamplot(X, Y, vx, vy,
-                  density=1, linewidth=1, arrowsize=1, arrowstyle='->')
-plt.fill([panel.xm for panel in panels],
-            [panel.ym for panel in panels],
+                  density=1, linewidth=0.5, arrowsize=1, arrowstyle='->')
+plt.fill(profile.x,
+            profile.y,
             color='k', linestyle='solid', linewidth=2, zorder=2)
 plt.axis('scaled')
 plt.xlim(x_start, x_end)
@@ -152,13 +178,13 @@ plt.title('Streamlines around a NACA 0012 airfoil (AoA = ${}^o$)'.format(0),
 plt.show()
 
 # compute the pressure field
-cp = 1.0 - np.sqrt(vx**2 + vy**2) / 1**2
-
+cp = 1.0 -(vx**2 + vy**2) / 1**2
 # plot the pressure field
 width = 10
 plt.figure(figsize=(width, width))
 plt.xlabel('x', fontsize=16)
 plt.ylabel('y', fontsize=16)
+
 contf = plt.contourf(X, Y, cp,
                         levels=np.linspace(-2.0, 1.0, 100), extend='both')
 cbar = plt.colorbar(contf,
@@ -166,11 +192,13 @@ cbar = plt.colorbar(contf,
                        shrink=0.5, pad = 0.1,
                        ticks=[-2.0, -1.0, 0.0, 1.0])
 cbar.set_label('$C_p$', fontsize=16)
-plt.fill([panel.xm for panel in panels],
-            [panel.ym for panel in panels],
+plt.fill(profile.x,
+            profile.y,
             color='k', linestyle='solid', linewidth=2, zorder=2)
+#plt.scatter(X,Y)
 plt.axis('scaled')
 plt.xlim(x_start, x_end)
 plt.ylim(y_start, y_end)
 plt.title('Contour of pressure field', fontsize=16)
 plt.show()
+"""

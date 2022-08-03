@@ -42,10 +42,15 @@ def definitionfigures():
 
     style = "Simple, tail_width=0.5, head_width=4, head_length=8"
     kw = dict(arrowstyle=style, color="k")
-    a3 = patches.FancyArrowPatch((0.7, -0.15), (1, -0.1),
+    a3 = patches.FancyArrowPatch((1, -0.1),(0.7, -0.15),
+                                 connectionstyle="arc3,rad=-.1", **kw)
+    plt.gca().add_patch(a3)
+    plt.annotate("Zählrichtung Panele $\mathcal{C}_i$", (0.8, -0.2), fontsize=16)
+
+    a3 = patches.FancyArrowPatch((1, 0.1),(0.7, 0.15),
                                  connectionstyle="arc3,rad=.1", **kw)
     plt.gca().add_patch(a3)
-    plt.annotate("Zählrichtung", (0.8, -0.2), fontsize=16)
+    plt.annotate("Zählrichtung \nKoordinatenpaare $\\vec x_i$", (0.48, 0.1), fontsize=16)
 
     for k in range(4,11):
         ax1.scatter(x[5*k], y[5*k], marker="D", color='k', fc="None", linewidth=0.5)

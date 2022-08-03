@@ -1,5 +1,6 @@
 import numpy as np
 import csv
+from shapely.geometry import Point, Polygon
 
 class AirfoilProfile:
     def __init__(self, panels, name=None, vortex=True):
@@ -9,6 +10,7 @@ class AirfoilProfile:
         self.y = [panel.ya for panel in self.panels]
         self.len = len(self.panels)
         self.vortex = vortex
+        self.shape = Polygon([(a,b) for a,b in zip(self.x, self.y)])
 
         self.U = sum([panel.length for panel in self.panels])
         self.t = abs(max(self.x) - min(self.x))
@@ -215,18 +217,23 @@ class AirfoilProfile:
         a = np.radians(a)
         #x = x[:-1]
         #y = y[:-1]
-        xi = self.__xi(x=x, y=y)
-        eta = self.__eta(x=x, y=y)
-        I = self.__i(Xi=xi, Eta=eta)
-        J = self.__j(Xi=xi, Eta=eta)
-        An = self.__an(II=I, JJ=J)
-        At = self.__at(II=I, JJ=J)
+        point = Point(x,y)
+        if point.within(self.shape) or self.shape.touches(point):
+            vtx = np.nan
+            vty = np.nan
+        else:
+            xi = self.__xi(x=x, y=y)
+            eta = self.__eta(x=x, y=y)
+            I = self.__i(Xi=xi, Eta=eta)
+            J = self.__j(Xi=xi, Eta=eta)
+            An = self.__an(II=I, JJ=J)
+            At = self.__at(II=I, JJ=J)
 
-        vtx = sum([At[0][j] * self.panels[j].q for j in range(self.len)]) - self.gamma * sum(
-            [An[0][j] for j in range(self.len)]) + V * np.cos(a)
+            vtx = sum([At[0][j] * self.panels[j].q for j in range(self.len)]) - self.gamma * sum(
+                [An[0][j] for j in range(self.len)]) + V * np.cos(a)
 
-        vty= sum([An[0][j] * self.panels[j].q for j in range(self.len)]) + self.gamma * sum(
-            [At[0][j] for j in range(self.len)]) + V * np.sin(a)
+            vty= sum([An[0][j] * self.panels[j].q for j in range(self.len)]) + self.gamma * sum(
+                [At[0][j] for j in range(self.len)]) + V * np.sin(a)
 
         return vtx, vty
 
