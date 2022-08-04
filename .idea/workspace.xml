@@ -20,86 +20,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/NACA0012ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/NACA0012contourcp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/NACA0012cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/NACA0012q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/NACA0012stream.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESNACA0012ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESNACA0012cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESNACA0012q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESNACA0012vx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESNACA0012vy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESsc20614ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESsc20614cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESsc20614q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESsc20614vx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESsc20614vy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESz40ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESz40cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESz40q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESz40vx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/ded/FIGURESz40vy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/sc20614ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/sc20614contourcp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/sc20614cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/sc20614q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/sc20614stream.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/z40ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/z40contourcp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/z40cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/z40q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/z40stream.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012vx.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012vy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614vx.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614vy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40vx.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40vy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/panel.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/completeprofile2d.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012contourcp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012stream.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614contourcp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614cp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614q.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614stream.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/z40ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/zaehlrichtung_2old.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/NACA0012ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/NACA0012contourcp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/NACA0012cp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/NACA0012q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/NACA0012stream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/cylinder8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/joukowskierror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/paneldefinition.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/sc20614ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/sc20614contourcp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/sc20614cp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/sc20614q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/sc20614stream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/z40ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/z40contourcp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/z40cp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/z40q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/z40stream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/backup/zaehlrichtung.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/eightsidedcylindererror.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/eightsidedcylindertheo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012vx100.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012vy100.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/NACA0012.DAT.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/NACA0012vx.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/NACA0012vy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/sc20614.dat.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/sc20614vx.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/sc20614vy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/z40.dat.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/z40vx.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/backup/z40vy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/custom.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/loadandplot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scenario/makeprofileplot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012contourcp_orig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/joukowskierror_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/sc20614contourcp_orig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/z40contourcp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/z40contourcp_orih.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/z40cp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/z40q.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/z40stream.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/rawdata/NACA0012.DAT" beforeDir="false" afterPath="$PROJECT_DIR$/data/rawdata/NACA0012.DAT" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURES/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURES/zaehlrichtung.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/zaehlrichtung.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012ca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012cp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012q.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012vx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012vy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614ca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614cp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614q.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614vx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESsc20614vy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESz40ca.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESz40cp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESz40q.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESz40vx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURESz40vy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/profile_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/profile_new.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURES/z40contourcp.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/z40contourcp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURES/z40stream.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/z40stream.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/z40vx.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40vx.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/z40vy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40vy.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/eightsidedcylinderpanelparameters/eightsidedcylinderparameters.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/eightsidedcylinderpanelparameters/eightsidedcylinderparameters.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/novortexsystemmatrix/novortexsystemmatrix.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/novortexsystemmatrix/novortexsystemmatrix.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/scenarios/rotatingcylinder/rotatingcylinder.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/rotatingcylinder/rotatingcylinder.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel_new.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scenario/definitionfigures.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/definitionfigures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/abschlussarbeit.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abstract.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/appendix01.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/appendix01.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012contourcp.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012contourcp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/figures/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/zaehlrichtung.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/zaehlrichtung.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/joukowskierror.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/joukowskierror.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/sc20614contourcp.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/sc20614contourcp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/hauptteil.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/hauptteil.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/pdfa.xmpi" beforeDir="false" afterPath="$PROJECT_DIR$/written/pdfa.xmpi" afterDir="false" />
     </list>
@@ -149,7 +135,7 @@
       <recent name="F:\Libraries\Documents\GitHub\BA\scenario" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.profiledata">
+  <component name="RunManager" selected="Python.run">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -220,6 +206,9 @@
       <module name="BA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scenario/profiledata" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -288,9 +277,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.run" />
         <item itemvalue="Python.profiledata" />
         <item itemvalue="Python.testsuite" />
-        <item itemvalue="Python.run" />
         <item itemvalue="Python.joukowskierror" />
         <item itemvalue="Python.karmanerror" />
       </list>
@@ -312,7 +301,8 @@
       <workItem from="1659439266196" duration="4691000" />
       <workItem from="1659456780302" duration="1186000" />
       <workItem from="1659476672497" duration="10008000" />
-      <workItem from="1659516755385" duration="16414000" />
+      <workItem from="1659516755385" duration="19698000" />
+      <workItem from="1659544761010" duration="4572000" />
     </task>
     <servers />
   </component>
@@ -358,7 +348,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/panel_new_py$run.coverage" NAME="run Coverage Results" MODIFIED="1659486669858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/testsuite_py$run.coverage" NAME="run Coverage Results" MODIFIED="1659529187577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/testsuite_py$run.coverage" NAME="run Coverage Results" MODIFIED="1659548494733" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/testsuite_py$testsuite.coverage" NAME="testsuite Coverage Results" MODIFIED="1659531925649" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/panel_new_py$testsuite.coverage" NAME="testsuite Coverage Results" MODIFIED="1659486047513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>

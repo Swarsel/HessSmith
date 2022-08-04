@@ -16,8 +16,18 @@ class Panel:
         self.ym = (ya + yb) / 2
         self.length = ensure_zero(np.sqrt((xb - xa) ** 2 + (yb - ya) ** 2))
         self.theta = np.arctan2(yb - ya, xb - xa)
-        # für einfachere Interpretation
+        # für einfachere Interpretation beim Plotten
+        """
+        if self.theta < 0:
+            self.theta += 2*np.pi
 
+        if np.pi / 2 < self.theta < 3 * np.pi / 2:
+            self.loc = 'lower'  # upper surface
+        elif self.theta == np.pi / 2 or self.theta == 3 * np.pi / 2:
+            self.loc = 'vertical'
+        else:
+            self.loc = 'upper'  # lower surface
+        """
         self.q = None
         self.vt = None
         self.cp = None

@@ -20,6 +20,11 @@ from scenario.joukowskierror import joukowskierror
 from scenario.karmanerror import karmanerror
 from scenario.definitionfigures import definitionfigures
 from scenario.definitionpanel import definitionpanel
+from scenario.loadandplot import loadandplot
+from scenario.custom import custom
+from scenario.makeprofileplot import makeprofileplot
+
+#custom()
 
 #get paneldefinitionsbild
 #definitionpanel()
@@ -40,7 +45,7 @@ from scenario.definitionpanel import definitionpanel
 #completeprofile()
 
 #funkionierende komplette Graphen in 2d
-completeprofile2d()
+#loadandplot()
 
 #8-seitiger Zylinder zwischen -15 und 15 grad
 #rotatingcylinder()
@@ -60,6 +65,7 @@ completeprofile2d()
 #BigGraphs
 #besser: über scenario-Folder starten
 #makeprofilegraphs()
+makeprofileplot()
 
 # Panelparameter 8-seitig
 #eightsidedcylinderpanelparameters()
