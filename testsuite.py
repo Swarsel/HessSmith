@@ -13,7 +13,7 @@ import matplotlib.patches as patches
 from shapely.geometry import Point, Polygon
 from scenario.definitionfigures import definitionfigures
 
-definitionfigures()
+#definitionfigures()
 
 """
 x,y = parsecoords("data/processeddata/naca0012b.dat")
@@ -202,3 +202,8 @@ plt.ylim(y_start, y_end)
 plt.title('Contour of pressure field', fontsize=16)
 plt.show()
 """
+
+x,y = parsecoords("data/processeddata/0213.dat")
+panels = make_panels(x,y)
+profile = AirfoilProfile(panels)
+profile.write_panels("ok", n=8)

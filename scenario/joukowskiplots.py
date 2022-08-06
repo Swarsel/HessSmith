@@ -38,7 +38,7 @@ def joukowskiplots():
 
 
     fig, ax1 = plt.subplots(1, constrained_layout=True)
-    ax1.plot(x2, y2, color='k', linestyle='-', linewidth=1, label='Karman-Trefftz-T.')
+    ax1.plot(x2, y2, color='k', linestyle='-', linewidth=1, label='Kármán-Trefftz-T.')
     ax1.plot(xc, yc, color='g', linestyle='-', linewidth=1, label="$\\zeta$-Kreis")
     ax1.scatter(tx, ty, color='g', linestyle='-', linewidth=1)
     ax1.plot([0, -mux], [0,0], color='g', linestyle='-', linewidth=2, label='$\\mu_x$')

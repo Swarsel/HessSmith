@@ -25,7 +25,7 @@ Hier ist die Ausgabe der ersten 30 Zeilen der AirfoilProfile-Methode .write\_pan
 \label{appendix:c}
 Hier sind ausgewählte Codeausschnitte gezeigt, welche zur Lösung der Problemstellungen geschrieben wurden.
 \subsubsection{Die Klasse Panel}
-Die Klasse Panel modelliert die Panels $\mathcal{C}_i$ eines gegebenen Profils. Gespeichert werden neben den charakteristischen Parametern $X_i, Y_i, \theta _i, l_i$ auch der Normalwinkel des Panels $\delta_i$, welcher aus dem Profil herauszeigt. Ebenso wird die Panelposition als Ober- oder Unterseite bestimmt (für einige besondere Profile ist auch ein Wert "vertical" für komplett senkrechte Panele möglich). Ebenso gespeichert wird die Quellbelegung $q_i$, die Tangentialgeschwindigkeit $v_i^{(t)}$ unter gegebenen Anströmwinkel $\alpha $ und -geschwindigkeit $V_{\infty}$, und der resultierende Druckbeiwert $c_{p_i}$.
+Die Klasse Panel modelliert die Panels $\mathcal{C}_i$ eines gegebenen Profils. Gespeichert werden neben den charakteristischen Parametern $X_i, Y_i, \theta _i, l_i$ auch die Quellbelegung $q_i$, die Tangentialgeschwindigkeit $v_i^{(t)}$ unter gegebenen Anströmwinkel $\alpha $ und -geschwindigkeit $V_{\infty}$, und der resultierende Druckbeiwert $c_{p_i}$.
 \begin{lstlisting}[language=Python]
 class Panel:
 

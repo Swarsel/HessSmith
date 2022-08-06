@@ -1,14 +1,14 @@
 \chapter{Aufgabenstellung}
-Die Berechnung der aerodynamischen Eigenschaften eines Tragflächenprofils.
-
+%Die Berechnung der aerodynamischen Eigenschaften eines Tragflächenprofils.
+%
 \section{Zielsetzung}
-Es sollen folgende Punkte implementiert werden:
+Das Ziel der vorliegenden Arbeit ist die Berechnung  aerodynamischer Eigenschaften von Tragflächenprofilen. Dazu sollen folgende Punkte implementiert werden:
 \begin{itemize}
-  \item Eine Klasse für Panele und die sie definierenden Eigenschaften: Mittelpunkte auf der $x$- und $y$-Achse, Neigungswinkel $\theta_{i}$ und Länge $l_i$. Jedes Panel enthält ebenfalls Möglichkeiten zur Speicherung der zugehörigen Quellstärken $q_i$, Tangentialgeschwindigkeiten $v_i^{(t)}$ und Druckbeiwerten $c_{p_i}$
-  \item Eine Klasse für Trägerprofile, ihre Umfänge $U$ und Tiefe $t$ sowie mathematisch relevante Systemparameter $\xi_{ij}, \; \eta_{ij}, \; I_{ij}, \; J_{ij}, \; A_{ij}^{(n)}, \;A_{ij}^{(t)}, \;M_{ij}$.
-  \item Eine Methode zur Lösung des linearen Gleichungssystems $M \vec q = \vec b$ für den Vektor der Quellbewegung unter einer konstanten Anströmgeschwindigkeit $V_{\infty}$ und einem Anstellwinkel des Profils $\alpha $, sowie der Berechnung der daraus resultierenden Tangentialgeschwindigkeiten und Druckbeiwerte.
+  \item Eine Klasse für Panele und die sie definierenden Eigenschaften: Mittelpunkte auf der $x$- und $y$-Achse, Neigungswinkel $\theta_{i}$ und Länge $l_i$. %Jedes Panel enthält ebenfalls Möglichkeiten zur Speicherung der zugehörigen Quellstärken $q_i$, Tangentialgeschwindigkeiten $v_i^{(t)}$ und Druckbeiwerten $c_{p_i}$
+  \item Eine Klasse für Trägerprofile, ihre Umfänge $U$ und Tiefe $t$ sowie mathematisch relevante Systemparameter $\xi_{i,j}, \; \eta_{i,j}, \; I_{i,j}, \; J_{i,j}, \; A_{i,j}^{(n)}, \;A_{i,j}^{(t)}, \;M_{i,j}$.
+  \item Eine Methode zur Lösung des linearen Gleichungssystems $M \vec q = \vec b$ für den Vektor der Quellbelegung unter einer konstanten Anströmgeschwindigkeit $V_{\infty}$ und einem Anstellwinkel des Profils $\alpha $, sowie der Berechnung der daraus resultierenden Tangentialgeschwindigkeiten und Druckbeiwerte.
 \end{itemize}
-Weiters soll mittels der Implementation eine Untersuchung der Abweichung der ermittelten Druckbeiwerte von den aus der Potentialtheorie berechneten Werten für einen achtseitigen Kreiszylinder sowie die Abweichung des Auftriebsbeiwerts eines Joukowsky-Profils vom analytischen Resultat ermittelt werden.
+Weiters soll eine Untersuchung der Abweichung der ermittelten Druckbeiwerte von den aus der Potentialtheorie berechneten Werten für einen achtseitigen Kreiszylinder sowie die Abweichung des Auftriebsbeiwerts eines Joukowski-Profils vom analytischen Resultat erfolgen.
 
 \section{Methodik}
-Zur Lösung der Aufgabenstellung wurde die Programmiersprache Python verwendet. Für die Lösung der linearen Gleichungssysteme wird linalg.solve\footnote{linalg.solve verwendet die LAPACK routine \_gesv als Solver \cite{harris2020array}} aus der Python-Bibliothek NumPy verwendet. \cite{harris2020array}\\Sämtliche Graphen wurden mithilfe der Python-Bibliothek Matplotlib erstellt. \cite{Hunter:2007} Sofern analytische Lösungen zu den linearen Gleichungssystemen berechnet wurden, wurden diese mit der Python-Bibliothek SymPy berechnet. \cite{Sympy} Für die Kurvenanpassung in \ref{chap:analyticalcylinder} wurde die Python-Bibliothek SciPy verwendet. \cite{2020SciPy-NMeth}
+Zur Lösung der Aufgabenstellung wurde die Programmiersprache Python (Version 3.8) verwendet. \cite{python2009} \\Für die Lösung der linearen Gleichungssysteme wurde linalg.solve\footnote{linalg.solve verwendet die LAPACK routine \_gesv als Solver \cite{harris2020array}} aus der Python-Bibliothek NumPy (Version 1.23.1) verwendet. \cite{harris2020array} Sämtliche Graphen wurden mithilfe der Python-Bibliothek Matplotlib (Version 3.5.2) erstellt. \cite{Hunter:2007} Analytische Lösungen zu den linearen Gleichungssystemen  wurden mit der Python-Bibliothek SymPy (Version 1.10.1) berechnet. \cite{Sympy} Für die Kurvenanpassung in \ref{chap:analyticalcylinder} wurde die Python-Bibliothek SciPy (Version 1.8.1) verwendet. \cite{2020SciPy-NMeth} Die Maskierung der Trägerprofile für die Strömungs- und Konturgraphen in \ref{chap:profilauswertung} wurde mithilfe der Python-Bibliothek shapely (Version 1.8.2) erreicht. \cite{shapely2007}

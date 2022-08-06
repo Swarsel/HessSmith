@@ -39,7 +39,7 @@ from scenario.makeprofileplot import makeprofileplot
 #joukowskierror()
 
 #joukowski und karman-trefftz graphen generieren
-#joukowskiplots()
+joukowskiplots()
 
 #komplette Graphen für vx, vy, q und cp
 #completeprofile()
@@ -65,7 +65,7 @@ from scenario.makeprofileplot import makeprofileplot
 #BigGraphs
 #besser: über scenario-Folder starten
 #makeprofilegraphs()
-makeprofileplot()
+#makeprofileplot()
 
 # Panelparameter 8-seitig
 #eightsidedcylinderpanelparameters()
