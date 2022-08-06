@@ -14,9 +14,9 @@ Es folgt eine Gegenüberstellung des Selig-Formats (links) mit dem Lednicer-Form
 \end{minipage}
 
 \newpage
-\addsec{Anhang B: Beispielausgabe der Methode .write\_panels()}
+\addsec{Anhang B: Beispielausgabe der Methode .write\_panels}
 \label{appendix:b}
-Hier ist die Ausgabe der ersten 30 Zeilen der AirfoilProfile-Methode .write\_panels() gezeigt, am Beispiel des NASA: HSNLF(1)-0213 Profils.
+Hier ist die Ausgabe der ersten 30 Zeilen der AirfoilProfile-Methode .write\_panels gezeigt, am Beispiel des NASA: HSNLF(1)-0213 Profils.
 
 \verbatiminput{writtenvals/hsnlf213_vals.csv}
 
@@ -44,10 +44,10 @@ class Panel:
 \end{lstlisting}
 
 \subsubsection{Die Klasse AirfoilProfile}
-Die Klasse AirfoilProfile modelliert ein gegebenes Profil. Sie speichert neben wählbaren Namen und der ihr zugewiesenen Panele auch die Profiltiefe $t$ und sämtliche Systemparameter $\xi_{ij}, \; \eta_{ij}, \; I_{ij}, \; J_{ij}, \; A_{ij}^{(n)}, \;A_{ij}^{(t)}, \;M_{ij}$. \\
-Durch einen Aufruf der Methode .solve(V, a) mit gegebenen $\alpha $ und $V_{\infty}$ werden für alle zugeordneten Panele die Quellstärken, Tangentialgeschwindigkeiten und Druckbeiwerte berechnet (und in den jeweiligen Klassenvariablen abgespeichert). Dabei wird ebenfalls die Genauigkeit der Approximation $\sum q_i l_i$ berechnet. Die Methode kann mit dem Schlüsselwortargument vortex=True aufgerufen werden, wodurch ebenfalls der Auftriebsbeiwert $c_a$, sowie die Wirbelbewegung $\gamma$ \\ berechnet werden.
-Die Methode .write\_panels() erzeugt eine .csv-Datei, welche für jedes Panel die Werte $X_i, Y_i \theta_i, l_i$ in eine Zeile schreibt (siehe \nameref{appendix:a}). \\
-Die Methode .compute\_free\_vt(x, y, V, a) ermöglicht die Berechnung der Tangentialgeschwindigkeiten an jedem Punkt $(x_i, y_i)$ des Profils. Diese werden als Tupel von der Methode zurückgegeben.
+Die Klasse AirfoilProfile modelliert ein gegebenes Profil. Sie speichert neben wählbaren Namen und der ihr zugewiesenen Panele auch die Profiltiefe $t$ und sämtliche Systemparameter $\xi_{i,j}, \; \eta_{i,j}, \; I_{i,j}, \; J_{i,j}, \; A_{i,j}^{(n)}, \;A_{i,j}^{(t)}, \;M_{i,j}$. \\
+Durch einen Aufruf der Methode .solve(V, a) mit gegebenen $\alpha $ und $V_{\infty}$ werden für alle zugeordneten Panele die Quellstärken, Tangentialgeschwindigkeiten und Druckbeiwerte berechnet (und in den jeweiligen Klassenvariablen abgespeichert). Dabei wird ebenfalls die Genauigkeit der Approximation $\sum q_i l_i$ berechnet. Die Methode kann mit dem Schlüsselwortargument vortex=True aufgerufen werden, wodurch ebenfalls der Auftriebsbeiwert $c_a$, sowie die Wirbelbelegung $\gamma$ \\ berechnet werden.
+Die Methode .write\_panels erzeugt eine .csv-Datei, welche für jedes Panel die Werte $X_i,\; Y_i,\; \theta_i,\; l_i$ in eine Zeile schreibt (siehe \nameref{appendix:b}). \\
+Die Methode .compute\_free\_vt ermöglicht die Berechnung der Tangentialgeschwindigkeiten an jedem Punkt $(x_i, y_i)$ des Profils. Diese werden als Tupel von der Methode zurückgegeben.
 \begin{lstlisting}[language=Python]
 class AirfoilProfile:
     def __init__(self, panels, name=None, vortex=True):
@@ -319,8 +319,10 @@ def cylinder(r=1, n=8):
     return x, y
 \end{lstlisting}
 
-\subsubsection{make\_panels(x,y, reverse=False)}
+\subsubsection{make\_panels(x,y)}
+Diese Funktion wurde verwendet, um aus gegebenen Koordinatenpaaren eine Liste an Panelen zu generieren. Es wird dabei sichergestellt, dass die Panele einen geschlossenen Körper ergeben.
 \begin{lstlisting}
+def make_panels(x, y):
     if type(x) is not np.ndarray:
         x = np.array(x)
     if type(y) is not np.ndarray:
@@ -328,22 +330,16 @@ def cylinder(r=1, n=8):
     if (x[0], y[0]) != (x[-1], y[-1]):
         x = np.append(x, x[0])
         y = np.append(y, y[0])
-    if reverse:
-        x = np.flipud(x)
-        y = np.flipud(y)
-    n = len(x) - 1
-    panels = np.array([Panel(x[i], y[i], x[i + 1], y[i + 1]) for i in range(n)])
+        
+    n = len(x) -1
+
+    panels = np.array([Panel(x[n - i], y[n - i], x[n - i - 1], y[n - i - 1], i) for i in range(n)])
+    
     return panels
 \end{lstlisting}
 
-\subsubsection{parsecoords(filename)}
-\begin{lstlisting}
-    x, y = np.loadtxt(filename, dtype=float, unpack=True)
-    return x, y
-\end{lstlisting}
-
-\subsubsection{Joukowsky-Profil-Generator}
-
+\subsubsection{Joukowski-Profil-Generator}
+Diese Funktion generiert Joukowski-Profile.
 \begin{lstlisting}
 def joukowski_transfrom(zeta):
     z = zeta + 1 / zeta
@@ -362,7 +358,7 @@ def make_joukowski(mux=0.2, muy=0.1, N=100):
 \end{lstlisting}
 
 \subsubsection{Kármán-Trefftz-Profil-Generator}
-
+Diese Funktion generiert Kármán-Trefftz-Profile.
 \begin{lstlisting}
 def karman_trefftz_transform(zeta, n):
     z = n * ((zeta + 1) ** n + (zeta - 1) ** n) / ((zeta + 1) ** n - (zeta - 1) ** n)
@@ -374,8 +370,6 @@ def make_karman_trefftz(mux=0.2, muy=0.1, n=1.9, N=100):
     theta = np.linspace(0, 2 * np.pi, N)
     Xc = np.real(center) + R * np.cos(theta)
     Yc = np.imag(center) + R * np.sin(theta)
-    tx = np.real(center)
-    ty = np.imag(center)
 
     p = karman_trefftz_transform(Xc + Yc * 1j, n)
     Xp, Yp = np.real(p), np.imag(p)
