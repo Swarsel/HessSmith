@@ -203,7 +203,8 @@ plt.title('Contour of pressure field', fontsize=16)
 plt.show()
 """
 
-x,y = parsecoords("data/processeddata/0213.dat")
+x,y = parsecoords("data/rawdata/sc20614.dat")
 panels = make_panels(x,y)
 profile = AirfoilProfile(panels)
-profile.write_panels("ok", n=8)
+profile.solve(a=0)
+print(profile)

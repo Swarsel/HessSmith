@@ -320,16 +320,13 @@ def cylinder(r=1, n=8):
 \end{lstlisting}
 
 \subsubsection{make\_panels(x,y)}
-Diese Funktion wurde verwendet, um aus gegebenen Koordinatenpaaren eine Liste an Panelen zu generieren. Es wird dabei sichergestellt, dass die Panele einen geschlossenen Körper ergeben.
+Diese Funktion wurde verwendet, um aus gegebenen Koordinatenpaaren eine Liste an Panelen zu generieren. 
 \begin{lstlisting}
 def make_panels(x, y):
     if type(x) is not np.ndarray:
         x = np.array(x)
     if type(y) is not np.ndarray:
         y = np.array(y)
-    if (x[0], y[0]) != (x[-1], y[-1]):
-        x = np.append(x, x[0])
-        y = np.append(y, y[0])
         
     n = len(x) -1
 

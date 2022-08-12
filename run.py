@@ -23,6 +23,8 @@ from scenario.definitionpanel import definitionpanel
 from scenario.loadandplot import loadandplot
 from scenario.custom import custom
 from scenario.makeprofileplot import makeprofileplot
+from scenario.lineplotprofiles import lineplotprofiles
+from scenario.caformulafind import caformulafind
 
 #custom()
 
@@ -39,7 +41,13 @@ from scenario.makeprofileplot import makeprofileplot
 #joukowskierror()
 
 #joukowski und karman-trefftz graphen generieren
-joukowskiplots()
+#joukowskiplots()
+
+#formel für ca bestimmen für profile
+caformulafind()
+
+#bessere lineplots
+#lineplotprofiles()
 
 #komplette Graphen für vx, vy, q und cp
 #completeprofile()

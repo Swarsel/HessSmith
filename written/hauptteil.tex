@@ -280,7 +280,7 @@ berechnet. Daraus wurde der Vektor der Quellenbelegung zunächst für eine allge
 \end{figure}
 
 Die Ergebnisse für Quellenbelegung, Tangentialgeschwindigkeiten und Druckbeiwerte sind in Tabelle \ref{tab:cyl8} für die Werte $V_{\infty} = 1$ und $\alpha  = 0$ zusammengefasst. \\
-Ebenfalls von Interesse ist die Größe $\sum_{i=0}^{n-1} q_i l_i$. Diese Summe sollte für einen geschlossenen Körper Null ergeben, da der Körper sonst durch den Fluss seine Masse verändern würde (vgl. \cite{Barba:2019}). Tatsächlich ergibt sich:
+Ebenfalls von Interesse ist die Größe $\sum_{i=0}^{n-1} q_i l_i$. Diese Summe sollte für einen \textbf{geschlossenen} Körper Null ergeben, da der Körper sonst durch den Fluss seine Masse verändern würde (vgl. \cite{Barba:2019}). Tatsächlich ergibt sich:
 \begin{align*}
 \sum_{i=0}^{n-1} q_i l_i \approx 4.44 \cdot 10^{-16}.
 \end{align*}
@@ -431,8 +431,8 @@ Diese Geschwindigkeitsvektoren wurden für die oben genannten Profile für ein G
 \begin{align*}
 \vec x = (x,y) = \{-0.5, -0.5 + n \Delta x,\ldots, 1,5\} \times \{-0.2, -0.2 + n \Delta y, \ldots, 0.2\}; \\ \;\; \Delta x = \frac{1.5 - (-0.5)}{200}, \;\; \Delta y = \frac{0.2 - (-0.2)}{200}, \;\; n \in \mathbb{N} \cap (0,200),
 \end{align*} 
-berechnet und sind in Form eines Strömungsgraphens dargestellt. Auch wurde ein Konturgraph für die sich ergebenden Druckbeiwerte im Umgebungsfeld des Profils generiert. \\
-Ebenfalls wurden in Form eines Farbgraphens für die Panele die Werte für Quellbelegung und Druckbeiwerte auf der Profiloberfläche ermittelt und dargestellt. Für sämtliche oben genannten Graphen wurde für die Anströmgeschwindigkeit $V_{\infty} = 1$, für den Anströmwinkel $\alpha =5^{\circ}$ gewählt.
+für die Anströmgeschwindigkeit $V_{\infty} = 1$ und den Anströmwinkel $\alpha =5^{\circ}$ berechnet und sind in Form eines Strömungsgraphens dargestellt. Auch wurde unter derselben Anströmung ein Konturgraph für die sich ergebenden Druckbeiwerte im Umgebungsfeld des Profils generiert. \\
+Die Werte für Tangentialgeschwindigkeiten und Druckbeiwerte auf der Profiloberfläche wurden für $V_{\infty} = 1$, sowie jeweils $\alpha =5^{\circ}$ und $\alpha =8^{\circ}$ ermittelt und dargestellt. Ebenfalls wurde für jedes Profil eine Kurvenanpassung der ermittelten Auftriebsbeiwerte in Abhängigkeit des Anströmwinkels durchgeführt und mit Werten aus der Literatur verglichen.
 
 \newpage
 \subsection{NACA-0012-Profil} 
@@ -452,42 +452,57 @@ Ebenfalls wurden in Form eines Farbgraphens für die Panele die Werte für Quell
 
     \end{tabular}
     \label{tab:naca}
-    \caption{Ergebnisse des NACA-0012-Profils}
+    %\caption{Ausgewählte Ausgewählte Ergebnisse des NACA-0012-Profils}
 \end{table}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{figures/nacaca.png}
-    \caption{Graph des Auftriebsbeiwerts}
+    \includegraphics[scale=0.4]{figures/NACA0012ca.png}
+    %\caption{Graph des Auftriebsbeiwerts}
     \label{fig:nacaca}
 \end{figure}
 \end{minipage}
+
+\begin{table}[H]
+%\caption{Ergebnisse für den achtseitigen Zylinder mit $V_{\infty} = 1, \alpha  = 0$}
+\label{tab:NACA0012cawerte}
+\begin{center}
+\begin{tabular}{c|cc}
+%\toprule
+Angepasste Kurve: $c_a = 0.12 \alpha$ & Berechneter Wert & Literaturwert (\cite{naca1945}, p.31) \\
+\midrule
+Auftrieb bei $\alpha = 0$, $c_{a_0}$ & $1.39 \cdot 10^{-9}$ & $0$ \\
+Nullauftriebswinkel $\alpha_{0}$ & $-1.16 \cdot 10^{-8}$ & $0$ 
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
 
 \begin{figure*}[!ht]
   \centering
   \begin{subfigure}[b]{0.475\linewidth}
     \centering\includegraphics[scale=0.5]{figures/naca0012stream.png} 
-    \caption{\label{fig:nacastream}}
+    %\caption{\label{fig:nacastream}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.475\linewidth}
     \centering\includegraphics[scale=0.5]{figures/naca0012contourcp.png} 
-    \caption{\label{fig:nacacontourcp}}
+    %\caption{\label{fig:nacacontourcp}}
   \end{subfigure}
   \vskip\baselineskip
   \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/naca0012q.png} 
-    \caption{\label{fig:nacaq}}
+    \centering\includegraphics[scale=0.4]{figures/naca0012vtlines.png} 
+    %\caption{\label{fig:nacaq}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/naca0012cp.png} 
-    \caption{\label{fig:nacacp}}
+    \centering\includegraphics[scale=0.4]{figures/nacacplines.png} 
+    %\caption{\label{fig:nacacp}}
   \end{subfigure}
   
-  \caption{\subref{fig:nacastream}) Umströmung und \subref{fig:nacacontourcp}) Druckbeiwerte im Feld \subref{fig:nacaq}) Quellbelegung und \subref{fig:nacacp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
+  %\caption{\subref{fig:nacastream}) Umströmung und \subref{fig:nacacontourcp}) Druckbeiwerte im Feld \subref{fig:nacaq}) Quellbelegung und \subref{fig:nacacp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
 \end{figure*}
 
 \newpage
@@ -497,53 +512,69 @@ Ebenfalls wurden in Form eines Farbgraphens für die Panele die Werte für Quell
     \centering
     \begin{tabular}{c|cc}
     $\alpha$ & $\gamma$ & $c_a$ \\
-        -11 & 0.3 & -1.26 \\ 
--7 & 0.19 & -0.77 \\ 
--3 & 0.07 & -0.27 \\ 
-1 & -0.05 & 0.22 \\ 
-5 & -0.17 & 0.71 \\ 
-9 & -0.29 & 1.2 \\ 
-13 & -0.41 & 1.69 \\ 
-17 & -0.53 & 2.16 \\ 
+       -11 & 0.18 & -0.73 \\ 
+-7 & 0.08 & -0.32 \\ 
+-3 & -0.02 & 0.09 \\ 
+1 & -0.12 & 0.5 \\ 
+5 & -0.22 & 0.9 \\ 
+9 & -0.32 & 1.3 \\ 
+13 & -0.41 & 1.7 \\ 
+17 & -0.51 & 2.09 \\ 
+
 
     \end{tabular}
     \label{tab:nlf}
-    \caption{Ergebnisse des NASA SC(2)-0614-Profils}
+    %\caption{Ausgewählte Ergebnisse des NASA SC(2)-0614-Profils}
 \end{table}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{figures/nlf105ca.png}
-    \caption{Graph des Auftriebsbeiwerts}
+    \includegraphics[scale=0.4]{figures/sc20614ca.png}
+    %\caption{Graph des Auftriebsbeiwerts}
     \label{fig:nlfca}
 \end{figure}
 \end{minipage}
+
+\begin{table}[H]
+%\caption{Ergebnisse für den achtseitigen Zylinder mit $V_{\infty} = 1, \alpha  = 0$}
+\label{tab:sc20614cawerte}
+\begin{center}
+\begin{tabular}{c|cc}
+%\toprule
+Angepasste Kurve: $c_a = 0.101 \alpha + 0.389$ & Berechneter Wert & Literaturwert \cite{bigfoil} \\
+\midrule
+Auftrieb bei $\alpha = 0$, $c_{a_0}$ & $0.389$ & $0.532$ \\
+Nullauftriebswinkel $\alpha_{0}$ & $-3.84$ & $-4.37$ 
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
 
 \begin{figure*}[!ht]
   \centering
   \begin{subfigure}[b]{0.475\linewidth}
     \centering\includegraphics[scale=0.5]{figures/sc20614stream.png} 
-    \caption{\label{fig:sc20614stream}}
+    %\caption{\label{fig:sc20614stream}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.475\linewidth}
     \centering\includegraphics[scale=0.5]{figures/sc20614contourcp.png} 
-    \caption{\label{fig:sc20614contourcp}}
+    %\caption{\label{fig:sc20614contourcp}}
   \end{subfigure}
   \vskip\baselineskip
   \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/sc20614q.png} 
-    \caption{\label{fig:sc20614q}}
+    \centering\includegraphics[scale=0.4]{figures/sc20614vtlines.png} 
+    %\caption{\label{fig:sc20614q}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/sc20614cp.png} 
-    \caption{\label{fig:sc20614cp}}
+    \centering\includegraphics[scale=0.4]{figures/sc20614cplines.png} 
+    %\caption{\label{fig:sc20614cp}}
   \end{subfigure}
   
-  \caption{\subref{fig:sc20614stream}) Umströmung und \subref{fig:sc20614contourcp}) Druckbeiwerte im Feld \subref{fig:sc20614q}) Quellbelegung und \subref{fig:sc20614cp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
+  %\caption{\subref{fig:sc20614stream}) Umströmung und \subref{fig:sc20614contourcp}) Druckbeiwerte im Feld \subref{fig:sc20614q}) Quellbelegung und \subref{fig:sc20614cp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
 \end{figure*}
 \newpage
 \subsection{Taylor Zone-40-Profil}
@@ -553,53 +584,69 @@ Ebenfalls wurden in Form eines Farbgraphens für die Panele die Werte für Quell
     \centering
     \begin{tabular}{c|cc}
     $\alpha$ & $\gamma$ & $c_a$ \\
-        -11 & 0.31 & -1.23 \\ 
--7 & 0.19 & -0.78 \\ 
--3 & 0.08 & -0.32 \\ 
-1 & -0.04 & 0.14 \\ 
-5 & -0.15 & 0.59 \\ 
-9 & -0.27 & 1.05 \\ 
-13 & -0.38 & 1.49 \\ 
-17 & -0.49 & 1.94 \\ 
+        -11 & 0.27 & -1.07 \\ 
+-7 & 0.16 & -0.63 \\ 
+-3 & 0.04 & -0.18 \\ 
+1 & -0.07 & 0.27 \\ 
+5 & -0.18 & 0.71 \\ 
+9 & -0.29 & 1.16 \\ 
+13 & -0.4 & 1.59 \\ 
+17 & -0.51 & 2.02 \\ 
+
 
     \end{tabular}
     \label{tab:zone}
-    \caption{Ergebnisse des Taylor Zone-40-Profils}
+    %\caption{Ergebnisse des Taylor Zone-40-Profils}
 \end{table}
 \end{minipage}
 \hfill
 \begin{minipage}{0.45\textwidth}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.6]{figures/zoneca.png}
-    \caption{Graph des Auftriebsbeiwerts}
+    \includegraphics[scale=0.4]{figures/zoneca.png}
+    %\caption{Graph des Auftriebsbeiwerts}
     \label{fig:zoneca}
 \end{figure}
 \end{minipage}
+
+\begin{table}[H]
+%\caption{Ergebnisse für den achtseitigen Zylinder mit $V_{\infty} = 1, \alpha  = 0$}
+\label{tab:sc20614cawerte}
+\begin{center}
+\begin{tabular}{c|cc}
+%\toprule
+Angepasste Kurve: $c_a = 0.111 \alpha + 0.153$ & Berechneter Wert & Literaturwert \cite{bigfoil} \\
+\midrule
+Auftrieb bei $\alpha = 0$, $c_{a_0}$ & $0.153$ & $0.153$ \\
+Nullauftriebswinkel $\alpha_{0}$ & $-1.38$ & $-1.34$ 
+%\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
 
 \begin{figure*}[!ht]
   \centering
   \begin{subfigure}[b]{0.475\linewidth}
     \centering\includegraphics[scale=0.5]{figures/z40stream.png} 
-    \caption{\label{fig:zonestream}}
+    %\caption{\label{fig:zonestream}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.475\linewidth}
     \centering\includegraphics[scale=0.5]{figures/z40contourcp.png} 
-    \caption{\label{fig:zonecontourcp}}
+    %\caption{\label{fig:zonecontourcp}}
   \end{subfigure}
   \vskip\baselineskip
   \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/z40q.png} 
-    \caption{\label{fig:zoneq}}
+    \centering\includegraphics[scale=0.4]{figures/zone40vtlines.png} 
+    %\caption{\label{fig:zoneq}}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/z40cp.png} 
-    \caption{\label{fig:zonecp}}
+    \centering\includegraphics[scale=0.4]{figures/zone40cplines.png} 
+    %\caption{\label{fig:zonecp}}
   \end{subfigure}
   
-  \caption{\subref{fig:zonestream}) Umströmung und \subref{fig:zonecontourcp}) Druckbeiwerte im Feld \subref{fig:zoneq}) Quellbelegung und \subref{fig:zonecp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
+  %\caption{\subref{fig:zonestream}) Umströmung und \subref{fig:zonecontourcp}) Druckbeiwerte im Feld \subref{fig:zoneq}) Quellbelegung und \subref{fig:zonecp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
 \end{figure*}
 
 

@@ -13,9 +13,10 @@ def make_panels(x, y):
         x = np.array(x)
     if type(y) is not np.ndarray:
         y = np.array(y)
-    if (x[0], y[0]) != (x[-1], y[-1]):
-        x = np.append(x, x[0])
-        y = np.append(y, y[0])
+    #weiß nicht ob man den körper jetzt schließen soll
+    #if (x[0], y[0]) != (x[-1], y[-1]):
+     #   x = np.append(x, x[0])
+      #  y = np.append(y, y[0])
         
     n = len(x) -1
 
