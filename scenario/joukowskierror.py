@@ -34,8 +34,8 @@ def joukowskierror():
     print("Relative error:", relerror)
 
     fig, ax1 = plt.subplots(1, constrained_layout=True)
-    ax1.plot(nas, theo, color='k', linestyle=':', linewidth=1, label='$c_a^\mathrm{theoretisch}$')
-    ax1.plot(nas, got, color='k', linestyle='-', linewidth=1, label="$c_a^\mathrm{berechnet}$")
+    ax1.plot(nas, theo, color='k', linestyle=':', linewidth=1, label='$c_a^\mathrm{analytisch}$')
+    ax1.plot(nas, got, color='k', linestyle='-', linewidth=1, label="$c_a^\mathrm{panelverfahren}$")
     ax1.set(xlabel='Panelanzahl $n$', ylabel='$c_a$')
 
     ax1.grid(True)

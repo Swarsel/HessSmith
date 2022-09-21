@@ -70,6 +70,19 @@
 }
 
 \newcommand{\writeIn}[1]{\usepackage[#1]{babel}} % Definiert einen neuen Befehl um die Sprache des Dokuments zu setzen
+\DefineBibliographyStrings{german}{ 
+	andothers = {{et\,al\adddot}},             
+}
+\DeclareLabelalphaTemplate{ 
+\labelelement{
+\field[final]{shorthand} 
+\field{label} 
+\field[strside=left,ifnames=1]{labelname} 
+}    
+\labelelement{
+\field[strside=right]{year}
+}}
+\renewcommand*{\labelalphaothers}{~et al.~}
 \usepackage{float}
 \usepackage{colorprofiles}
 \PassOptionsToPackage{usenames,dvipsnames}{color}

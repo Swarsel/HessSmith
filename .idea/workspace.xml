@@ -20,41 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1047fd5b-87ee-4689-b144-d024013e7476" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data/scenarios/FIGURESNACA0012ca.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/nlf105.dat.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/caformulafind.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scenario/lineplotprofiles.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/abschlussarbeit.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012ca_old.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012vtlines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/joukowskierror_oldbutnewer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/nacacplines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614ca_old.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614cplines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/sc20614vtlines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/zone40cplines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/zone40vtlines.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/written/figures/zoneca_oldbutnewer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compjouk.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012contourcp_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/NACA0012stream_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/joukowskierror_wronglabels.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/sc20614contourcp_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/sc20614stream_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/z40contourcp_old.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/written/figures/z40stream_old.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/rawdata/nlf105.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/FIGURES/joukowskierror.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012.DAT.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/NACA0012.DAT.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/sc20614.dat.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/scenarios/completeprofile/z40.dat.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/helper.py" beforeDir="false" afterPath="$PROJECT_DIR$/helper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/panel_new.py" beforeDir="false" afterPath="$PROJECT_DIR$/panel_new.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scenario/joukowskierror.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/joukowskierror.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testsuite.py" beforeDir="false" afterPath="$PROJECT_DIR$/testsuite.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/appendix01.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/appendix01.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scenario/loadandplot.py" beforeDir="false" afterPath="$PROJECT_DIR$/scenario/loadandplot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/abstract.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/aufgabenstellung.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/aufgabenstellung.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/bib/example.bib" beforeDir="false" afterPath="$PROJECT_DIR$/written/bib/example.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012ca.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012ca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012contourcp.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012contourcp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/NACA0012stream.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/NACA0012stream.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/figures/joukowskierror.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/joukowskierror.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/sc20614ca.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/sc20614ca.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/written/figures/zoneca.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/zoneca.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/sc20614contourcp.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/sc20614contourcp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/sc20614stream.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/sc20614stream.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/z40contourcp.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/z40contourcp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/figures/z40stream.png" beforeDir="false" afterPath="$PROJECT_DIR$/written/figures/z40stream.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/hauptteil.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/hauptteil.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/written/pdfa.xmpi" beforeDir="false" afterPath="$PROJECT_DIR$/written/pdfa.xmpi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/written/titlepage.tex" beforeDir="false" afterPath="$PROJECT_DIR$/written/titlepage.tex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,22 +276,22 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="978" height="275" key="GridCell.Tab.0.bottom" timestamp="1660264958747">
+    <state width="978" height="275" key="GridCell.Tab.0.bottom" timestamp="1663711859805">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="978" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1660264958747" />
-    <state width="978" height="275" key="GridCell.Tab.0.center" timestamp="1660264958747">
+    <state width="978" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1663711859805" />
+    <state width="978" height="275" key="GridCell.Tab.0.center" timestamp="1663711859805">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="978" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1660264958747" />
-    <state width="978" height="275" key="GridCell.Tab.0.left" timestamp="1660264958747">
+    <state width="978" height="275" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1663711859805" />
+    <state width="978" height="275" key="GridCell.Tab.0.left" timestamp="1663711859805">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="978" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1660264958747" />
-    <state width="978" height="275" key="GridCell.Tab.0.right" timestamp="1660264958747">
+    <state width="978" height="275" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1663711859805" />
+    <state width="978" height="275" key="GridCell.Tab.0.right" timestamp="1663711859805">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="978" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1660264958747" />
+    <state width="978" height="275" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1663711859805" />
     <state x="237" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1660253542026">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

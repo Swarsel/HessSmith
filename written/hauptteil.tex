@@ -8,13 +8,13 @@
 \caption{Zur Definition eines Panels}
 \label{fig:panel}
 \end{figure}
-Das Hess-Smith-Panelverfahren ist ein Verfahren zur Berechnung von ebenen Potentialströmungen um geschlossene Körper mit Auftrieb. Ein kontinuierlicher zweidimensionaler Körper mit der Umfangkurve $\mathcal{C}$ wird dabei zunächst durch  $n + 1$ diskrete Datenpunkte $\vec x_i = (x_i, y_i)$ dargestellt. Die Kontur des Profils wird nun durch eine endliche Anzahl Verbindungsgeraden zwischen zwei benachbarten Punkten $\vec x_i, \vec x_{i+1}$, den Panelen $\mathcal{C}_i$ (Abb. \ref{fig:panel}) angenähert. Die Zählrichtung der Punkte sei als gegen den Uhrzeigersinn festgelegt (siehe Abb. \ref{fig:zaehlrichtung}). Für das Profil gilt somit die Periodizität $\vec x_n = \vec x_0$. \\
+Das Hess-Smith-Panelverfahren ist ein Verfahren zur Berechnung von ebenen Potentialströmungen um geschlossene Körper mit Auftrieb unter Lösung der Laplace-Gleichung. Ein kontinuierlicher zweidimensionaler Körper mit der Umfangkurve $\mathcal{C}$ wird dabei zunächst durch  $n + 1$ diskrete Datenpunkte $\vec x_i = (x_i, y_i)$ dargestellt. Die Kontur des Profils wird nun durch eine endliche Anzahl Verbindungsgeraden zwischen zwei benachbarten Punkten $\vec x_i, \vec x_{i+1}$, den Panelen $\mathcal{C}_i$ (Abb. \ref{fig:panel}) angenähert. Die Zählrichtung der Punkte sei als gegen den Uhrzeigersinn festgelegt (siehe Abb. \ref{fig:zaehlrichtung}). Für das Profil gilt somit die Periodizität $\vec x_n = \vec x_0$. \\
 Jedes Panel wird durch die folgenden Parameter charakterisiert:
 \begin{itemize}
 \item den Mittelpunkten auf beiden Achsen
 \begin{equation}
 \label{eq:X}
-X_i =  \frac{x_{n-i}+x_{n-i-1}}{2}, \; Y_i =  \frac{y_{n-i}+y_{n-i-1}}{2},
+X_i =  \frac{x_{n-i}+x_{n-i-1}}{2}, \quad Y_i =  \frac{y_{n-i}+y_{n-i-1}}{2},
 \end{equation}
 \item seinem Neigungswinkel
 \begin{equation}
@@ -52,16 +52,21 @@ Aus der Summe über alle Panelbeiträge aus \eqref{eqn:potq} und \eqref{eqn:potv
 \label{eqn:potnovortex}
 \phi(\vec x) =  V_{\infty} (\cos{\alpha} x + \sin{\alpha} y) + \sum_{i=0}^{n-1} \phi_i^{(q)}.
 \end{equation}
+Das Geschwindigkeitspotential muss hierbei die Laplace-Gleichung erfüllen:
+\begin{equation}
+\label{eqn:laplace}
+\Delta \phi = 0.
+\end{equation}
 Die Geschwindigkeit im Punkt $\vec x$  kann über den Gradienten von $\phi$ berechnet werden:
 \begin{equation}
 \vec v ( \vec x) =  \nabla  \phi (\vec x).
 \end{equation}
-Auf der Oberfläche des Profils muss die Strömung die Gleitbedingung erfüllen; damit lassen sich $n$ Gleichungen aufstellen, um diese Bedingung zu modellieren. Es wird gefordert, dass die Normalkomponente des Geschwindigkeitsvektors,
+Auf der Oberfläche des Profils muss die Strömung die Gleitbedingung erfüllen; damit lassen sich $n$ Gleichungen aufstellen, um diese Bedingung zu modellieren. Es wird gefordert, dass die Normalkomponente des Geschwindigkeitsvektors verschwindet:
 \begin{equation}
-v_j^{(n)} =  \vec v(\vec X_j) \cdot \vec n_j,
+v_j^{(n)} =  \vec v(\vec X_j) \cdot \vec n_j = 0.
 \end{equation}
-verschwindet. Dabei ist $\vec n_j$ der Normalvektor auf das Panel $\mathcal{C}_j$.\\
-In 0. Ordnung erhält man ein System von $n$ Gleichungen
+Dabei ist $\vec n_j$ der Normalvektor auf das Panel $\mathcal{C}_j$.\\
+In führender Ordnung erhält man ein System von $n$ Gleichungen
 \begin{equation}
 \label{eq:lgls1}
 \sum_{j=0}^{n-1} M_{i,j}^{(q)}q_j =  b_i,
@@ -78,12 +83,12 @@ aus dessen Lösung die Quellstärken $q_i$ für jedes Panel ermittelt werden kö
 Damit können die Tangentialkomponenten des Geschwindigkeitsvektors
 \begin{equation}
 \label{eqn:vt}
-v_i^{(t)} =  \vec v(X_i) \cdot \frac{\vec x_{i+1}-\vec x_i}{|\vec x_{i+1}-\vec x_i|},
+v_i^{(t)} =  \vec v(X_i) \cdot \frac{\vec x_{i+1}-\vec x_i}{|\vec x_{i+1}-\vec x_i|}
 \end{equation}
 bestimmt werden. \\
 Aus der Bernoulli-Gleichung
 \begin{equation}
-p_{\infty} + \frac{1}{2} \rho V_{\infty}^2 =  p + \frac{1}{2} \rho v^2,
+p_{\infty} + \frac{1}{2} \rho V_{\infty}^2 =  p + \frac{1}{2} \rho v^2
 \end{equation}
 definiert man den Druckbeiwert als das Verhältnis der Druckdifferenzen von Profilanströmung und dynamischem Druck 
 \begin{equation}
@@ -93,19 +98,19 @@ Daraus kann der Druckbeiwert
 \begin{equation}
 c_{p_i} =  1 - \left( \frac{v_i^{(t)}}{V_{\infty}}\right)
 \end{equation}
-am Mittelpunkt des Panels $\mathcal{C}_i$ bestimmt werden. \cite{Hess:1966} \cite{Cebeci:1999} 
+am Mittelpunkt des Panels $\mathcal{C}_i$ bestimmt werden, \cite{Hess:1966}, \cite{Cebeci:1999}.
 \subsection{Berücksichtigung einer Wirbelbelegung}
 Will man den Auftrieb berücksichtigen, so reicht die reine Quellbelegung des Profils noch nicht aus. \\
 Im Hess-Smith-Verfahren wird für das gesamte Profil eine einzige konstante Wirbelbelegung $\gamma$ für alle Panele angenommen. Damit wird das Potential aus \eqref{eqn:potnovortex} um folgende Beiträge erweitert:
 \begin{equation}
-\phi_i^{(w)} =  \frac{\gamma}{2 \pi } \int ds \theta_i,
+\phi_i^{(w)} =  \frac{\gamma}{2 \pi } \int ds \, \theta_i,
 \end{equation}
 zu
 \begin{align}
 \phi(\vec x) &=  V_{\infty} (\cos{\alpha} x + \sin{\alpha} y) + \sum_{i=0}^{n-1} \left( \phi_i^{(q)} + \phi_i^{(w)} \right) \nonumber \\
 &= V_{\infty} (\cos{\alpha} x + \sin{\alpha} y) + \sum_{i=0}^{n-1} \int_{\mathcal{C}_i} \left( \frac{q_i}{2\pi } \ln r_i - \frac{\gamma}{2\pi } \theta_{i} \right) ds.
 \end{align}
-Die Gleitbedingung bleibt erhalten, allerdings muss das Gleichungssystem entsprechend um den hinzugekommenen Geschwindigkeitsbeitrag erweitert werden. Dadurch erhält das Gleichungssystem eine neue Variable $\gamma$ und ist somit unterbestimmt. Die fehlende Gleichung ergibt sich aus der Kutta-Bedingung, welche besagt, dass es an der Hinterkante des Profils keine Umströmung gibt.\\
+Die Gleitbedingung bleibt erhalten, allerdings muss das Gleichungssystem entsprechend um den hinzugekommenen Potentialbeitrag erweitert werden. Dadurch erhält das Gleichungssystem eine neue Variable $\gamma$ und ist somit unterbestimmt. Die fehlende Gleichung ergibt sich aus der Kutta-Bedingung, welche besagt, dass es an der Hinterkante des Profils keine Umströmung gibt.\\
 Zur Modellierung der Kutta-Bedingung wählt man
 \begin{equation}
 v_0^{(t)} =  -v_n^{(t)}.
@@ -121,7 +126,7 @@ c_a \approx \frac{2}{V_{\infty}t}\sum_{i=0}^{n-1} v_i^{(t)} l_i.
 %\caption{Zur Kutta-Bedingung am Beispiel eines NACA0012-%Profils - am Punkt der Hinterkante sind die %Tangentialgeschwindigkeiten genau entgegengerichtet}
 %\label{fig:kutta}
 %\end{figure}
-Für eine analytische Berechnung des Auftriebsbeiwerts muss nun noch die Systemmatrix bestimmt werden, welche das lineare Gleichungssystem \eqref{eq:lgls1} definiert. \cite{Hess:1966} \cite{Cebeci:1999} \cite{Alonso:2005}
+Für eine numerische Berechnung des Auftriebsbeiwerts muss nun noch die Systemmatrix bestimmt werden, welche das lineare Gleichungssystem \eqref{eq:lgls1} definiert,  \cite{Hess:1966}, \cite{Cebeci:1999}, \cite{Alonso:2005}.
 
 \subsection{Berechnung der Systemmatrix}
 \label{chap:systemmatrixtheory}
@@ -129,7 +134,7 @@ Die Systemmatrix zur Berechnung der Normalgeschwindigkeiten $v_i^{(n)}$ in den P
 Für die Systemmatrix und ihre Parameter gelten:
 \begin{equation}
 \label{eq:mnovortex}
-M_{i,j} = A_{i,j}^{(n)}, \;\; i = 0, 1, \ldots , n-1; \;\; j = 0,1,\ldots , n-1,
+M_{i,j} = A_{i,j}^{(n)},  \quad i = 0, 1, \ldots , n-1,  \quad j = 0,1,\ldots , n-1,
 \end{equation}
 mit der Einflussmatrix
 \begin{equation}
@@ -140,22 +145,22 @@ sowie den geometrischen Integralen
 \begin{equation}
 I_{i,j} = 
      \begin{cases}
-       \frac{1}{4\pi } \ln \left[ \frac{(l_j + 2 \xi_{i,j})^2 + 4 \eta_{i,j}^2}{(l_j -2 \xi _{i,j})^2 + 4 \eta_{i,j}^2} \right] &\quad i \neq j \\
-       0 &\quad i = j \\
-     \end{cases},
+       \frac{1}{4\pi } \ln \left[ \frac{(l_j + 2 \xi_{i,j})^2 + 4 \eta_{i,j}^2}{(l_j -2 \xi _{i,j})^2 + 4 \eta_{i,j}^2} \right] &,\quad i \neq j, \\
+       0 &,\quad i = j, \\
+     \end{cases}
 \end{equation}
 und
 \begin{equation}
 J_{i,j} = 
      \begin{cases}
-       \frac{1}{2\pi } \arctan \left[ \frac{l_j - 2 \xi_{i,j}}{2 \eta_{i,j}} \right] + \frac{1}{2\pi } \arctan \left[ \frac{l_j + 2 \xi_{i,j}}{2 \eta_{i,j}} \right] &\quad i \neq j \\
-       \frac{1}{2} &\quad i = j \\
-     \end{cases}.
+       \frac{1}{2\pi } \arctan \left[ \frac{l_j - 2 \xi_{i,j}}{2 \eta_{i,j}} \right] + \frac{1}{2\pi } \arctan \left[ \frac{l_j + 2 \xi_{i,j}}{2 \eta_{i,j}} \right] &,\quad i \neq j, \\
+       \frac{1}{2} &,\quad i = j. \\
+     \end{cases}
 \end{equation}
 Dabei gilt
 \begin{equation}
 \label{eq:xi}
-\xi_{i,j} =  (X_i - X_j) \cos \theta _j + (Y_i - Y_j) \sin \theta _j;
+\xi_{i,j} =  (X_i - X_j) \cos \theta _j + (Y_i - Y_j) \sin \theta _j,
 \end{equation}
 \begin{equation}
 \label{eq:eta}
@@ -176,10 +181,10 @@ A_{i,j}^{(t)} =  \cos{(\theta _i - \theta _j)} I_{i,j} + \sin{(\theta _i - \thet
 Die Systemmatrix $M_{i,j}$ aus \eqref{eq:mnovortex} berücksichtigt allerdings noch keine Wirbelbelegungen und damit keinen Auftrieb.\\
 Im Falle einer konstanten Wirbelbelegung $\gamma$ auf allen Panelen erweitert sich die Dimension von $M_{i,j}$ von $n \times n$ auf $(n+1) \times (n+1)$. Dadurch müssen folgende zusätzliche Elemente bestimmt werden:
 \begin{equation}
-M_{i,n} =  \sum_{j=0}^{n-1} A_{i,j}^{(t)}, \;\; i=0,1,\ldots, n-1;
+M_{i,n} =  \sum_{j=0}^{n-1} A_{i,j}^{(t)},  \quad i=0,1,\ldots, n-1,
 \end{equation}
 \begin{equation}
-M_{n,j} =  A_{0,j}^{(t)} + A_{n-1,j}^{(t)}, \;\; j =0,1,\ldots, n-1;
+M_{n,j} =  A_{0,j}^{(t)} + A_{n-1,j}^{(t)},  \quad j =0,1,\ldots, n-1,
 \end{equation}
 \begin{equation}
 M_{n,n} =  - \sum_{j=0}^{n-1} \left[ A_{0,j}^{(n)} + A_{n-1,j}^{(n)}\right],
@@ -188,17 +193,17 @@ und
 \begin{equation}
 b_n =  -V_{\infty} [\cos{(\alpha -\theta_0)} + \cos{(\alpha -\theta _{n-1})}].
 \end{equation}
-Gleichung \eqref{eq:vtnovortex} erweitert sich damit zu
+Gleichung \eqref{eq:vtnovortex} erweitert sich damit zu, \cite{Hess:1966}, \cite{Cebeci:1999}
 \begin{equation}
 \label{eq:vtvortex}
 v_i^{(t)} =  \sum_{j=0}^{n-1} A_{i,j}^{(t)} q_j - \gamma \sum_{j=0}^{n-1}A_{i,j}^{(n)} + V_{\infty} \cos{(\alpha - \theta_i)}.
 \end{equation}
-\cite{Hess:1966} \cite{Cebeci:1999}
+
 \newpage
 \chapter{Bericht der Arbeit}
 Im Folgenden werden die wesentlichen Erkenntnisse der Arbeit präsentiert.
 \section{Vorbereitung der Daten}
-Die Daten der Profile wurden der UIUC Airfoil Data Site\footnote{\url{https://m-selig.ae.illinois.edu/ads/coord_database.html}} entnommen und lagen dabei überwiegend im Selig- oder Lednicer-Format vor.\footnote{Eine Gegenüberstellung der beiden Formate ist in \nameref{appendix:a} zu finden.}
+Die Daten der Profile wurden der UIUC Airfoil Data Site entnommen und lagen dabei überwiegend im Selig- oder Lednicer-Format vor, \cite{uiuc}.\footnote{Eine Gegenüberstellung der beiden Formate ist in \nameref{appendix:a} zu finden.}
 \\
 Im Lednicer-Format wird in der ersten Zeile die Bezeichnung des Profils angegeben. In der zweiten Zeile wird die Anzahl der Koordinatenpaare der Ober- und Unterseite angegeben. Ab der dritten Zeile werden die Koordinaten der Panelenden $(x_i,y_i)$ von $x=0$ bis $x=1$ für die Oberseite des Profils angegeben. Danach folgt eine Leerzeile. Danach werden die Koordinaten der Panelenden $(x_i,y_i)$ von $x=0$ bis $x=1$ für die Unterseite des Profils angegeben.
 \\
@@ -210,7 +215,7 @@ Unter Verwendung der Methode .write\_panels() wurde für die Profile eine .csv-D
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.6]{figures/NACA0012.png} 
+\includegraphics[scale=0.73]{figures/NACA0012.png} 
 \caption{NACA-0012-Profil. Aufgrund der Symmetrie des Profils sind die Panellängen für Ober- und Unterseite deckungsgleich}
 \label{fig:naca0012}
 \end{center}
@@ -269,7 +274,7 @@ M_{i,j} =
 %\subsubsection{Lösung des wirbelfreien Gleichungssystems}
 Im Folgenden wurde die Lösung des linearen Gleichungssystems mit der obigen Systemmatrix und den Inhomogenitäten
 \begin{equation}
-b_i =  -V_{\infty} \sin{(\alpha -\theta _i)}, \;\; i= 0,1,\ldots, n-1,
+b_i =  -V_{\infty} \sin{(\alpha -\theta _i)}, \quad i= 0,1,\ldots, n-1,
 \end{equation}
 berechnet. Daraus wurde der Vektor der Quellenbelegung zunächst für eine allgemeine Anströmung berechnet: \\
 \begin{figure}[!h]
@@ -280,11 +285,11 @@ berechnet. Daraus wurde der Vektor der Quellenbelegung zunächst für eine allge
 \end{figure}
 
 Die Ergebnisse für Quellenbelegung, Tangentialgeschwindigkeiten und Druckbeiwerte sind in Tabelle \ref{tab:cyl8} für die Werte $V_{\infty} = 1$ und $\alpha  = 0$ zusammengefasst. \\
-Ebenfalls von Interesse ist die Größe $\sum_{i=0}^{n-1} q_i l_i$. Diese Summe sollte für einen \textbf{geschlossenen} Körper Null ergeben, da der Körper sonst durch den Fluss seine Masse verändern würde (vgl. \cite{Barba:2019}). Tatsächlich ergibt sich:
+Ebenfalls von Interesse ist die Größe $\sum_{i=0}^{n-1} q_i l_i$. Diese Summe sollte für einen geschlossenen Körper Null ergeben (vgl. \cite{Barba:2019}). Tatsächlich ergibt sich für den geschlossenen achtseitigen Kreiszylinder:
 \begin{align*}
 \sum_{i=0}^{n-1} q_i l_i \approx 4.44 \cdot 10^{-16}.
 \end{align*}
-Dieser sehr kleine Fehler beträgt ungefähr zwei Epsilon \footnote{1 Epsilon $=2.220446049250313 \cdot 10^{-16}$ beschreibt die kleinstmögliche in Python darstellbare Gleitkommazahl.  \cite{python2009}} und ergibt sich aus Rundungsfehlern, die bei der Berechnung der Eckpunkte des Kreiszylinders entstehen.
+Dieser sehr kleine Fehler beträgt ungefähr zwei Epsilon \footnote{1 Epsilon $=2.220446049250313 \cdot 10^{-16}$ beschreibt die kleinstmögliche in Python darstellbare Gleitkommazahl, \cite{python2009}} und ergibt sich aus Rundungsfehlern, die bei der Berechnung der Eckpunkte des Kreiszylinders entstehen.
 
 \begin{table}
 \caption{Ergebnisse für den achtseitigen Zylinder mit $V_{\infty} = 1, \alpha  = 0$}
@@ -308,7 +313,7 @@ $i$ & $q_i$ & $v_i^{(t)}$ & $c_{p_i}$ \\
 \end{table}
 
 \subsection{Untersuchungen an allgemeinen Kreiszylindern} \label{chap:analyticalcylinder}
-Die Potentialtheorie liefert ein exaktes Resultat für den Druckbeiwert auf der Oberfläche eines Zylinders: \cite{Cebeci:1999}
+Die Potentialtheorie liefert ein exaktes Resultat für den Druckbeiwert auf der Oberfläche eines Zylinders, \cite{Cebeci:1999}
 \begin{align}
 c_p^\mathrm{exakt} (\varphi ) &=  2 \cos{(2\varphi )} -1.
 \end{align}
@@ -345,7 +350,7 @@ Das Programm wurde nun für Kreiszylinder zwischen 5 und 100 Panelen durchlaufen
 \begin{align*}
 e_{c_{p}}(n) \approx \frac{17.85301}{n^2} + 0.00183,
 \end{align*}
-ermittelt.
+ermittelt. Die konstante Verschiebung ergibt sich daraus, dass für die Kurvenanpassung nur über eine endliche Anzahl an Panelen iteriert wurde; für $n \to \infty$ geht diese gegen Null.
 
 \subsubsection{Rotation des achtseitigen Zylinders}
 Als nächstes wurden die Werte $\gamma$, $c_a$, sowie die Druckbeiwerte für verschiedene Winkel im Bereich $\alpha \in [-15^{\circ}, 15^{\circ}]$ bestimmt. Die Ergebnisse sind in Tabelle \ref{tab:cylgammacas} aufgetragen. 
@@ -409,7 +414,7 @@ und
 \end{equation}
 gelten. \eqref{eq:An} und \eqref{eq:At} vereinfachen sich ebenfalls zu
 \begin{equation}
-A_{j}^{(n)} = \sin {(\theta _j)} I_{j} + \cos{( \theta _j)} J_{j};
+A_{j}^{(n)} = \sin {(\theta _j)} I_{j} + \cos{( \theta _j)} J_{j},
 \end{equation}
 \begin{equation}
 A_{j}^{(t)} =  \cos{(\theta _j)} I_{j} - \sin{( \theta _j)} J_{j}.
@@ -423,13 +428,13 @@ v_y
 \end{pmatrix}
 =
 \begin{pmatrix}
-\sum_{j=0}^{n-1} A_{j}^{(t)} q_j - \gamma \sum_{j=0}^{n-1}A_{j}^{(n)} + V_{\infty} \cos{(\alpha)} \\
-\sum_{j=0}^{n-1} A_{j}^{(n)} q_j + \gamma \sum_{j=0}^{n-1}A_{j}^{(t)} + V_{\infty} \cos{(\alpha)}
+\displaystyle{\sum_{j=0}^{n-1} A_{j}^{(t)} q_j - \gamma \sum_{j=0}^{n-1}A_{j}^{(n)} + V_{\infty} \cos{(\alpha)}} \\[0.6cm]
+\displaystyle{\sum_{j=0}^{n-1} A_{j}^{(n)} q_j + \gamma \sum_{j=0}^{n-1}A_{j}^{(t)} + V_{\infty} \cos{(\alpha)}}
 \end{pmatrix}.
 \end{equation}
 Diese Geschwindigkeitsvektoren wurden für die oben genannten Profile für ein Gitter der Dimension $200 \times 200$ und den Punkten
 \begin{align*}
-\vec x = (x,y) = \{-0.5, -0.5 + n \Delta x,\ldots, 1,5\} \times \{-0.2, -0.2 + n \Delta y, \ldots, 0.2\}; \\ \;\; \Delta x = \frac{1.5 - (-0.5)}{200}, \;\; \Delta y = \frac{0.2 - (-0.2)}{200}, \;\; n \in \mathbb{N} \cap (0,200),
+\vec x = (x,y) = \{-0.5, -0.5 + n \Delta x,\ldots, 1,5\} \times \{-0.2, -0.2 + n \Delta y, \ldots, 0.2\}, \\ \quad \Delta x = \frac{1.5 - (-0.5)}{200}, \quad \Delta y = \frac{0.2 - (-0.2)}{200}, \quad n \in \mathbb{N} \cap (0,200),
 \end{align*} 
 für die Anströmgeschwindigkeit $V_{\infty} = 1$ und den Anströmwinkel $\alpha =5^{\circ}$ berechnet und sind in Form eines Strömungsgraphens dargestellt. Auch wurde unter derselben Anströmung ein Konturgraph für die sich ergebenden Druckbeiwerte im Umgebungsfeld des Profils generiert. \\
 Die Werte für Tangentialgeschwindigkeiten und Druckbeiwerte auf der Profiloberfläche wurden für $V_{\infty} = 1$, sowie jeweils $\alpha =5^{\circ}$ und $\alpha =8^{\circ}$ ermittelt und dargestellt. Ebenfalls wurde für jedes Profil eine Kurvenanpassung der ermittelten Auftriebsbeiwerte in Abhängigkeit des Anströmwinkels durchgeführt und mit Werten aus der Literatur verglichen.
@@ -480,30 +485,19 @@ Nullauftriebswinkel $\alpha_{0}$ & $-1.16 \cdot 10^{-8}$ & $0$
 \end{center}
 \end{table}
 
-\begin{figure*}[!ht]
-  \centering
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/naca0012stream.png} 
-    %\caption{\label{fig:nacastream}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/naca0012contourcp.png} 
-    %\caption{\label{fig:nacacontourcp}}
-  \end{subfigure}
-  \vskip\baselineskip
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.4]{figures/naca0012vtlines.png} 
-    %\caption{\label{fig:nacaq}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.4]{figures/nacacplines.png} 
-    %\caption{\label{fig:nacacp}}
-  \end{subfigure}
-  
-  %\caption{\subref{fig:nacastream}) Umströmung und \subref{fig:nacacontourcp}) Druckbeiwerte im Feld \subref{fig:nacaq}) Quellbelegung und \subref{fig:nacacp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
-\end{figure*}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.66]{figures/naca0012stream.png} \end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.66]{figures/naca0012contourcp.png} \end{center}
+\end{figure}
+\newpage
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.77]{figures/naca0012vtlines.png} \end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.77]{figures/nacacplines.png} \end{center}
+\end{figure}
 
 \newpage
 \subsection{NASA SC(2)-0614-Profil}
@@ -552,30 +546,21 @@ Nullauftriebswinkel $\alpha_{0}$ & $-3.84$ & $-4.37$
 \end{center}
 \end{table}
 
-\begin{figure*}[!ht]
-  \centering
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/sc20614stream.png} 
-    %\caption{\label{fig:sc20614stream}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/sc20614contourcp.png} 
-    %\caption{\label{fig:sc20614contourcp}}
-  \end{subfigure}
-  \vskip\baselineskip
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.4]{figures/sc20614vtlines.png} 
-    %\caption{\label{fig:sc20614q}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.4]{figures/sc20614cplines.png} 
-    %\caption{\label{fig:sc20614cp}}
-  \end{subfigure}
-  
-  %\caption{\subref{fig:sc20614stream}) Umströmung und \subref{fig:sc20614contourcp}) Druckbeiwerte im Feld \subref{fig:sc20614q}) Quellbelegung und \subref{fig:sc20614cp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
-\end{figure*}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.65]{figures/sc20614stream.png} \end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.65]{figures/sc20614contourcp.png} \end{center}
+\end{figure}
+\newpage
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.77]{figures/sc20614vtlines.png} \end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.77]{figures/sc20614cplines.png} \end{center}
+\end{figure}
+
+
 \newpage
 \subsection{Taylor Zone-40-Profil}
 
@@ -624,30 +609,20 @@ Nullauftriebswinkel $\alpha_{0}$ & $-1.38$ & $-1.34$
 \end{center}
 \end{table}
 
-\begin{figure*}[!ht]
-  \centering
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/z40stream.png} 
-    %\caption{\label{fig:zonestream}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.5]{figures/z40contourcp.png} 
-    %\caption{\label{fig:zonecontourcp}}
-  \end{subfigure}
-  \vskip\baselineskip
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.4]{figures/zone40vtlines.png} 
-    %\caption{\label{fig:zoneq}}
-  \end{subfigure}
-  \hfill
-  \begin{subfigure}[b]{0.475\linewidth}
-    \centering\includegraphics[scale=0.4]{figures/zone40cplines.png} 
-    %\caption{\label{fig:zonecp}}
-  \end{subfigure}
-  
-  %\caption{\subref{fig:zonestream}) Umströmung und \subref{fig:zonecontourcp}) Druckbeiwerte im Feld \subref{fig:zoneq}) Quellbelegung und \subref{fig:zonecp}) Druckbeiwerte pro Panel $\mathcal{C}_{i}$ unter dem Anströmwinkel $\alpha =5^{\circ}$}
-\end{figure*}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.65]{figures/z40stream.png} \end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.65]{figures/z40contourcp.png} \end{center}
+\end{figure}
+\newpage
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.77]{figures/zone40vtlines.png} \end{center}
+\end{figure}
+\begin{figure}[H]
+\begin{center} \includegraphics[scale=0.77]{figures/zone40cplines.png} \end{center}
+\end{figure}
+
 
 
 \newpage
@@ -662,7 +637,7 @@ Nullauftriebswinkel $\alpha_{0}$ & $-1.38$ & $-1.34$
     \centering\includegraphics[scale=0.45]{figures/karmantrefftztrans.png} 
     \caption{\label{fig:karmantrefftztrans}}
   \end{subfigure}
-  \caption{Vergleich der \subref{fig:joukowskitrans}) Joukowski-Transformation mit der \subref{fig:karmantrefftztrans}) Kármán-Trefftz-Transformation. Für beide Transformationen wurde $\mu_x = 0.3, \mu_y =0.4$ gewählt; für die Kármán-Trefftz-Transformation wurde $n=1.9$ gesetzt.\label{fig:joukar}}
+  \caption{Vergleich der \subref{fig:joukowskitrans}) Joukowski-Transformation mit der \subref{fig:karmantrefftztrans}) Kármán-Trefftz-Transformation. Für beide Transformationen wurde für die Verschiebung des Mittelpunkts des $\zeta $-Kreises $\mu_x = -0.3, \mu_y =0.4$ gewählt; für die Kármán-Trefftz-Transformation wurde $n=1.9$ gesetzt.\label{fig:joukar}}
 \end{figure}
 Die Joukowski-Transformation ist eine konforme Abbildung, deren Transformation als Ergebnis Tragflächenprofile liefert. Die Transformationsgleichung lautet:
 \begin{equation}
@@ -670,11 +645,11 @@ Die Joukowski-Transformation ist eine konforme Abbildung, deren Transformation a
 z = \zeta + \frac{a^2}{\zeta},
 \end{equation}
 mit einem reellen Parameter $a$ welcher im Folgenden $a=1$ gesetzt wird. Dabei ist $z = x + iy$ eine komplexe Zahl im Bildraum und $\zeta = \chi + i \eta$ eine komplexe Zahl im Ursprungsraum. \\
-Ein Joukowski-Profil wird im $z$-Raum durch die Anwendung der Joukowski-Transformation auf einen Kreis im $\zeta$-Raum erzeugt. Einsetzen von $z$ und $\zeta$ in \eqref{eq:joukowski} ergibt die realen und imaginären Komponenten
+Ein Joukowski-Profil wird im $z$-Raum durch die Anwendung der Joukowski-\\Transformation auf einen Kreis im $\zeta$-Raum erzeugt. Einsetzen von $z$ und $\zeta$ in \eqref{eq:joukowski} ergibt die realen und imaginären Komponenten
 \begin{equation}
-x={\frac {\chi \left(\chi ^{2}+\eta ^{2}+1\right)}{\chi ^{2}+\eta ^{2}}}, \;\;\; y={\frac {\eta \left(\chi ^{2}+\eta ^{2}-1\right)}{\chi ^{2}+\eta ^{2}}}.
+x={\frac {\chi \left(\chi ^{2}+\eta ^{2}+1\right)}{\chi ^{2}+\eta ^{2}}}, \quad y={\frac {\eta \left(\chi ^{2}+\eta ^{2}-1\right)}{\chi ^{2}+\eta ^{2}}}.
 \end{equation}
-Durch Verschiebung des Mittelpunkts des Kreises in der $\zeta$-Ebene können so verschieden Profile generiert werden. Die Abbildung hat allerdings an den Stellen $z = \pm a = \pm 1$ eine Singularität. Deshalb legt man einen der Punkte (hier $z = -1$) ins Innere des Kreises und den Punkt $z=1$ auf den Kreis. In diesem Fall ergibt sich an der Hinterkante ein Winkel von $0^{\circ}$. \\
+Durch Verschiebung des Mittelpunkts des Kreises in der $\zeta$-Ebene um $\mu = \mu_x + i\mu _y$  können so verschiedene Profile generiert werden. Die Abbildung hat allerdings an den Stellen $z = \pm a = \pm 1$ eine Singularität. Deshalb legt man einen der Punkte (hier $z = -1$) ins Innere des Kreises und den Punkt $z=1$ auf den Kreis. In diesem Fall ergibt sich an der Hinterkante ein Winkel von $0^{\circ}$. \\
 \begin{figure}[!ht]
 \begin{center} \includegraphics[scale=0.5]{figures/zoomedjouk.png} \end{center}
 \caption{Vergleich der Hinterkantenwinkel des Joukowski- und Kármán-Trefftz-Profils}
@@ -690,23 +665,74 @@ Die analytische Lösung einer ebenen Potentialströmung um einen Kreiszylinder i
 \begin{equation}
 \Gamma = 4  V_{\infty}R \sin{\left(\alpha + \arcsin \frac{\mu_y}{R} \right)}.
 \end{equation}
-Mit dem Kutta-Joukowski-Theorem für den dynamischen Auftrieb $F_a = \rho \Gamma V_{\infty}$ ist über den dynamischen Auftrieb mit $c_a = \tfrac{F_a}{pt} = \tfrac{2F_a}{\rho V_{\infty}}$ ein Ausdruck für den Auftriebsbeiwert gegeben:
+Mit dem Kutta-Joukowski-Theorem für den dynamischen Auftrieb $F_a = \rho \Gamma V_{\infty}$ ist über den dynamischen Auftrieb mit $c_a = \tfrac{2F_a}{\rho V_{\infty}^2}$ ein Ausdruck für den Auftriebsbeiwert gegeben:
 \begin{equation}
 \label{eq:joukowskitheoretical}
-c_a = \frac{8  R V_{\infty} \sin{\left(\alpha + \arcsin \frac{\mu_y}{R} \right)}}{V_{\infty}t}.
+c_a = \frac{8  R \sin{\left(\alpha + \arcsin \frac{\mu_y}{R} \right)}}{t}.
 \end{equation} 
-Es wurde nun für Joukowski-Profile mit den Parametern $\mu_x = 0.2, \mu_y =0.1$ für 10 bis 200 Panele der Auftriebsbeiwert berechnet und mit dem theoretischen Resultat aus \eqref{eq:joukowskitheoretical} verglichen. 
+Es wurde nun für Joukowski-Profile mit den Parametern $\mu_x = -0.2, \mu_y =0.1$ für 10 bis 200 Panele der Auftriebsbeiwert berechnet und mit dem theoretischen Resultat aus \eqref{eq:joukowskitheoretical} verglichen. 
 \begin{figure}[!ht]
 \begin{center} \includegraphics[scale=0.5]{figures/joukowskierror.png} \end{center}
-\caption{Vergleich des theoretisch ermittelten Werts für den Auftriebsbeiwert eines Joukowski-Profils mit $\mu_x = 0.2, \mu_y =0.1$ und dem berechneten Wert.}
+\caption{Vergleich des theoretisch ermittelten Werts für den Auftriebsbeiwert eines Joukowski-Profils mit $\mu_x = -0.2, \mu_y =0.1$ und dem berechneten Wert.}
 \label{fig:joukowskitheoretical}
 \end{figure}
+
 Es ist ersichtlich, dass sich der Auftriebsbeiwert ab einer Panelanzahl von ungefähr 75 stabil eingeschwungen hat, bis auf Schwankungen, welche vermutlich auf der Diskretisierungsfunktion des Joukowski-Profils beruhen. Für den mittleren relativen Fehler eines Joukowski-Profils mit mindestens 75 Panelen wurde der Wert
 \begin{align*}
-\frac{\Delta c_a}{c_a^\mathrm{theoretisch}} &= \frac{|c_a^\mathrm{theoretisch} - c_a^\mathrm{exakt}|}{c_a^\mathrm{theoretisch}} \\
+\frac{\Delta c_a}{c_a^\mathrm{analytisch}} &= \frac{|c_a^\mathrm{analytisch} - c_a^\mathrm{panelverfahren}|}{c_a^\mathrm{analytisch}} \\
 & = 0.033 = 3.3 \%,
 \end{align*}
-ermittelt. \cite{Abello2018} \cite{Barba:2019}
+ermittelt. Ein Vergleich der analytischen mit den aus dem Panelverfahren ermittelten Werten ist in Tabelle \ref{tab:compjouk} gezeigt, \cite{Abello2018},  \cite{Barba:2019}.
+
+\begin{table}
+\caption{Vergleich der analytischen mit den aus dem Panelverfahren ermittelten Auftriebsbeiwerten}
+\label{tab:compjouk}
+\begin{center}
+\begin{tabular}{c|ccc}
+    $n$ & $c_a^{\mathrm{analytisch}}$ & $c_a^{\mathrm{panelverfahren}}$ & $\Delta c_a$ \\
+10 & 1.27 & 2.19 & 0.92\\
+15 & 1.25 & 1.67 & 0.42\\
+20 & 1.25 & 1.55 & 0.3\\
+25 & 1.25 & 1.31 & 0.06\\
+30 & 1.25 & 1.34 & 0.09\\
+35 & 1.25 & 1.27 & 0.02\\
+40 & 1.25 & 1.46 & 0.21\\
+45 & 1.25 & 1.31 & 0.06\\
+50 & 1.25 & 1.28 & 0.04\\
+55 & 1.25 & 1.36 & 0.11\\
+60 & 1.25 & 1.35 & 0.1\\
+65 & 1.25 & 1.22 & 0.02\\
+70 & 1.25 & 1.18 & 0.06\\
+75 & 1.25 & 1.18 & 0.06\\
+80 & 1.25 & 1.19 & 0.06\\
+85 & 1.25 & 1.2 & 0.05\\
+90 & 1.25 & 1.31 & 0.06\\
+95 & 1.25 & 1.38 & 0.13\\
+100 & 1.25 & 1.3 & 0.06\\
+105 & 1.25 & 1.22 & 0.03\\
+110 & 1.25 & 1.21 & 0.04\\
+115 & 1.25 & 1.21 & 0.04\\
+120 & 1.25 & 1.22 & 0.03\\
+125 & 1.25 & 1.23 & 0.02\\
+130 & 1.25 & 1.33 & 0.09\\
+135 & 1.25 & 1.35 & 0.11\\
+140 & 1.25 & 1.28 & 0.03\\
+145 & 1.25 & 1.25 & 0.01\\
+150 & 1.25 & 1.25 & 0.0\\
+155 & 1.25 & 1.25 & 0.0\\
+160 & 1.25 & 1.25 & 0.01\\
+165 & 1.25 & 1.27 & 0.02\\
+170 & 1.25 & 1.36 & 0.11\\
+175 & 1.25 & 1.33 & 0.09\\
+180 & 1.25 & 1.26 & 0.01\\
+185 & 1.25 & 1.26 & 0.01\\
+190 & 1.25 & 1.26 & 0.01\\
+195 & 1.25 & 1.26 & 0.01 \\
+200 & 1.25 & 1.27 & 0.02
+\end{tabular}
+\end{center}
+\end{table}
+
 %\begin{figure}[!ht]
 %\begin{center} \includegraphics[scale=0.3]{figures/jouk0201.png} \end{center}
 %\caption{Joukowski-Profil, $\mu_x = 0.2, \mu_y =0.1$}

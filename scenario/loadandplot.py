@@ -44,7 +44,7 @@ def loadandplot():
 
         cp = 1.0 - (vx ** 2 + vy ** 2) / 1 ** 2
         # plot the pressure field
-        plt.figure(figsize=(5, 3), layout='constrained')
+        plt.figure(figsize=(8, 3), layout='constrained')
         plt.xlabel('$x$', fontsize=16)
         plt.ylabel('$y$', fontsize=16)
 

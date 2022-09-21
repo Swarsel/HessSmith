@@ -44,7 +44,7 @@ from scenario.caformulafind import caformulafind
 #joukowskiplots()
 
 #formel für ca bestimmen für profile
-caformulafind()
+#caformulafind()
 
 #bessere lineplots
 #lineplotprofiles()
@@ -53,7 +53,7 @@ caformulafind()
 #completeprofile()
 
 #funkionierende komplette Graphen in 2d
-#loadandplot()
+loadandplot()
 
 #8-seitiger Zylinder zwischen -15 und 15 grad
 #rotatingcylinder()
